@@ -1,4 +1,4 @@
-package mehdi.sakout.fancybuttons;
+package com.rilixtech;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -12,17 +12,19 @@ import java.util.Map;
 
 class Utils {
 
-  private static Map<String, Typeface> cachedFontMap = new HashMap<String, Typeface>();
+  private static final String TAG = Utils.class.getSimpleName();
 
-  public static int pxToSp(final Context context, final float px) {
+  private static Map<String, Typeface> cachedFontMap = new HashMap<>();
+
+  static int pxToSp(final Context context, final float px) {
     return Math.round(px / context.getResources().getDisplayMetrics().scaledDensity);
   }
 
-  public static int spToPx(final Context context, final float sp) {
+  static int spToPx(final Context context, final float sp) {
     return Math.round(sp * context.getResources().getDisplayMetrics().scaledDensity);
   }
 
-  public static Typeface findFont(Context context, String fontPath, String defaultFontPath) {
+  static Typeface findFont(Context context, String fontPath, String defaultFontPath) {
 
     if (fontPath == null) {
       return Typeface.DEFAULT;
@@ -63,7 +65,7 @@ class Utils {
           throw new Exception("Font not Found");
         }
       } catch (Exception e) {
-        Log.e(FancyButton.TAG,
+        Log.e(TAG,
             String.format("Unable to find %s font. Using Typeface.DEFAULT instead.", fontName));
         cachedFontMap.put(fontName, Typeface.DEFAULT);
         return Typeface.DEFAULT;

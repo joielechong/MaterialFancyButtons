@@ -19,7 +19,7 @@
             android:orientation="vertical"
             android:padding="20dp" >
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_facebook_like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
                 fancy:fb_text="Like my facebook page"
                 fancy:fb_textColor="#FFFFFF"/>
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_facebook_share"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                 fancy:fb_text="Share the link"
                 fancy:fb_textColor="#FFFFFF"/>
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_facebook_follow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                 android:layout_marginBottom="15dp"
                 android:gravity="center" >
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_android"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -104,7 +104,7 @@
                     fancy:fb_radius="64dp"
                     fancy:fb_textColor="#FFFFFF" />
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_dropbox"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -116,7 +116,7 @@
                     fancy:fb_focusColor="#313131"
                     fancy:fb_iconResource="@drawable/dropbox"
                     fancy:fb_radius="64dp">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
             </LinearLayout>
 
             <LinearLayout
@@ -127,7 +127,7 @@
                 android:gravity="center"
                 android:orientation="horizontal" >
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_instagram"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -139,9 +139,9 @@
                     fancy:fb_focusColor="#313131"
                     fancy:fb_iconResource="@drawable/instagram"
                     fancy:fb_radius="64dp">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_sound"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -153,7 +153,7 @@
                     fancy:fb_focusColor="#313131"
                     fancy:fb_iconResource="@drawable/soundcloud"
                     fancy:fb_radius="64dp">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
             </LinearLayout>
 
             <LinearLayout
@@ -163,7 +163,7 @@
                 android:gravity="center"
                 android:orientation="horizontal" >
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_gplus"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -175,9 +175,9 @@
                     fancy:fb_focusColor="#313131"
                     fancy:fb_iconResource="@drawable/gplus"
                     fancy:fb_radius="64dp">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_facebook"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -189,7 +189,7 @@
                     fancy:fb_focusColor="#313131"
                     fancy:fb_iconResource="@drawable/github"
                     fancy:fb_radius="64dp" >
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -200,7 +200,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="20dp" >
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_spotify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -217,7 +217,7 @@
                 fancy:fb_text="SHUFFLE PLAY"
                 fancy:fb_textColor="#FFFFFF" />
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_spotify_pause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -233,7 +233,7 @@
                 fancy:fb_radius="30dp"
                 fancy:fb_text="PAUSE"
                 fancy:fb_textColor="#FFFFFF" />
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_spotify_follow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
             android:orientation="vertical"
             android:padding="20dp" >
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_twitter_follow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -272,7 +272,7 @@
                 fancy:fb_text="Follow me on Twitter"
                 fancy:fb_textColor="#FFFFFF"/>
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_twitter_followers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -297,7 +297,7 @@
             android:paddingBottom="30dp"
             android:paddingTop="30dp" >
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_create_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -310,9 +310,9 @@
                 fancy:fb_radius="30dp"
                 fancy:fb_text="Create an account"
                 fancy:fb_textColor="#FFFFFF" >
-            </mehdi.sakout.fancybuttons.FancyButton>
+            </com.rilixtech.MaterialFancyButton>
 
-            <mehdi.sakout.fancybuttons.FancyButton
+            <com.rilixtech.MaterialFancyButton
                 android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -342,7 +342,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_download"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -358,9 +358,9 @@
                     fancy:fb_radius="10dp"
                     fancy:fb_text="Download the file"
                     fancy:fb_textColor="#FFFFFF">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_upload"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -376,7 +376,7 @@
                     fancy:fb_iconPosition="bottom"
                     fancy:fb_text="Upload"
                     fancy:fb_textColor="#FFFFFF">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
 
             </LinearLayout>
 
@@ -384,7 +384,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_send"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -400,9 +400,9 @@
                     fancy:fb_text="Send"
                     fancy:fb_radius="10dp"
                     fancy:fb_textColor="#FFFFFF">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_send_disabled"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -420,9 +420,9 @@
                     fancy:fb_text="Send Disabled"
                     fancy:fb_radius="10dp"
                     fancy:fb_textColor="#FFFFFF">
-                </mehdi.sakout.fancybuttons.FancyButton>
+                </com.rilixtech.MaterialFancyButton>
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_android_prefix"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -446,7 +446,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_decline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -463,7 +463,7 @@
                     fancy:fb_text="Mute"
                     fancy:fb_textColor="#ffffff" />
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_answer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -516,7 +516,7 @@
                 android:orientation="horizontal">
 
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_ghost_deposit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -536,7 +536,7 @@
                     fancy:fb_text="Deposit"
                     fancy:fb_textColor="#ffffff" />
 
-                <mehdi.sakout.fancybuttons.FancyButton
+                <com.rilixtech.MaterialFancyButton
                     android:id="@+id/btn_ghost_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

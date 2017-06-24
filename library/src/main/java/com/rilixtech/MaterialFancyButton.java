@@ -1,4 +1,4 @@
-package mehdi.sakout.fancybuttons;
+package com.rilixtech;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -12,6 +12,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
@@ -24,11 +25,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("unused") public class FancyButton extends LinearLayout {
+public class MaterialFancyButton extends LinearLayout {
 
-  public static final String TAG = FancyButton.class.getSimpleName();
-
-  //private Context mContext;
+  public static final String TAG = MaterialFancyButton.class.getSimpleName();
 
   // # Background Attributes
   private int mDefaultBackgroundColor = Color.BLACK;
@@ -91,13 +90,12 @@ import java.util.List;
    *
    * @param context : Context
    */
-  public FancyButton(Context context) {
+  public MaterialFancyButton(Context context) {
     super(context);
-    //this.mContext = context;
 
     mTextTypeFace = Utils.findFont(context, mDefaultTextFont, null);
     mIconTypeFace = Utils.findFont(context, mDefaultIconFont, null);
-    initializeFancyButton();
+    initializeMaterialFancyButton();
   }
 
   /**
@@ -106,15 +104,14 @@ import java.util.List;
    * @param context : Context
    * @param attrs : Attributes Array
    */
-  public FancyButton(Context context, AttributeSet attrs) {
+  public MaterialFancyButton(Context context, AttributeSet attrs) {
     super(context, attrs);
-    //this.mContext = context;
 
-    TypedArray attrsArray = context.obtainStyledAttributes(attrs, R.styleable.FancyButtonsAttrs, 0, 0);
+    TypedArray attrsArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialFancyButtonAttrs, 0, 0);
     initAttributesArray(attrsArray);
     attrsArray.recycle();
 
-    initializeFancyButton();
+    initializeMaterialFancyButton();
   }
 
   /**
@@ -124,16 +121,12 @@ import java.util.List;
    * - Initialize Button Icon
    * - Initialize Button Font Icon
    */
-  private void initializeFancyButton() {
-
+  private void initializeMaterialFancyButton() {
     initializeButtonContainer();
 
     mTextView = setupTextView();
     mIconView = setupIconView();
     mFontIconView = setupFontIconView();
-
-    int iconIndex, textIndex;
-    View view1, view2;
 
     this.removeAllViews();
     setupBackground();
@@ -281,75 +274,75 @@ import java.util.List;
   private void initAttributesArray(TypedArray attrsArray) {
 
     mDefaultBackgroundColor =
-        attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_defaultColor, mDefaultBackgroundColor);
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_defaultColor, mDefaultBackgroundColor);
     mFocusBackgroundColor =
-        attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_focusColor, mFocusBackgroundColor);
-    mDisabledBackgroundColor = attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_disabledColor,
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_focusColor, mFocusBackgroundColor);
+    mDisabledBackgroundColor = attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_disabledColor,
         mDisabledBackgroundColor);
 
-    mEnabled = attrsArray.getBoolean(R.styleable.FancyButtonsAttrs_android_enabled, true);
+    mEnabled = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_android_enabled, true);
 
     mDisabledTextColor =
-        attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_disabledTextColor, mDisabledTextColor);
-    mDisabledBorderColor = attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_disabledBorderColor,
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_disabledTextColor, mDisabledTextColor);
+    mDisabledBorderColor = attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_disabledBorderColor,
         mDisabledBorderColor);
     mDefaultTextColor =
-        attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_textColor, mDefaultTextColor);
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_textColor, mDefaultTextColor);
     // if default color is set then the icon's color is the same (the default for icon's color)
     mDefaultIconColor =
-        attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_iconColor, mDefaultTextColor);
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_iconColor, mDefaultTextColor);
 
     mDefaultTextSize =
-        (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_textSize, mDefaultTextSize);
-    mDefaultTextSize = (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_android_textSize,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_textSize, mDefaultTextSize);
+    mDefaultTextSize = (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_android_textSize,
         mDefaultTextSize);
 
     mDefaultTextGravity =
-        attrsArray.getInt(R.styleable.FancyButtonsAttrs_fb_textGravity, mDefaultTextGravity);
+        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_fb_textGravity, mDefaultTextGravity);
 
-    mBorderColor = attrsArray.getColor(R.styleable.FancyButtonsAttrs_fb_borderColor, mBorderColor);
+    mBorderColor = attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_borderColor, mBorderColor);
     mBorderWidth =
-        (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_borderWidth, mBorderWidth);
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_borderWidth, mBorderWidth);
 
-    mRadius = (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_radius, mRadius);
+    mRadius = (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_radius, mRadius);
     mFontIconSize =
-        (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_fontIconSize, mFontIconSize);
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_fontIconSize, mFontIconSize);
 
     mIconPaddingLeft =
-        (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_iconPaddingLeft,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingLeft,
             mIconPaddingLeft);
     mIconPaddingRight =
-        (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_iconPaddingRight,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingRight,
             mIconPaddingRight);
-    mIconPaddingTop = (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_iconPaddingTop,
+    mIconPaddingTop = (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingTop,
         mIconPaddingTop);
     mIconPaddingBottom =
-        (int) attrsArray.getDimension(R.styleable.FancyButtonsAttrs_fb_iconPaddingBottom,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingBottom,
             mIconPaddingBottom);
 
-    mTextAllCaps = attrsArray.getBoolean(R.styleable.FancyButtonsAttrs_fb_textAllCaps, false);
-    mTextAllCaps = attrsArray.getBoolean(R.styleable.FancyButtonsAttrs_android_textAllCaps, false);
+    mTextAllCaps = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_textAllCaps, false);
+    mTextAllCaps = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_android_textAllCaps, false);
 
-    mGhost = attrsArray.getBoolean(R.styleable.FancyButtonsAttrs_fb_ghost, mGhost);
+    mGhost = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_ghost, mGhost);
     mUseSystemFont =
-        attrsArray.getBoolean(R.styleable.FancyButtonsAttrs_fb_useSystemFont, mUseSystemFont);
+        attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_useSystemFont, mUseSystemFont);
 
-    String text = attrsArray.getString(R.styleable.FancyButtonsAttrs_fb_text);
+    String text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_text);
 
     if (text == null) { //no fb_text attribute
-      text = attrsArray.getString(R.styleable.FancyButtonsAttrs_android_text);
+      text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_android_text);
     }
 
-    mIconPosition = attrsArray.getInt(R.styleable.FancyButtonsAttrs_fb_iconPosition, mIconPosition);
+    mIconPosition = attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_fb_iconPosition, mIconPosition);
 
-    String fontIcon = attrsArray.getString(R.styleable.FancyButtonsAttrs_fb_fontIconResource);
+    String fontIcon = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_fontIconResource);
 
-    String iconFontFamily = attrsArray.getString(R.styleable.FancyButtonsAttrs_fb_iconFont);
-    String textFontFamily = attrsArray.getString(R.styleable.FancyButtonsAttrs_fb_textFont);
+    String iconFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_iconFont);
+    String textFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_textFont);
 
     Drawable icon = null;
     try {
-      mIconResource = attrsArray.getDrawable(R.styleable.FancyButtonsAttrs_fb_iconResource);
+      mIconResource = attrsArray.getDrawable(R.styleable.MaterialFancyButtonAttrs_fb_iconResource);
     } catch (Exception e) {
       mIconResource = null;
     }
@@ -391,7 +384,12 @@ import java.util.List;
     defaultDrawable.setCornerRadius(mRadius);
     if (mGhost) {
       // Hollow Background
-      defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
+      if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+        defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
+      } else {
+        defaultDrawable.setColor(getResources().getColor(android.R.color.transparent, getContext().getTheme()));
+      }
+
     } else {
       defaultDrawable.setColor(mDefaultBackgroundColor);
     }
@@ -416,7 +414,11 @@ import java.util.List;
     if (!mEnabled) {
       defaultDrawable.setStroke(mBorderWidth, mDisabledBorderColor);
       if (mGhost) {
-        disabledDrawable.setColor(getResources().getColor(android.R.color.transparent));
+        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+          disabledDrawable.setColor(getResources().getColor(android.R.color.transparent));
+        } else {
+          disabledDrawable.setColor(getResources().getColor(android.R.color.transparent, getContext().getTheme()));
+        }
       }
     }
 
@@ -509,7 +511,7 @@ import java.util.List;
     text = mTextAllCaps ? text.toUpperCase() : text;
     this.mText = text;
     if (mTextView == null) {
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mTextView.setText(text);
     }
@@ -517,14 +519,16 @@ import java.util.List;
 
   /**
    * Set text of the button by string resource id
+   *
    * @param resId Resource id for the string
    */
+  @SuppressWarnings("unused")
   public void setText(@StringRes int resId) {
     String text = getContext().getString(resId);
     text = mTextAllCaps ? text.toUpperCase() : text;
     this.mText = text;
     if (mTextView == null) {
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mTextView.setText(text);
     }
@@ -535,6 +539,7 @@ import java.util.List;
    *
    * @param textAllCaps : is text to be capitalized
    */
+  @SuppressWarnings("unused")
   public void setTextAllCaps(boolean textAllCaps) {
     this.mTextAllCaps = textAllCaps;
     setText(mText);
@@ -546,10 +551,11 @@ import java.util.List;
    * @param color : Color
    * use Color.parse('#code')
    */
+  @SuppressWarnings("unused")
   public void setTextColor(int color) {
     this.mDefaultTextColor = color;
     if (mTextView == null) {
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mTextView.setTextColor(color);
     }
@@ -560,6 +566,7 @@ import java.util.List;
    *
    * @param color : Color
    */
+  @SuppressWarnings("unused")
   public void setIconColor(int color) {
     if (mFontIconView != null) {
       mFontIconView.setTextColor(color);
@@ -593,6 +600,7 @@ import java.util.List;
    *
    * @param color : use Color.parse('#code')
    */
+  @SuppressWarnings("unused")
   public void setDisableBackgroundColor(int color) {
     this.mDisabledBackgroundColor = color;
     if (mIconView != null || mFontIconView != null || mTextView != null) this.setupBackground();
@@ -603,10 +611,11 @@ import java.util.List;
    *
    * @param color : use Color.parse('#code')
    */
+  @SuppressWarnings("unused")
   public void setDisableTextColor(int color) {
     this.mDisabledTextColor = color;
     if (mTextView == null) {
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else if (!mEnabled) mTextView.setTextColor(color);
   }
 
@@ -615,6 +624,7 @@ import java.util.List;
    *
    * @param color : use Color.parse('#code')
    */
+  @SuppressWarnings("unused")
   public void setDisableBorderColor(int color) {
     this.mDisabledBorderColor = color;
     if (mIconView != null || mFontIconView != null || mTextView != null) {
@@ -637,7 +647,7 @@ import java.util.List;
    *
    * @param gravity : Text Gravity
    */
-
+  @SuppressWarnings("unused")
   public void setTextGravity(int gravity) {
     this.mDefaultTextGravity = gravity;
     if (mTextView != null) {
@@ -673,11 +683,15 @@ import java.util.List;
    *
    * @param drawable : Int resource
    */
-  public void setIconResource(int drawable) {
-    this.mIconResource = getResources().getDrawable(drawable);
+  public void setIconResource(@DrawableRes int drawable) {
+    if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+      this.mIconResource = getResources().getDrawable(drawable);
+    } else {
+      this.mIconResource = getResources().getDrawable(drawable, getContext().getTheme());
+    }
     if (mIconView == null || mFontIconView != null) {
       mFontIconView = null;
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mIconView.setImageDrawable(mIconResource);
     }
@@ -688,11 +702,12 @@ import java.util.List;
    *
    * @param drawable : Drawable resource
    */
+  @SuppressWarnings("unused")
   public void setIconResource(Drawable drawable) {
     this.mIconResource = drawable;
     if (mIconView == null || mFontIconView != null) {
       mFontIconView = null;
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mIconView.setImageDrawable(mIconResource);
     }
@@ -707,7 +722,7 @@ import java.util.List;
     this.mFontIcon = icon;
     if (mFontIconView == null) {
       mIconView = null;
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mFontIconView.setText(icon);
     }
@@ -737,7 +752,7 @@ import java.util.List;
       mIconPosition = POSITION_LEFT;
     }
 
-    initializeFancyButton();
+    initializeMaterialFancyButton();
   }
 
   /**
@@ -746,6 +761,7 @@ import java.util.List;
    * @param color : Color
    * use Color.parse('#code')
    */
+  @SuppressWarnings("unused")
   public void setBorderColor(int color) {
     this.mBorderColor = color;
     if (mIconView != null || mFontIconView != null || mTextView != null) {
@@ -758,6 +774,7 @@ import java.util.List;
    *
    * @param width : Width
    */
+  @SuppressWarnings("unused")
   public void setBorderWidth(int width) {
     this.mBorderWidth = width;
     if (mIconView != null || mFontIconView != null || mTextView != null) {
@@ -787,7 +804,7 @@ import java.util.List;
     mTextTypeFace = Utils.findFont(getContext(), fontName, mDefaultTextFont);
 
     if (mTextView == null) {
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mTextView.setTypeface(mTextTypeFace);
     }
@@ -799,12 +816,13 @@ import java.util.List;
    * @param fontName : Font Name
    * Place your icon fonts in assets
    */
+  @SuppressWarnings("unused")
   public void setCustomIconFont(String fontName) {
 
     mIconTypeFace = Utils.findFont(getContext(), fontName, mDefaultIconFont);
 
     if (mFontIconView == null) {
-      initializeFancyButton();
+      initializeMaterialFancyButton();
     } else {
       mFontIconView.setTypeface(mIconTypeFace);
     }
@@ -817,12 +835,13 @@ import java.util.List;
   @Override public void setEnabled(boolean value) {
     super.setEnabled(value);
     this.mEnabled = value;
-    initializeFancyButton();
+    initializeMaterialFancyButton();
   }
 
   /**
    * Setting the button to have hollow or solid shape
    */
+  @SuppressWarnings("unused")
   public void setGhost(boolean ghost) {
     this.mGhost = ghost;
 
@@ -836,6 +855,7 @@ import java.util.List;
    *
    * @param status : true || false
    */
+  @SuppressWarnings("unused")
   public void setUsingSystemFont(boolean status) {
     this.mUseSystemFont = status;
   }
@@ -845,6 +865,7 @@ import java.util.List;
    *
    * @return Text
    */
+  @SuppressWarnings("unused")
   public CharSequence getText() {
     if (mTextView != null) {
       return mTextView.getText();
@@ -858,6 +879,7 @@ import java.util.List;
    *
    * @return TextView Object
    */
+  @SuppressWarnings("unused")
   public TextView getTextViewObject() {
     return mTextView;
   }
@@ -867,6 +889,7 @@ import java.util.List;
    *
    * @return TextView Object
    */
+  @SuppressWarnings("unused")
   public TextView getIconFontObject() {
     return mFontIconView;
   }
@@ -876,6 +899,7 @@ import java.util.List;
    *
    * @return ImageView Object
    */
+  @SuppressWarnings("unused")
   public ImageView getIconImageObject() {
     return mIconView;
   }
