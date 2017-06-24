@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
-  buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+  compileSdkVersion rootProject.ext.sdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
-    minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
-    targetSdkVersion project.ANDROID_BUILD_TARGET_SDK_VERSION
-    versionCode Integer.parseInt(project.VERSION_CODE)
-    versionName project.VERSION_NAME
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.sdkVersion
+    versionCode rootProject.ext.libraryVersionCode
+    versionName rootProject.ext.libraryVersion
   }
   buildTypes {
     release {
@@ -16,12 +17,11 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
     }
   }
-  buildToolsVersion '25.0.2'
 }
 
 dependencies {
-  compile 'com.android.support:appcompat-v7:25.3.1'
-  compile project(':fancybuttons_library')
+  compile "com.android.support:appcompat-v7:$supportLibVersion"
+  compile project(':library')
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
 }

@@ -12,6 +12,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -504,7 +505,7 @@ import java.util.List;
    *
    * @param text : Text
    */
-  public void setText(String text) {
+  public void setText(@NonNull String text) {
     text = mTextAllCaps ? text.toUpperCase() : text;
     this.mText = text;
     if (mTextView == null) {

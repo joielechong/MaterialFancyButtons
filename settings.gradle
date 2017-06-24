@@ -1,1 +1,1 @@
-include ':samples', ':fancybuttons_library'
+include ':samples', ':library'
