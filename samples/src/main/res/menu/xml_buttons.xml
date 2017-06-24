@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="mehdi.sakout.fancybuttons.samples.XmlButtons" >
+    tools:context="mehdi.sakout.fancybuttons.samples.com.rilixtech.materialfancybutton.sample.XmlButtons" >
     
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"

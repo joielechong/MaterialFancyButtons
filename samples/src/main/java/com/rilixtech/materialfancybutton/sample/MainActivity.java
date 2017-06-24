@@ -1,4 +1,4 @@
-package mehdi.sakout.fancybuttons.samples;
+package com.rilixtech.materialfancybutton.sample;
 
 import android.app.ListActivity;
 import android.content.Intent;
