@@ -1,0 +1,29 @@
+### Changelog
+
+- 1.8.3
+    - Fixed long searching of font
+    - Added ability to use android:text, android:textSize, android:testAllCaps attributes
+    - Fixed preview issues with android:* attrs
+    - Added opportunity to use android:* attrs in styles
+    - Added ability to use custom LayoutParams instead of the default one
+    - Force refreshing the view when `setEnabled(boolean)` is called
+    - Minor optimization & refactoring
+
+- 1.8.2
+    - Added ability to disable button
+    - Added ability to use system font
+
+- 1.8.1
+    - Fix Bug related to loading custom fonts
+
+- 1.8
+    - Add setIconResource(Drawable)
+    - Cache fonts
+
+- 1.7
+    - Fix ripple effect when background is transparent
+    - Add capitalization of text
+
+- 1.6
+    - Add ripple effect
+    - Upgrade Font Awesome to 4.5.0

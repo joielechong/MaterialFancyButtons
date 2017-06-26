@@ -1,566 +1,618 @@
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
+
+  <LinearLayout
+      android:id="@+id/section1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
 
     <LinearLayout
-        android:id="@+id/section1"
+        android:id="@+id/section_facebook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:background="#3b5998"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
 
-        <LinearLayout
-            android:id="@+id/section_facebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#3b5998"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="20dp" >
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_facebook_like"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:padding="10dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="1dp"
+          fancy:fb_defaultColor="#3b5998"
+          fancy:fb_focusColor="#5577bd"
+          fancy:fb_iconFont="fontawesome.ttf"
+          fancy:fb_fontIconResource="@string/icon_like"
+          fancy:fb_fontIconSize="15sp"
+          fancy:fb_iconPosition="right"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="Like my facebook page"
+          fancy:fb_textColor="#FFFFFF"
+          />
 
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_facebook_like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="#3b5998"
-                fancy:fb_focusColor="#5577bd"
-                fancy:fb_fontIconResource="@string/icon_like"
-                fancy:fb_fontIconSize="15sp"
-                fancy:fb_iconPosition="right"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Like my facebook page"
-                fancy:fb_textColor="#FFFFFF"/>
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_facebook_share"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:padding="10dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="1dp"
+          fancy:fb_defaultColor="#3b5998"
+          fancy:fb_focusColor="#5577bd"
+          fancy:fb_iconFont="fontawesome.ttf"
+          fancy:fb_fontIconResource="@string/icon_share"
+          fancy:fb_fontIconSize="25sp"
+          fancy:fb_iconPaddingLeft="20dp"
+          fancy:fb_iconPaddingRight="0dp"
+          fancy:fb_iconPosition="right"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="Share the link"
+          fancy:fb_textColor="#FFFFFF"
+          />
 
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_facebook_share"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="#3b5998"
-                fancy:fb_focusColor="#5577bd"
-                fancy:fb_fontIconResource="@string/icon_share"
-                fancy:fb_fontIconSize="25sp"
-                fancy:fb_iconPosition="right"
-                fancy:fb_iconPaddingLeft="20dp"
-                fancy:fb_iconPaddingRight= "0dp"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Share the link"
-                fancy:fb_textColor="#FFFFFF"/>
-
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_facebook_follow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="#3b5998"
-                fancy:fb_focusColor="#5577bd"
-                fancy:fb_fontIconResource="@string/icon_follow"
-                fancy:fb_fontIconSize="25sp"
-                fancy:fb_iconPosition="right"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Follow Mehdi Sakout"
-                fancy:fb_textColor="#FFFFFF" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/section_socialnetworks"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:gravity="center_horizontal"
-            android:minHeight="200dp"
-            android:orientation="vertical"
-            android:padding="20dp" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="15dp"
-                android:gravity="center" >
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_android"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#55acee"
-                    fancy:fb_focusColor="#313131"
-                    fancy:fb_iconResource="@drawable/twitter"
-                    fancy:fb_iconPaddingLeft="0dp"
-                    fancy:fb_iconPaddingRight="0dp"
-                    fancy:fb_radius="64dp"
-                    fancy:fb_textColor="#FFFFFF" />
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_dropbox"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#007ee5"
-                    fancy:fb_iconPaddingLeft="0dp"
-                    fancy:fb_iconPaddingRight="0dp"
-                    fancy:fb_focusColor="#313131"
-                    fancy:fb_iconResource="@drawable/dropbox"
-                    fancy:fb_radius="64dp">
-                </com.rilixtech.MaterialFancyButton>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sn_pos2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="15dp"
-                android:gravity="center"
-                android:orientation="horizontal" >
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_instagram"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#3f729b"
-                    fancy:fb_iconPaddingLeft="0dp"
-                    fancy:fb_iconPaddingRight="0dp"
-                    fancy:fb_focusColor="#313131"
-                    fancy:fb_iconResource="@drawable/instagram"
-                    fancy:fb_radius="64dp">
-                </com.rilixtech.MaterialFancyButton>
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_sound"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#ff8800"
-                    fancy:fb_iconPaddingLeft="0dp"
-                    fancy:fb_iconPaddingRight="0dp"
-                    fancy:fb_focusColor="#313131"
-                    fancy:fb_iconResource="@drawable/soundcloud"
-                    fancy:fb_radius="64dp">
-                </com.rilixtech.MaterialFancyButton>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal" >
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_gplus"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#dd4b39"
-                    fancy:fb_iconPaddingLeft="0dp"
-                    fancy:fb_iconPaddingRight="0dp"
-                    fancy:fb_focusColor="#313131"
-                    fancy:fb_iconResource="@drawable/gplus"
-                    fancy:fb_radius="64dp">
-                </com.rilixtech.MaterialFancyButton>
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_facebook"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#000000"
-                    fancy:fb_iconPaddingLeft="0dp"
-                    fancy:fb_iconPaddingRight="0dp"
-                    fancy:fb_focusColor="#313131"
-                    fancy:fb_iconResource="@drawable/github"
-                    fancy:fb_radius="64dp" >
-                </com.rilixtech.MaterialFancyButton>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/section_spotify"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#222326"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="20dp" >
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_spotify"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                fancy:fb_defaultColor="#7ab800"
-                fancy:fb_focusColor="#9bd823"
-                fancy:fb_fontIconResource="&#xf04b;"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="SHUFFLE PLAY"
-                fancy:fb_textColor="#FFFFFF" />
-
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_spotify_pause"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                fancy:fb_defaultColor="#7ab800"
-                fancy:fb_focusColor="#9bd823"
-                fancy:fb_fontIconResource="&#xf04c;"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="PAUSE"
-                fancy:fb_textColor="#FFFFFF" />
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_spotify_follow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                fancy:fb_defaultColor="#222326"
-                fancy:fb_focusColor="#424243"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="FOLLOW"
-                fancy:fb_borderColor="#88898c"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_textColor="#dfe0d9" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/section_twitter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#55acee"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="20dp" >
-
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_twitter_follow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:padding="5dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="2dp"
-                fancy:fb_defaultColor="#55acee"
-                fancy:fb_focusColor="#8cc9f8"
-                fancy:fb_iconResource="@drawable/twitter"
-                fancy:fb_text="Follow me on Twitter"
-                fancy:fb_textColor="#FFFFFF"/>
-
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_twitter_followers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="2dp"
-                fancy:fb_defaultColor="#55acee"
-                fancy:fb_focusColor="#8cc9f8"
-                fancy:fb_fontIconResource="@string/icon_user"
-                fancy:fb_fontIconSize="25sp"
-                fancy:fb_iconPosition="top"
-                fancy:fb_text="2145 followers"
-                fancy:fb_textColor="#FFFFFF"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ff5f69"
-            android:gravity="center"
-            android:paddingBottom="30dp"
-            android:paddingTop="30dp" >
-
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_create_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:padding="10dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="#ff5f69"
-                fancy:fb_focusColor="#ff838b"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Create an account"
-                fancy:fb_textColor="#FFFFFF" >
-            </com.rilixtech.MaterialFancyButton>
-
-            <com.rilixtech.MaterialFancyButton
-                android:id="@+id/btn_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                fancy:fb_borderColor="#FFFFFF"
-                fancy:fb_borderWidth="1dp"
-                fancy:fb_defaultColor="#ff5f69"
-                fancy:fb_focusColor="#ff838b"
-                fancy:fb_fontIconResource="@string/icon_user"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Login"
-                fancy:fb_textColor="#FFFFFF" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="20dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_download"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:padding="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_defaultColor="#3b414f"
-                    fancy:fb_focusColor="#8cc9f8"
-                    fancy:fb_fontIconResource="@string/icon_download"
-                    fancy:fb_fontIconSize="25sp"
-                    fancy:fb_iconPosition="top"
-                    fancy:fb_radius="10dp"
-                    fancy:fb_text="Download the file"
-                    fancy:fb_textColor="#FFFFFF">
-                </com.rilixtech.MaterialFancyButton>
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_upload"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:padding="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_defaultColor="#3b414f"
-                    fancy:fb_focusColor="#8cc9f8"
-                    fancy:fb_fontIconResource="@string/icon_upload"
-                    fancy:fb_fontIconSize="25sp"
-                    fancy:fb_radius="10dp"
-                    fancy:fb_iconPosition="bottom"
-                    fancy:fb_text="Upload"
-                    fancy:fb_textColor="#FFFFFF">
-                </com.rilixtech.MaterialFancyButton>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_send"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:padding="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_defaultColor="#40a75a"
-                    fancy:fb_focusColor="#8cc9f8"
-                    fancy:fb_fontIconResource="@string/icon_user"
-                    fancy:fb_fontIconSize="30sp"
-                    fancy:fb_iconPosition="left"
-                    fancy:fb_text="Send"
-                    fancy:fb_radius="10dp"
-                    fancy:fb_textColor="#FFFFFF">
-                </com.rilixtech.MaterialFancyButton>
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_send_disabled"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:padding="10dp"
-                    android:enabled="false"
-                    fancy:fb_borderColor="#FFFFFF"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_defaultColor="#40a75a"
-                    fancy:fb_focusColor="#8cc9f8"
-                    fancy:fb_disabledColor="#e4e4e4"
-                    fancy:fb_fontIconResource="@string/icon_user"
-                    fancy:fb_fontIconSize="30sp"
-                    fancy:fb_iconPosition="left"
-                    fancy:fb_text="Send Disabled"
-                    fancy:fb_radius="10dp"
-                    fancy:fb_textColor="#FFFFFF">
-                </com.rilixtech.MaterialFancyButton>
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_android_prefix"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:padding="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_defaultColor="#40a75a"
-                    fancy:fb_focusColor="#8cc9f8"
-                    fancy:fb_disabledColor="#e4e4e4"
-                    fancy:fb_radius="10dp"
-                    android:textSize="10sp"
-                    android:textAllCaps="true"
-                    android:text="@string/android_prefix"
-                    fancy:fb_textColor="#FFFFFF"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_decline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:padding="10dp"
-                    fancy:fb_borderColor="#FFFFFF"
-                    fancy:fb_borderWidth="0dp"
-                    fancy:fb_defaultColor="#d86262"
-                    fancy:fb_focusColor="#2e5071"
-                    fancy:fb_fontIconResource="@string/icon_mute"
-                    fancy:fb_fontIconSize="25dp"
-                    fancy:fb_iconPosition="right"
-                    fancy:fb_radius="30dp"
-                    fancy:fb_text="Mute"
-                    fancy:fb_textColor="#ffffff" />
-
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_answer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:gravity="right"
-                    android:padding="10dp"
-                    fancy:fb_defaultColor="#7ed862"
-                    fancy:fb_focusColor="#2e5071"
-                    fancy:fb_fontIconResource="@string/icon_answer"
-                    fancy:fb_fontIconSize="25dp"
-                    fancy:fb_iconPosition="right"
-                    fancy:fb_radius="30dp"
-                    fancy:fb_text="Answer the call"
-                    fancy:fb_textColor="#ffffff" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="20dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#55acee">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ghost_button_title"
-                    android:layout_gravity="center"
-                    android:textSize="20sp"
-                    android:textColor="#ff000000"/>
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_facebook_follow"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:padding="10dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="1dp"
+          fancy:fb_defaultColor="#3b5998"
+          fancy:fb_focusColor="#5577bd"
+          fancy:fb_icon="@string/faw_star"
+          fancy:fb_fontIconSize="25sp"
+          fancy:fb_iconPosition="right"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="Follow Mehdi Sakout"
+          fancy:fb_textColor="#FFFFFF"
+          />
+    </LinearLayout>
 
 
-            </LinearLayout>
+    <LinearLayout
+        android:id="@+id/section_socialnetworks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:minHeight="200dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
 
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginBottom="15dp"
+          android:gravity="center"
+          >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_android"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#55acee"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_iconResource="@drawable/twitter"
+            fancy:fb_radius="64dp"
+            fancy:fb_textColor="#FFFFFF"
+            />
 
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_dropbox"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#007ee5"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_iconResource="@drawable/dropbox"
+            fancy:fb_radius="64dp"
+            >
+        </com.rilixtech.MaterialFancyButton>
+      </LinearLayout>
 
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_ghost_deposit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:gravity="right"
-                    android:padding="15dp"
-                    android:paddingRight="20dp"
-                    android:paddingLeft="20dp"
-                    fancy:fb_ghost="true"
-                    fancy:fb_focusColor="#fffffefa"
-                    fancy:fb_fontIconResource="@string/icon_creditcard"
-                    fancy:fb_fontIconSize="15sp"
-                    fancy:fb_radius="40dp"
-                    fancy:fb_iconPosition="right"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_borderColor="#ffe7e6e2"
-                    fancy:fb_text="Deposit"
-                    fancy:fb_textColor="#ffffff" />
+      <LinearLayout
+          android:id="@+id/sn_pos2"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginBottom="15dp"
+          android:gravity="center"
+          android:orientation="horizontal"
+          >
 
-                <com.rilixtech.MaterialFancyButton
-                    android:id="@+id/btn_ghost_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:gravity="right"
-                    android:padding="15dp"
-                    android:paddingRight="30dp"
-                    android:paddingLeft="30dp"
-                    fancy:fb_ghost="true"
-                    fancy:fb_focusColor="#ffa8f192"
-                    fancy:fb_fontIconResource="@string/icon_envelope"
-                    fancy:fb_fontIconSize="15sp"
-                    fancy:fb_radius="25dp"
-                    fancy:fb_iconPosition="right"
-                    fancy:fb_borderWidth="2dp"
-                    fancy:fb_borderColor="#7ed862"
-                    fancy:fb_text="Contact"
-                    fancy:fb_textColor="#ffa8f192" />
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_instagram"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#3f729b"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_iconResource="@drawable/instagram"
+            fancy:fb_radius="64dp"
+            >
+        </com.rilixtech.MaterialFancyButton>
 
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_sound"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#ff8800"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_iconResource="@drawable/soundcloud"
+            fancy:fb_radius="64dp"
+            >
+        </com.rilixtech.MaterialFancyButton>
+      </LinearLayout>
 
-            </LinearLayout>
+      <LinearLayout
+          android:id="@+id/LinearLayout1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="horizontal"
+          >
 
-        </LinearLayout>
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_gplus"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#dd4b39"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_iconResource="@drawable/gplus"
+            fancy:fb_radius="64dp"
+            >
+        </com.rilixtech.MaterialFancyButton>
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#000000"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_iconResource="@drawable/github"
+            fancy:fb_radius="64dp"
+            >
+        </com.rilixtech.MaterialFancyButton>
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/section_spotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#222326"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_spotify"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:paddingBottom="10dp"
+          android:paddingLeft="20dp"
+          android:paddingRight="20dp"
+          android:paddingTop="10dp"
+          fancy:fb_defaultColor="#7ab800"
+          fancy:fb_focusColor="#9bd823"
+          fancy:fb_iconFont="fontawesome.ttf"
+          fancy:fb_fontIconResource="&#xf04b;"
+          fancy:fb_iconPosition="left"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="SHUFFLE PLAY"
+          fancy:fb_textColor="#FFFFFF"
+          />
+
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_spotify_pause"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:paddingBottom="10dp"
+          android:paddingLeft="20dp"
+          android:paddingRight="20dp"
+          android:paddingTop="10dp"
+          fancy:fb_defaultColor="#7ab800"
+          fancy:fb_focusColor="#9bd823"
+          fancy:fb_iconFont="fontawesome.ttf"
+          fancy:fb_fontIconResource="&#xf04c;"
+          fancy:fb_iconPosition="left"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="PAUSE"
+          fancy:fb_textColor="#FFFFFF"
+          />
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_spotify_follow"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingBottom="10dp"
+          android:paddingLeft="20dp"
+          android:paddingRight="20dp"
+          android:paddingTop="10dp"
+          fancy:fb_borderColor="#88898c"
+          fancy:fb_borderWidth="1dp"
+          fancy:fb_defaultColor="#222326"
+          fancy:fb_focusColor="#424243"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="FOLLOW"
+          fancy:fb_textColor="#dfe0d9"
+          />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/section_twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55acee"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_twitter_follow"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="20dp"
+          android:padding="5dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="2dp"
+          fancy:fb_defaultColor="#55acee"
+          fancy:fb_focusColor="#8cc9f8"
+          fancy:fb_iconResource="@drawable/twitter"
+          fancy:fb_text="Follow me on Twitter"
+          fancy:fb_textColor="#FFFFFF"
+          />
+
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_twitter_followers"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:padding="10dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="2dp"
+          fancy:fb_defaultColor="#55acee"
+          fancy:fb_focusColor="#8cc9f8"
+          fancy:fb_iconFont="fontawesome.ttf"
+          fancy:fb_fontIconResource="@string/icon_user"
+          fancy:fb_fontIconSize="25sp"
+          fancy:fb_iconPosition="top"
+          fancy:fb_text="2145 followers"
+          fancy:fb_textColor="#FFFFFF"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff5f69"
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        >
+
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_create_account"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="20dp"
+          android:padding="10dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="1dp"
+          fancy:fb_defaultColor="#ff5f69"
+          fancy:fb_focusColor="#ff838b"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="Create an account"
+          fancy:fb_textColor="#FFFFFF"
+          >
+      </com.rilixtech.MaterialFancyButton>
+
+      <com.rilixtech.MaterialFancyButton
+          android:id="@+id/btn_login"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingBottom="10dp"
+          android:paddingLeft="20dp"
+          android:paddingRight="20dp"
+          android:paddingTop="10dp"
+          fancy:fb_borderColor="#FFFFFF"
+          fancy:fb_borderWidth="1dp"
+          fancy:fb_defaultColor="#ff5f69"
+          fancy:fb_focusColor="#ff838b"
+          fancy:fb_icon="@string/faw_user"
+          fancy:fb_iconPosition="left"
+          fancy:fb_radius="30dp"
+          fancy:fb_text="Login"
+          fancy:fb_textColor="#FFFFFF"
+          />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#3b414f"
+            fancy:fb_focusColor="#8cc9f8"
+            fancy:fb_icon="@string/faw_download"
+            fancy:fb_fontIconSize="25sp"
+            fancy:fb_iconPosition="top"
+            fancy:fb_radius="10dp"
+            fancy:fb_text="Download the file"
+            fancy:fb_textColor="#FFFFFF"
+            >
+        </com.rilixtech.MaterialFancyButton>
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#3b414f"
+            fancy:fb_focusColor="#8cc9f8"
+            fancy:fb_icon="@string/faw_upload"
+            fancy:fb_fontIconSize="25sp"
+            fancy:fb_iconPosition="bottom"
+            fancy:fb_radius="10dp"
+            fancy:fb_text="Upload"
+            fancy:fb_textColor="#FFFFFF"
+            >
+        </com.rilixtech.MaterialFancyButton>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#40a75a"
+            fancy:fb_focusColor="#8cc9f8"
+            fancy:fb_icon="@string/faw_user"
+            fancy:fb_fontIconSize="30sp"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="10dp"
+            fancy:fb_text="Send"
+            fancy:fb_textColor="#FFFFFF"
+            >
+        </com.rilixtech.MaterialFancyButton>
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_send_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:enabled="false"
+            android:padding="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#40a75a"
+            fancy:fb_disabledColor="#e4e4e4"
+            fancy:fb_focusColor="#8cc9f8"
+            fancy:fb_icon="@string/faw_user"
+            fancy:fb_fontIconSize="30sp"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="10dp"
+            fancy:fb_text="Send Disabled"
+            fancy:fb_textColor="#FFFFFF"
+            >
+        </com.rilixtech.MaterialFancyButton>
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_android_prefix"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="@string/android_prefix"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_icon="@string/faw_android"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#40a75a"
+            fancy:fb_disabledColor="#e4e4e4"
+            fancy:fb_focusColor="#8cc9f8"
+            fancy:fb_radius="10dp"
+            fancy:fb_textColor="#FFFFFF"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="0dp"
+            fancy:fb_defaultColor="#d86262"
+            fancy:fb_focusColor="#2e5071"
+            fancy:fb_iconFont="fontawesome.ttf"
+            fancy:fb_fontIconResource="@string/icon_mute"
+            fancy:fb_fontIconSize="25dp"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Mute"
+            fancy:fb_textColor="#ffffff"
+            />
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#7ed862"
+            fancy:fb_focusColor="#2e5071"
+            fancy:fb_iconFont="fontawesome.ttf"
+            fancy:fb_fontIconResource="@string/icon_answer"
+            fancy:fb_fontIconSize="25dp"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Answer the call"
+            fancy:fb_textColor="#ffffff"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55acee"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="15dp"
+          android:orientation="vertical"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ghost_button_title"
+            android:textColor="#ff000000"
+            android:textSize="20sp"
+            />
+
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="15dp"
+          android:gravity="center"
+          android:orientation="horizontal"
+          >
+
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_ghost_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:padding="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            fancy:fb_borderColor="#ffe7e6e2"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_focusColor="#fffffefa"
+            fancy:fb_iconFont="fontawesome.ttf"
+            fancy:fb_fontIconResource="@string/icon_creditcard"
+            fancy:fb_fontIconSize="15sp"
+            fancy:fb_ghost="true"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="40dp"
+            fancy:fb_text="Deposit"
+            fancy:fb_textColor="#ffffff"
+            />
+
+        <com.rilixtech.MaterialFancyButton
+            android:id="@+id/btn_ghost_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:gravity="right"
+            android:padding="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            fancy:fb_borderColor="#7ed862"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_focusColor="#ffa8f192"
+            fancy:fb_iconFont="fontawesome.ttf"
+            fancy:fb_fontIconResource="@string/icon_envelope"
+            fancy:fb_fontIconSize="15sp"
+            fancy:fb_ghost="true"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="25dp"
+            fancy:fb_text="Contact"
+            fancy:fb_textColor="#ffa8f192"
+            />
+
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
 
 </ScrollView>

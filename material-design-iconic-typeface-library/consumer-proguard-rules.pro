@@ -1,0 +1,1 @@
+-keep class com.rilixtech.material_design_iconic_typeface_library.MaterialDesignIconic { *; }

@@ -16,13 +16,17 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.rilixtech.typeface.IIcon;
+import com.rilixtech.typeface.ITypeface;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MaterialFancyButton extends LinearLayout {
@@ -49,6 +53,7 @@ public class MaterialFancyButton extends LinearLayout {
   private int mFontIconSize = Utils.spToPx(getContext(), 15);
   private String mFontIcon = null;
   private int mIconPosition = 1;
+  private String mIcon = null;
 
   private int mIconPaddingLeft = 10;
   private int mIconPaddingRight = 10;
@@ -74,8 +79,8 @@ public class MaterialFancyButton extends LinearLayout {
   public static final int POSITION_TOP = 3;
   public static final int POSITION_BOTTOM = 4;
 
-  private String mDefaultIconFont = "fontawesome.ttf";
-  private String mDefaultTextFont = "robotoregular.ttf";
+  private String mDefaultIconFont = null; //"fontawesome.ttf";
+  private String mDefaultTextFont = null; //"robotoregular.ttf";
 
   private ImageView mIconView;
   private TextView mFontIconView;
@@ -127,6 +132,10 @@ public class MaterialFancyButton extends LinearLayout {
     mTextView = setupTextView();
     mIconView = setupIconView();
     mFontIconView = setupFontIconView();
+    if(mIcon != null) {
+      Log.d(TAG, "mIcon = " + mIcon);
+      setIcon(mIcon);
+    }
 
     this.removeAllViews();
     setupBackground();
@@ -174,7 +183,12 @@ public class MaterialFancyButton extends LinearLayout {
       mText = "Fancy Button";
     }
 
-    TextView textView = new TextView(getContext());
+    TextView textView;
+    if(mTextView == null) {
+      textView = new TextView(getContext());
+    } else {
+      textView = mTextView;
+    }
     textView.setText(mText);
 
     textView.setGravity(mDefaultTextGravity);
@@ -241,7 +255,13 @@ public class MaterialFancyButton extends LinearLayout {
    */
   private ImageView setupIconView() {
     if (mIconResource != null) {
-      ImageView iconView = new ImageView(getContext());
+      ImageView iconView;
+      if(mIconView == null) {
+        iconView = new ImageView(getContext());
+      } else {
+        iconView = mIconView;
+      }
+      //ImageView iconView = new ImageView(getContext());
       iconView.setImageDrawable(mIconResource);
       iconView.setPadding(mIconPaddingLeft, mIconPaddingTop, mIconPaddingRight, mIconPaddingBottom);
 
@@ -347,6 +367,8 @@ public class MaterialFancyButton extends LinearLayout {
       mIconResource = null;
     }
 
+    mIcon = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_icon);
+
     if (fontIcon != null) mFontIcon = fontIcon;
 
     if (text != null) mText = mTextAllCaps ? text.toUpperCase() : text;
@@ -384,7 +406,7 @@ public class MaterialFancyButton extends LinearLayout {
     defaultDrawable.setCornerRadius(mRadius);
     if (mGhost) {
       // Hollow Background
-      if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+      if (android.os.Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
         defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
       } else {
         defaultDrawable.setColor(getResources().getColor(android.R.color.transparent, getContext().getTheme()));
@@ -423,7 +445,6 @@ public class MaterialFancyButton extends LinearLayout {
     }
 
     if (mUseRippleEffect && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
       this.setBackground(getRippleDrawable(defaultDrawable, focusDrawable, disabledDrawable));
     } else {
 
@@ -728,6 +749,34 @@ public class MaterialFancyButton extends LinearLayout {
     }
   }
 
+  public void setIcon(Character icon) {
+    setIcon(icon.toString());
+  }
+
+  public void setIcon(String icon) {
+      try {
+        Log.d(TAG, "icon.substring(0, 3) = " + icon.substring(0, 3));
+        ITypeface font = Iconics.findFont(getContext().getApplicationContext(), icon.substring(0, 3));
+        Log.d(TAG, "Font characters = " + font.getCharacters().size());
+        icon = icon.replace("-", "_");
+        setIcon(font.getIcon(icon));
+        Log.d(TAG, font.getIcon(icon).getTypeface().getDescription());
+      } catch (Exception ex) {
+        Log.e(TAG, "Wrong icon name: " + icon);
+      }
+    //setIconResource(icon);
+  }
+
+  public void setIcon(IIcon icon) {
+      ITypeface typeface = icon.getTypeface();
+    Log.d(TAG, "Typeface = " + icon.getTypeface().getAuthor());
+      //mIconPaint.setTypeface(typeface.getTypeface(mContext));
+    mIconTypeFace = typeface.getTypeface(getContext().getApplicationContext());
+
+    setIconResource(String.valueOf(icon.getCharacter()));
+    //mFontIconView.setText(icon.getCharacter());
+  }
+
   /**
    * Set Icon size of the button (for only font icons) in sp
    *
@@ -817,7 +866,7 @@ public class MaterialFancyButton extends LinearLayout {
    * Place your icon fonts in assets
    */
   @SuppressWarnings("unused")
-  public void setCustomIconFont(String fontName) {
+  public void setIconFont(String fontName) {
 
     mIconTypeFace = Utils.findFont(getContext(), fontName, mDefaultIconFont);
 

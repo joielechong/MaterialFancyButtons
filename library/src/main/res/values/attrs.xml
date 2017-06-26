@@ -19,6 +19,7 @@
 
     <attr format="dimension" name="fb_textSize"/>
     <attr format="integer" name="fb_iconResource"/>
+    <attr format="string" name="fb_icon"/>
     <attr format="string" name="fb_fontIconResource"/>
     <attr format="dimension" name="fb_fontIconSize"/>
     <attr format="enum" name="fb_iconPosition">

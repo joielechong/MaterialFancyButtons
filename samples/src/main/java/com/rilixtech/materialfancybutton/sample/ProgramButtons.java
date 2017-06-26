@@ -9,8 +9,22 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.rilixtech.MaterialFancyButton;
+import com.rilixtech.community_material_typeface_library.CommunityMaterial;
+import com.rilixtech.devicon_typeface_library.DevIcon;
+import com.rilixtech.entypo_typeface_library.Entypo;
+import com.rilixtech.foundation_icons_typeface_library.FoundationIcons;
+import com.rilixtech.google_material_typeface_library.GoogleMaterial;
+import com.rilixtech.ionicons_typeface_library.Ionicons;
+import com.rilixtech.material_design_iconic_typeface_library.MaterialDesignIconic;
+import com.rilixtech.meteocons_typeface_library.Meteoconcs;
+import com.rilixtech.octicons_typeface_library.Octicons;
+import com.rilixtech.pixeden_7_stroke_typeface_library.Pixeden7Stroke;
+import com.rilixtech.typeicons_typeface_library.Typeicons;
+import com.rilixtech.weather_icons_typeface_library.WeatherIcons;
 
 public class ProgramButtons extends AppCompatActivity {
+
+  public static final String TAG = ProgramButtons.class.getSimpleName();
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -22,7 +36,7 @@ public class ProgramButtons extends AppCompatActivity {
     facebookLoginBtn.setFocusBackgroundColor(Color.parseColor("#5474b8"));
     facebookLoginBtn.setTextSize(17);
     facebookLoginBtn.setRadius(5);
-    facebookLoginBtn.setIconResource("\uf082");
+    facebookLoginBtn.setIcon(DevIcon.Icon.dev_zend_plain);
     facebookLoginBtn.setIconPosition(MaterialFancyButton.POSITION_LEFT);
     facebookLoginBtn.setFontIconSize(30);
 
@@ -32,6 +46,7 @@ public class ProgramButtons extends AppCompatActivity {
     foursquareBtn.setFocusBackgroundColor(Color.parseColor("#228fcb"));
     foursquareBtn.setTextSize(17);
     foursquareBtn.setRadius(5);
+    foursquareBtn.setIconFont("fontawesome.ttf");
     foursquareBtn.setIconResource("\uf180");
     foursquareBtn.setIconPosition(MaterialFancyButton.POSITION_TOP);
     foursquareBtn.setFontIconSize(30);

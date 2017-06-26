@@ -8,7 +8,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:id="@+id/container"
     android:orientation="vertical"
-    tools:context="mehdi.sakout.fancybuttons.samples.com.rilixtech.materialfancybutton.sample.ProgramButtons">
+    tools:context="com.rilixtech.materialfancybutton.sample.ProgramButtons">
 
 
 

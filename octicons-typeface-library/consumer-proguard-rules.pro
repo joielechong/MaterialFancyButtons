@@ -1,0 +1,1 @@
+-keep class com.rilixtech.octicons_typeface_library.Octicons { *; }

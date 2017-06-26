@@ -1,0 +1,1 @@
+-keep class com.rilixtech.ionicons_typeface_library.Ionicons { *; }

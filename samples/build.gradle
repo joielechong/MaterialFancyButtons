@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
+group "com.rilixtech"
 android {
 
-  compileSdkVersion rootProject.ext.sdkVersion
+  compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
     minSdkVersion rootProject.ext.minSdkVersion
-    targetSdkVersion rootProject.ext.sdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode rootProject.ext.libraryVersionCode
     versionName rootProject.ext.libraryVersion
   }
@@ -24,4 +25,18 @@ dependencies {
   compile project(':library')
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile project(path: ':devicon-typeface-library')
+  compile project(path: ':fontawesome-typeface-library')
+  compile project(path: ':community-material-typeface-library')
+  compile project(path: ':entypo-typeface-library')
+  compile project(path: ':foundation-icons-typeface-library')
+  compile project(path: ':google-material-typeface-library')
+  compile project(path: ':google-material-typeface-library')
+  compile project(path: ':ionicons-typeface-library')
+  compile project(path: ':material-design-iconic-typeface-library')
+  compile project(path: ':meteocons-typeface-library')
+  compile project(path: ':octicons-typeface-library')
+  compile project(path: ':pixeden-7-stroke-typeface-library')
+  compile project(path: ':typeicons-typeface-library')
+  compile project(path: ':weather-icons-typeface-library')
 }

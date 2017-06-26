@@ -1,0 +1,1 @@
+-keep class com.rilixtech.pixeden_7_stroke_typeface_library.Pixeden7Stroke { *; }
