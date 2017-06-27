@@ -1,4 +1,4 @@
-include ':samples', ':library'
+include ':samples', ':library', ':icontext2string'
 include ':fontawesome-typeface-library'
 include ':meteocons-typeface-library'
 include ':weather-icons-typeface-library'

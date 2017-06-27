@@ -24,6 +24,12 @@
             android:name=".ProgramButtons"
             android:label="@string/title_activity_program_buttons" >
         </activity>
+
+        <activity
+            android:name=".CommunityMaterialButtons"
+            android:label="@string/title_activity_community_material_buttons" >
+        </activity>
+
     </application>
 
 </manifest>

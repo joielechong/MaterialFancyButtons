@@ -64,11 +64,11 @@ compile 'com.mikepenz:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
 ### Usage
 
-1 - Include MaterialFancyButtons namespace to the root element:
+1 - Include MaterialFancyButton namespace to the root element:
 
 	xmlns:fancy="http://schemas.android.com/apk/res-auto"
 
-2 - Add the FancyButton View with custom params:
+2 - Add the MaterialFancyButton View with custom params:
 
 	<com.rilixtech.MaterialFancyButton
 	android:id="@+id/btn_preview"
@@ -112,7 +112,7 @@ compile 'com.mikepenz:fontawesome-typeface:4.7.0.1@aar'
 ```
 then you can use a more simpler way:
 
-    fancy:fb_icon="@string/faw_star"
+    fancy:fb_icon="faw_star"
 
 so it will be look like this:
 
@@ -120,10 +120,10 @@ so it will be look like this:
 	android:id="@+id/btn_preview"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	fancy:fb_icon="@string/faw_star"/>
+	fancy:fb_icon="faw_star"/>
 
 This is the recommended way, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
-
+Please be noted that when using fancy:fb_icon you don't need to use fancy:fb_iconFont and fancy:fb_fontIconResource. Iff both value is present, they will be override and ignored.
 ####  Supported Attributes
 
 | XML Attribute        | Java Attribute           | Description  |

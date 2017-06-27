@@ -1,4 +1,4 @@
-package com.rilixtech;
+package com.rilixtech.utils;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -10,21 +10,21 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-class Utils {
+public class FontUtil {
 
-  private static final String TAG = Utils.class.getSimpleName();
+  private static final String TAG = FontUtil.class.getSimpleName();
 
   private static Map<String, Typeface> cachedFontMap = new HashMap<>();
 
-  static int pxToSp(final Context context, final float px) {
+  public static int pxToSp(final Context context, final float px) {
     return Math.round(px / context.getResources().getDisplayMetrics().scaledDensity);
   }
 
-  static int spToPx(final Context context, final float sp) {
+  public static int spToPx(final Context context, final float sp) {
     return Math.round(sp * context.getResources().getDisplayMetrics().scaledDensity);
   }
 
-  static Typeface findFont(Context context, String fontPath, String defaultFontPath) {
+  public static Typeface findFont(Context context, String fontPath, String defaultFontPath) {
 
     if (fontPath == null) {
       return Typeface.DEFAULT;

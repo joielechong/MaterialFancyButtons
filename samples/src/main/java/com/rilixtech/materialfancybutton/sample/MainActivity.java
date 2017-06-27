@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
 
-  String[] listItems = { "XML buttons", "Programmatically Buttons", };
+  String[] listItems = { "XML buttons", "Programmatically Buttons", "Community Material Buttons"};
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -49,6 +49,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 1:
         Intent intentProg = new Intent(MainActivity.this, ProgramButtons.class);
         startActivity(intentProg);
+        break;
+      case 2:
+        Intent intentCommunity = new Intent(MainActivity.this, CommunityMaterialButtons.class);
+        startActivity(intentCommunity);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");
