@@ -11,14 +11,22 @@ import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
 
-  String[] listItems = { "XML buttons", "Programmatically Buttons", "Community Material Buttons"};
+  //private String[] listItems = { "XML buttons", "Programmatically Buttons", "Community Material Buttons", "Devicon Buttons" };
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    setListAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems));
+    setListAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, getListItems()));
     getListView().setOnItemClickListener(this);
+  }
+
+  private String[] getListItems() {
+    String[] listItems = {getString(R.string.title_activity_xml_buttons),
+    getString(R.string.title_activity_program_buttons),
+        getString(R.string.title_activity_community_material_buttons),
+        getString(R.string.title_activity_devicon_buttons)};
+    return listItems;
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,6 +61,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 2:
         Intent intentCommunity = new Intent(MainActivity.this, CommunityMaterialButtons.class);
         startActivity(intentCommunity);
+        break;
+      case 3:
+        Intent intentDevIcon = new Intent(MainActivity.this, DeviconButtons.class);
+        startActivity(intentDevIcon);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");

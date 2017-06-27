@@ -7,6 +7,7 @@
     <string name="title_activity_xml_buttons">XmlButtons</string>
     <string name="title_activity_program_buttons">ProgramButtons</string>
     <string name="title_activity_community_material_buttons">Community Material Buttons</string>
+    <string name="title_activity_devicon_buttons">Devicon Buttons</string>
 
     <string name="icon_user">&#xf007;</string>
     <string name="icon_add">&#xf067;</string>

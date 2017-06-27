@@ -31,12 +31,12 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="communitymaterial.ttf"
-          fancy:fb_fontIconResource="&#xf002;"
+          fancy:fb_iconFont="devicon.ttf"
+          fancy:fb_fontIconResource="&#xe607;"
           fancy:fb_fontIconSize="15sp"
           fancy:fb_iconPosition="right"
           fancy:fb_radius="30dp"
-          fancy:fb_text="Free access Point"
+          fancy:fb_text="Redis"
           fancy:fb_textColor="#FFFFFF"
           />
 
@@ -50,14 +50,14 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="communitymaterial.ttf"
-          fancy:fb_fontIconResource="&#xf01C;"
+          fancy:fb_iconFont="devicon.ttf"
+          fancy:fb_fontIconResource="&#xe841;"
           fancy:fb_fontIconSize="25sp"
           fancy:fb_iconPaddingLeft="20dp"
           fancy:fb_iconPaddingRight="0dp"
           fancy:fb_iconPosition="right"
           fancy:fb_radius="30dp"
-          fancy:fb_text="Air baloon"
+          fancy:fb_text="Java"
           fancy:fb_textColor="#FFFFFF"
           />
 
@@ -71,12 +71,12 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="communitymaterial.ttf"
-          fancy:fb_fontIconResource="&#xf496;"
+          fancy:fb_iconFont="devicon.ttf"
+          fancy:fb_fontIconResource="&#xeb60;"
           fancy:fb_fontIconSize="25sp"
           fancy:fb_iconPosition="right"
           fancy:fb_radius="30dp"
-          fancy:fb_text="Share"
+          fancy:fb_text="MySQL"
           fancy:fb_textColor="#FFFFFF"
           />
     </LinearLayout>
@@ -102,10 +102,10 @@
           android:paddingTop="10dp"
           fancy:fb_defaultColor="#7ab800"
           fancy:fb_focusColor="#9bd823"
-          fancy:fb_icon="@string/cmd_account_network"
+          fancy:fb_icon="@string/dev_atom_plain"
           fancy:fb_iconPosition="left"
           fancy:fb_radius="30dp"
-          fancy:fb_text="Account Network"
+          fancy:fb_text="Atom"
           fancy:fb_textColor="#FFFFFF"
           />
 
@@ -120,10 +120,10 @@
           android:paddingTop="10dp"
           fancy:fb_defaultColor="#7ab800"
           fancy:fb_focusColor="#9bd823"
-          fancy:fb_icon="@string/cmd_json"
+          fancy:fb_icon="@string/dev_linux_plain"
           fancy:fb_iconPosition="left"
           fancy:fb_radius="30dp"
-          fancy:fb_text="JSON"
+          fancy:fb_text="Linux"
           fancy:fb_textColor="#FFFFFF"
           />
       <com.rilixtech.MaterialFancyButton
@@ -138,9 +138,9 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#222326"
           fancy:fb_focusColor="#424243"
-          fancy:fb_icon="@string/cmd_xbox"
+          fancy:fb_icon="@string/dev_android_plain_wordmark"
           fancy:fb_radius="30dp"
-          fancy:fb_text="XBox"
+          fancy:fb_text="Android"
           fancy:fb_textColor="#dfe0d9"
           />
     </LinearLayout>

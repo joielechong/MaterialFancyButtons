@@ -2,7 +2,6 @@
 <resources>
   <string name="define_font_community_material">com.rilixtech.community_material_typeface_library.CommunityMaterial</string>
 
-
   <string name="cmd_access_point">cmd_access_point</string>
   <string name="cmd_access_point_network">cmd_access_point_network</string>
   <string name="cmd_account">cmd_account</string>
