@@ -35,7 +35,7 @@
           fancy:fb_fontIconResource="&#xf002;"
           fancy:fb_fontIconSize="15sp"
           fancy:fb_iconPosition="right"
-          fancy:fb_radius="30dp"
+          fancy:mfb_radius="30dp"
           fancy:fb_text="Free access Point"
           fancy:fb_textColor="#FFFFFF"
           />
@@ -56,7 +56,7 @@
           fancy:fb_iconPaddingLeft="20dp"
           fancy:fb_iconPaddingRight="0dp"
           fancy:fb_iconPosition="right"
-          fancy:fb_radius="30dp"
+          fancy:mfb_radius="30dp"
           fancy:fb_text="Air baloon"
           fancy:fb_textColor="#FFFFFF"
           />
@@ -75,7 +75,7 @@
           fancy:fb_fontIconResource="&#xf496;"
           fancy:fb_fontIconSize="25sp"
           fancy:fb_iconPosition="right"
-          fancy:fb_radius="30dp"
+          fancy:mfb_radius="30dp"
           fancy:fb_text="Share"
           fancy:fb_textColor="#FFFFFF"
           />
@@ -104,7 +104,7 @@
           fancy:fb_focusColor="#9bd823"
           fancy:fb_icon="@string/cmd_account_network"
           fancy:fb_iconPosition="left"
-          fancy:fb_radius="30dp"
+          fancy:mfb_radius="30dp"
           fancy:fb_text="Account Network"
           fancy:fb_textColor="#FFFFFF"
           />
@@ -122,7 +122,7 @@
           fancy:fb_focusColor="#9bd823"
           fancy:fb_icon="@string/cmd_json"
           fancy:fb_iconPosition="left"
-          fancy:fb_radius="30dp"
+          fancy:mfb_radius="30dp"
           fancy:fb_text="JSON"
           fancy:fb_textColor="#FFFFFF"
           />
@@ -139,7 +139,7 @@
           fancy:fb_defaultColor="#222326"
           fancy:fb_focusColor="#424243"
           fancy:fb_icon="@string/cmd_xbox"
-          fancy:fb_radius="30dp"
+          fancy:mfb_radius="30dp"
           fancy:fb_text="XBox"
           fancy:fb_textColor="#dfe0d9"
           />

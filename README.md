@@ -1,5 +1,9 @@
 # Material Fancy Button
+
+Beautiful Fancy Button with endorphins.
+
 Icons, Borders, Radius ... for Android buttons
+
 [ ![jCenter](https://api.bintray.com/packages/medyo/maven/fancybuttons/images/download.svg) ](https://bintray.com/medyo/maven/fancybuttons/_latestVersion)  [![jitPack](https://jitpack.io/v/medyo/Fancybuttons.svg)](https://jitpack.io/#medyo/Fancybuttons)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FancyButtons-lightgrey.svg?style=flat)](http://android-arsenal.com/details/1/681)
 
@@ -146,13 +150,19 @@ Please be noted that when using fancy:fb_icon you don't need to use fancy:fb_ico
 | fancy:fb_disabledColor | setDisableBackgroundColor(int)      |    Disabled Color of button background|
 | fancy:fb_disabledTextColor | setDisableTextColor(int)      |    Disabled Color of button text|
 | fancy:fb_disabledBorderColor | setDisableBorderColor(int)      |    Disabled Color of button border|
-| fancy:fb_radius | setRadius(int)      |    Radius of the button|
+| fancy:mfb_radius | setRadius(int)      |    Radius of the button|
+| fancy:mfb_radiusTopLeft | setRadiusTopLeft(int)      |    Radius top left of the button|
+| fancy:mfb_radiusTopRight | setRadiusTopRight(int)      |    Radius top right of the button|
+| fancy:mfb_radiusBottomLeft | setRadiusBottomLeft(int)      |    Radius bottom left of the button|
+| fancy:mfb_radiusBottomRight | setRadiusBottomRight(int)      |    Radius bottom right of the button|
 | fancy:fb_iconPaddingLeft | setIconPadding(int,int,int,int)      |    Icon Padding|
 | fancy:fb_iconPaddingRight | setIconPadding(int,int,int,int)      |    Icon Padding|
 | fancy:fb_iconPaddingTop | setIconPadding(int,int,int,int)      |    Icon Padding|
 | fancy:fb_iconPaddingBottom | setIconPadding(int,int,int,int)      |    Icon Padding|
 | fancy:fb_ghost | setGhost(boolean)      |    Ghost (Hollow)|
 | fancy:fb_useSystemFont | setUsingSystemFont(boolean) | If enabled, the button title will ignore its custom font and use the default system font |
+
+For setting the radius of the button, you can also use `setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight)`
 
 Also you can use Attributes with default prefix (android:) which makes migrating of your project more fast.
 Default Attributes have more priority than Attributes with prefix fancy.
@@ -195,7 +205,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 		fancy:fb_iconFont="fontawesome.ttf"
 		fancy:fb_fontIconResource="&#xf04b;"
 		fancy:fb_iconPosition="left"
-		fancy:fb_radius="30dp"
+		fancy:mfb_radius="30dp"
 		fancy:fb_text="SHUFFLE PLAY"
 		fancy:fb_textColor="#FFFFFF" />
 
@@ -227,7 +237,7 @@ See the [example project](https://github.com/medyo/fancybuttons/tree/master/samp
 Just Paste your font inside `assets/fonts/` folder for Text fonts or inside `assets/iconfonts/` for icon fonts eg : entypo
 
 ## Contributions
-Fancybuttons needs you to build the missing features :
+MaterialFancyButtons needs you to build the missing features :
 * Supporting Circular buttons
 * Add elevation (Material Design)
 

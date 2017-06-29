@@ -64,7 +64,13 @@
     <attr format="color" name="fb_disabledColor"/>
     <attr format="color" name="fb_disabledTextColor"/>
     <attr format="color" name="fb_disabledBorderColor"/>
-    <attr format="dimension" name="fb_radius"/>
+
+    <attr format="dimension" name="mfb_radius"/>
+    <attr format="dimension" name="mfb_radiusTopLeft"/>
+    <attr format="dimension" name="mfb_radiusTopRight"/>
+    <attr format="dimension" name="mfb_radiusBottomLeft"/>
+    <attr format="dimension" name="mfb_radiusBottomRight"/>
+
     <attr format="boolean" name="fb_textAllCaps"/>
 
     <attr format="boolean" name="fb_ghost"/>
