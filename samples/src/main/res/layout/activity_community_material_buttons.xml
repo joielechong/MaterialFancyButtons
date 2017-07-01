@@ -21,7 +21,7 @@
         android:padding="20dp"
         >
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_facebook_like"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -31,16 +31,16 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="communitymaterial.ttf"
           fancy:fb_fontIconResource="&#xf002;"
           fancy:fb_fontIconSize="15sp"
+          fancy:fb_iconFont="communitymaterial.ttf"
           fancy:fb_iconPosition="right"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Free access Point"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_facebook_share"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -50,18 +50,18 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="communitymaterial.ttf"
           fancy:fb_fontIconResource="&#xf01C;"
           fancy:fb_fontIconSize="25sp"
+          fancy:fb_iconFont="communitymaterial.ttf"
           fancy:fb_iconPaddingLeft="20dp"
           fancy:fb_iconPaddingRight="0dp"
           fancy:fb_iconPosition="right"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Air baloon"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_facebook_follow"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -71,13 +71,13 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="communitymaterial.ttf"
           fancy:fb_fontIconResource="&#xf496;"
           fancy:fb_fontIconSize="25sp"
+          fancy:fb_iconFont="communitymaterial.ttf"
           fancy:fb_iconPosition="right"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Share"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
     </LinearLayout>
 
@@ -91,7 +91,7 @@
         android:orientation="vertical"
         android:padding="20dp"
         >
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_spotify"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -102,14 +102,14 @@
           android:paddingTop="10dp"
           fancy:fb_defaultColor="#7ab800"
           fancy:fb_focusColor="#9bd823"
-          fancy:fb_icon="@string/cmd_account_network"
+          fancy:fb_icon="@string/cmdi_account_network"
           fancy:fb_iconPosition="left"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Account Network"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_spotify_pause"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -120,13 +120,13 @@
           android:paddingTop="10dp"
           fancy:fb_defaultColor="#7ab800"
           fancy:fb_focusColor="#9bd823"
-          fancy:fb_icon="@string/cmd_json"
+          fancy:fb_icon="@string/cmdi_json"
           fancy:fb_iconPosition="left"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="JSON"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_spotify_follow"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -138,10 +138,10 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#222326"
           fancy:fb_focusColor="#424243"
-          fancy:fb_icon="@string/cmd_xbox"
-          fancy:mfb_radius="30dp"
+          fancy:fb_icon="@string/cmdi_xbox"
           fancy:fb_text="XBox"
           fancy:fb_textColor="#dfe0d9"
+          fancy:mfb_radius="30dp"
           />
     </LinearLayout>
 

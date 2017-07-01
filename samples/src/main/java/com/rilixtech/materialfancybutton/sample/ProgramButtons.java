@@ -8,19 +8,9 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.rilixtech.MaterialFancyButton;
-import com.rilixtech.community_material_typeface_library.CommunityMaterial;
-import com.rilixtech.devicon_typeface_library.DevIcon;
-import com.rilixtech.entypo_typeface_library.Entypo;
-import com.rilixtech.foundation_icons_typeface_library.FoundationIcons;
-import com.rilixtech.google_material_typeface_library.GoogleMaterial;
-import com.rilixtech.ionicons_typeface_library.Ionicons;
-import com.rilixtech.material_design_iconic_typeface_library.MaterialDesignIconic;
-import com.rilixtech.meteocons_typeface_library.Meteoconcs;
-import com.rilixtech.octicons_typeface_library.Octicons;
-import com.rilixtech.pixeden_7_stroke_typeface_library.Pixeden7Stroke;
-import com.rilixtech.typeicons_typeface_library.Typeicons;
-import com.rilixtech.weather_icons_typeface_library.WeatherIcons;
+import com.rilixtech.fontawesome_typeface.FontAwesome;
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
+import com.rilixtech.devicon_typeface.DevIcon;
 
 public class ProgramButtons extends AppCompatActivity {
 
@@ -30,13 +20,23 @@ public class ProgramButtons extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_program_buttons);
 
+    MaterialFancyButton fontAwesomeBtn = new MaterialFancyButton(this);
+    fontAwesomeBtn.setText("Login with Facebook");
+    fontAwesomeBtn.setBackgroundColor(Color.parseColor("#3b5998"));
+    fontAwesomeBtn.setFocusBackgroundColor(Color.parseColor("#5474b8"));
+    fontAwesomeBtn.setTextSize(17);
+    fontAwesomeBtn.setRadius(5);
+    fontAwesomeBtn.setIcon(FontAwesome.Icon.fawi_address_book);
+    fontAwesomeBtn.setIconPosition(MaterialFancyButton.POSITION_LEFT);
+    fontAwesomeBtn.setFontIconSize(30);
+
     MaterialFancyButton facebookLoginBtn = new MaterialFancyButton(this);
     facebookLoginBtn.setText("Login with Facebook");
     facebookLoginBtn.setBackgroundColor(Color.parseColor("#3b5998"));
     facebookLoginBtn.setFocusBackgroundColor(Color.parseColor("#5474b8"));
     facebookLoginBtn.setTextSize(17);
     facebookLoginBtn.setRadius(5);
-    facebookLoginBtn.setIcon(DevIcon.Icon.dev_zend_plain);
+    facebookLoginBtn.setIcon(DevIcon.Icon.devi_zend_plain);
     facebookLoginBtn.setIconPosition(MaterialFancyButton.POSITION_LEFT);
     facebookLoginBtn.setFontIconSize(30);
 
@@ -77,6 +77,7 @@ public class ProgramButtons extends AppCompatActivity {
     layoutParams.setMargins(0, 0, 0, 10);
 
     LinearLayout container = (LinearLayout) findViewById(R.id.container);
+    container.addView(fontAwesomeBtn, layoutParams);
     container.addView(facebookLoginBtn, layoutParams);
     container.addView(foursquareBtn, layoutParams);
     container.addView(installBtn, layoutParams);

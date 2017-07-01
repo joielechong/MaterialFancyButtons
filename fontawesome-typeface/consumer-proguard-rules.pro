@@ -1,0 +1,1 @@
+-keep class com.rilixtech.fontawesome_typeface.FontAwesome { *; }

@@ -1,1 +1,0 @@
--keep class com.rilixtech.devicon_typeface_library.DevIcon { *; }

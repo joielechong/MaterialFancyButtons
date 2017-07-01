@@ -33,7 +33,7 @@ public class IconText2String {
           //String countryName = data[2].replace(" \"", "\"");
           //countryName = countryName.replace("\"", "");
 
-          //<string name="faw_glass">faw_glass</string>
+          //<string name="fawi_glass">fawi_glass</string>
 
           bw.write("<string name=\"");
           bw.write(iconName);

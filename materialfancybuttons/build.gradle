@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+group = rootProject.ext.publishedGroupId
+version = rootProject.ext.materialFancyButtonLibraryVersionName
+
+android {
+
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.materialFancyButtonLibraryVersionCode
+    versionName rootProject.ext.materialFancyButtonLibraryVersionName
+
+    consumerProguardFiles 'proguard-rules.pro'
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+//  compile "com.android.support:support-annotations:$supportLibVersion"
+}
+
+if (project.hasProperty('pushall') || project.hasProperty('materialfancybuttonslibraryonly')) {
+  ext {
+
+    //For bintray and jcenter distribution
+    bintrayRepo = rootProject.ext.bintrayRepo
+    bintrayName = 'materialfancybuttons'
+
+    publishedGroupId = rootProject.ext.publishedGroupId
+    libraryName = 'materialfancybuttons'
+    artifact = 'materialfancybuttons' //This artifact name should be the same with library module name
+
+    libraryDescription = 'Beautiful Fancy Button on endorphins.'
+
+    siteUrl = rootProject.ext.siteUrl
+    gitUrl = rootProject.ext.gitUrl
+
+    libraryVersion = rootProject.ext.materialFancyButtonLibraryVersionName
+
+    developerId = rootProject.ext.developerId
+    developerName = rootProject.ext.developerName
+    developerEmail = rootProject.ext.developerEmail
+    organization = rootProject.ext.organization
+    licenseName =rootProject.ext.licenseName
+    licenseUrl =rootProject.ext.licenseUrl
+    allLicenses = [rootProject.ext.allLicenses]
+
+  }
+  apply from: '../install.gradle'
+  apply from: '../bintray.gradle'
+}
+

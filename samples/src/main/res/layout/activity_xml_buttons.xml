@@ -22,7 +22,7 @@
         android:padding="20dp"
         >
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_facebook_like"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -32,16 +32,17 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="fontawesome.ttf"
-          fancy:fb_fontIconResource="@string/icon_like"
           fancy:fb_fontIconSize="15sp"
+          fancy:fb_icon="@string/fawi_facebook"
           fancy:fb_iconPosition="right"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Like my facebook page"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
+      <!--fancy:fb_iconFont="fontawesome.ttf"-->
+      <!--fancy:fb_fontIconResource="@string/icon_like"-->
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_facebook_share"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -51,20 +52,21 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_iconFont="fontawesome.ttf"
-          fancy:fb_fontIconResource="@string/icon_share"
           fancy:fb_fontIconSize="25sp"
+          fancy:fb_icon="@string/fawi_share"
           fancy:fb_iconPaddingLeft="20dp"
           fancy:fb_iconPaddingRight="0dp"
           fancy:fb_iconPosition="right"
+          fancy:fb_text="Share the link"
+          fancy:fb_textColor="#FFFFFF"
           fancy:mfb_radius="30dp"
           fancy:mfb_radiusTopLeft="10dp"
           fancy:mfb_radiusTopRight="10dp"
-          fancy:fb_text="Share the link"
-          fancy:fb_textColor="#FFFFFF"
           />
+      <!--fancy:fb_iconFont="fontawesome.ttf"-->
+      <!--fancy:fb_fontIconResource="@string/icon_share"-->
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_facebook_follow"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -74,12 +76,12 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#3b5998"
           fancy:fb_focusColor="#5577bd"
-          fancy:fb_icon="@string/faw_star"
           fancy:fb_fontIconSize="25sp"
+          fancy:fb_icon="@string/fawi_star"
           fancy:fb_iconPosition="right"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Follow Mehdi Sakout"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
     </LinearLayout>
 
@@ -102,7 +104,7 @@
           android:gravity="center"
           >
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_android"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -113,11 +115,11 @@
             fancy:fb_iconPaddingLeft="0dp"
             fancy:fb_iconPaddingRight="0dp"
             fancy:fb_iconResource="@drawable/twitter"
-            fancy:mfb_radius="64dp"
             fancy:fb_textColor="#FFFFFF"
+            fancy:mfb_radius="64dp"
             />
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_dropbox"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -130,7 +132,7 @@
             fancy:fb_iconResource="@drawable/dropbox"
             fancy:mfb_radius="64dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
       </LinearLayout>
 
       <LinearLayout
@@ -142,7 +144,7 @@
           android:orientation="horizontal"
           >
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_instagram"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -155,9 +157,9 @@
             fancy:fb_iconResource="@drawable/instagram"
             fancy:mfb_radius="64dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_sound"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -170,7 +172,7 @@
             fancy:fb_iconResource="@drawable/soundcloud"
             fancy:mfb_radius="64dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
       </LinearLayout>
 
       <LinearLayout
@@ -181,7 +183,7 @@
           android:orientation="horizontal"
           >
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_gplus"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -194,9 +196,9 @@
             fancy:fb_iconResource="@drawable/gplus"
             fancy:mfb_radius="64dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_facebook"
             android:layout_width="64dp"
             android:layout_height="64dp"
@@ -209,7 +211,7 @@
             fancy:fb_iconResource="@drawable/github"
             fancy:mfb_radius="64dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
       </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -221,7 +223,7 @@
         android:orientation="vertical"
         android:padding="20dp"
         >
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_spotify"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -232,15 +234,16 @@
           android:paddingTop="10dp"
           fancy:fb_defaultColor="#7ab800"
           fancy:fb_focusColor="#9bd823"
-          fancy:fb_iconFont="fontawesome.ttf"
           fancy:fb_fontIconResource="&#xf04b;"
+          fancy:fb_iconFont="fontawesome.ttf"
           fancy:fb_iconPosition="left"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="SHUFFLE PLAY"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
 
-      <com.rilixtech.MaterialFancyButton
+
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_spotify_pause"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -251,14 +254,14 @@
           android:paddingTop="10dp"
           fancy:fb_defaultColor="#7ab800"
           fancy:fb_focusColor="#9bd823"
-          fancy:fb_iconFont="fontawesome.ttf"
           fancy:fb_fontIconResource="&#xf04c;"
+          fancy:fb_iconFont="fontawesome.ttf"
           fancy:fb_iconPosition="left"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="PAUSE"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_spotify_follow"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -270,9 +273,9 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#222326"
           fancy:fb_focusColor="#424243"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="FOLLOW"
           fancy:fb_textColor="#dfe0d9"
+          fancy:mfb_radius="30dp"
           />
     </LinearLayout>
     <LinearLayout
@@ -285,7 +288,7 @@
         android:padding="20dp"
         >
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_twitter_follow"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -300,7 +303,7 @@
           fancy:fb_textColor="#FFFFFF"
           />
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_twitter_followers"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -310,9 +313,9 @@
           fancy:fb_borderWidth="2dp"
           fancy:fb_defaultColor="#55acee"
           fancy:fb_focusColor="#8cc9f8"
-          fancy:fb_iconFont="fontawesome.ttf"
           fancy:fb_fontIconResource="@string/icon_user"
           fancy:fb_fontIconSize="25sp"
+          fancy:fb_iconFont="fontawesome.ttf"
           fancy:fb_iconPosition="top"
           fancy:fb_text="2145 followers"
           fancy:fb_textColor="#FFFFFF"
@@ -328,7 +331,7 @@
         android:paddingTop="30dp"
         >
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_create_account"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -338,13 +341,13 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#ff5f69"
           fancy:fb_focusColor="#ff838b"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Create an account"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           >
-      </com.rilixtech.MaterialFancyButton>
+      </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
-      <com.rilixtech.MaterialFancyButton
+      <com.rilixtech.materialfancybutton.MaterialFancyButton
           android:id="@+id/btn_login"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -356,11 +359,11 @@
           fancy:fb_borderWidth="1dp"
           fancy:fb_defaultColor="#ff5f69"
           fancy:fb_focusColor="#ff838b"
-          fancy:fb_icon="@string/faw_user"
+          fancy:fb_icon="@string/fawi_user"
           fancy:fb_iconPosition="left"
-          fancy:mfb_radius="30dp"
           fancy:fb_text="Login"
           fancy:fb_textColor="#FFFFFF"
+          fancy:mfb_radius="30dp"
           />
 
     </LinearLayout>
@@ -377,7 +380,7 @@
           android:layout_height="wrap_content"
           >
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_download"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -387,16 +390,16 @@
             fancy:fb_borderWidth="2dp"
             fancy:fb_defaultColor="#3b414f"
             fancy:fb_focusColor="#8cc9f8"
-            fancy:fb_icon="@string/faw_download"
             fancy:fb_fontIconSize="25sp"
+            fancy:fb_icon="@string/fawi_download"
             fancy:fb_iconPosition="top"
-            fancy:mfb_radius="10dp"
             fancy:fb_text="Download the file"
             fancy:fb_textColor="#FFFFFF"
+            fancy:mfb_radius="10dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_upload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -406,14 +409,14 @@
             fancy:fb_borderWidth="2dp"
             fancy:fb_defaultColor="#3b414f"
             fancy:fb_focusColor="#8cc9f8"
-            fancy:fb_icon="@string/faw_upload"
             fancy:fb_fontIconSize="25sp"
+            fancy:fb_icon="@string/fawi_upload"
             fancy:fb_iconPosition="bottom"
-            fancy:mfb_radius="10dp"
             fancy:fb_text="Upload"
             fancy:fb_textColor="#FFFFFF"
+            fancy:mfb_radius="10dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
       </LinearLayout>
 
@@ -422,7 +425,7 @@
           android:layout_height="wrap_content"
           >
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -432,16 +435,16 @@
             fancy:fb_borderWidth="2dp"
             fancy:fb_defaultColor="#40a75a"
             fancy:fb_focusColor="#8cc9f8"
-            fancy:fb_icon="@string/faw_user"
             fancy:fb_fontIconSize="30sp"
+            fancy:fb_icon="@string/fawi_user"
             fancy:fb_iconPosition="left"
-            fancy:mfb_radius="10dp"
             fancy:fb_text="Send"
             fancy:fb_textColor="#FFFFFF"
+            fancy:mfb_radius="10dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_send_disabled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -453,16 +456,16 @@
             fancy:fb_defaultColor="#40a75a"
             fancy:fb_disabledColor="#e4e4e4"
             fancy:fb_focusColor="#8cc9f8"
-            fancy:fb_icon="@string/faw_user"
             fancy:fb_fontIconSize="30sp"
+            fancy:fb_icon="@string/fawi_user"
             fancy:fb_iconPosition="left"
-            fancy:mfb_radius="10dp"
             fancy:fb_text="Send Disabled"
             fancy:fb_textColor="#FFFFFF"
+            fancy:mfb_radius="10dp"
             >
-        </com.rilixtech.MaterialFancyButton>
+        </com.rilixtech.materialfancybutton.MaterialFancyButton>
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_android_prefix"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -472,13 +475,13 @@
             android:textAllCaps="true"
             android:textSize="10sp"
             fancy:fb_borderColor="#FFFFFF"
-            fancy:fb_icon="@string/faw_android"
             fancy:fb_borderWidth="2dp"
             fancy:fb_defaultColor="#40a75a"
             fancy:fb_disabledColor="#e4e4e4"
             fancy:fb_focusColor="#8cc9f8"
-            fancy:mfb_radius="10dp"
+            fancy:fb_icon="@string/fawi_android"
             fancy:fb_textColor="#FFFFFF"
+            fancy:mfb_radius="10dp"
             />
 
       </LinearLayout>
@@ -488,7 +491,7 @@
           android:layout_height="wrap_content"
           >
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_decline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -498,16 +501,16 @@
             fancy:fb_borderWidth="0dp"
             fancy:fb_defaultColor="#d86262"
             fancy:fb_focusColor="#2e5071"
-            fancy:fb_iconFont="fontawesome.ttf"
-            fancy:fb_fontIconResource="@string/icon_mute"
             fancy:fb_fontIconSize="25dp"
             fancy:fb_iconPosition="right"
-            fancy:mfb_radius="30dp"
             fancy:fb_text="Mute"
             fancy:fb_textColor="#ffffff"
+            fancy:mfb_radius="30dp"
             />
+        <!--fancy:fb_iconFont="fontawesome.ttf"-->
+        <!--fancy:fb_fontIconResource="@string/icon_mute"-->
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -516,14 +519,14 @@
             android:padding="10dp"
             fancy:fb_defaultColor="#7ed862"
             fancy:fb_focusColor="#2e5071"
-            fancy:fb_iconFont="fontawesome.ttf"
-            fancy:fb_fontIconResource="@string/icon_answer"
             fancy:fb_fontIconSize="25dp"
             fancy:fb_iconPosition="right"
-            fancy:mfb_radius="30dp"
             fancy:fb_text="Answer the call"
             fancy:fb_textColor="#ffffff"
+            fancy:mfb_radius="30dp"
             />
+        <!--fancy:fb_iconFont="fontawesome.ttf"-->
+        <!--fancy:fb_fontIconResource="@string/icon_answer"-->
 
       </LinearLayout>
 
@@ -566,7 +569,7 @@
           >
 
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_ghost_deposit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -578,17 +581,17 @@
             fancy:fb_borderColor="#ffe7e6e2"
             fancy:fb_borderWidth="2dp"
             fancy:fb_focusColor="#fffffefa"
-            fancy:fb_iconFont="fontawesome.ttf"
             fancy:fb_fontIconResource="@string/icon_creditcard"
             fancy:fb_fontIconSize="15sp"
             fancy:fb_ghost="true"
+            fancy:fb_iconFont="fontawesome.ttf"
             fancy:fb_iconPosition="right"
-            fancy:mfb_radius="40dp"
             fancy:fb_text="Deposit"
             fancy:fb_textColor="#ffffff"
+            fancy:mfb_radius="40dp"
             />
 
-        <com.rilixtech.MaterialFancyButton
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btn_ghost_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -600,14 +603,14 @@
             fancy:fb_borderColor="#7ed862"
             fancy:fb_borderWidth="2dp"
             fancy:fb_focusColor="#ffa8f192"
-            fancy:fb_iconFont="fontawesome.ttf"
             fancy:fb_fontIconResource="@string/icon_envelope"
             fancy:fb_fontIconSize="15sp"
             fancy:fb_ghost="true"
+            fancy:fb_iconFont="fontawesome.ttf"
             fancy:fb_iconPosition="right"
-            fancy:mfb_radius="25dp"
             fancy:fb_text="Contact"
             fancy:fb_textColor="#ffa8f192"
+            fancy:mfb_radius="25dp"
             />
 
 

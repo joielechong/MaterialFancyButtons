@@ -47,5 +47,5 @@ if (project.hasProperty('pushall') || project.hasProperty('Pixeden7Strokeonly'))
 }
 
 dependencies {
-    compile project(path: ':library')
+    compile project(path: ':materialfancybuttons')
 }

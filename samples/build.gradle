@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-group "com.rilixtech"
+group rootProject.publishedGroupId
 android {
 
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -9,8 +9,8 @@ android {
   defaultConfig {
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
-    versionCode rootProject.ext.libraryVersionCode
-    versionName rootProject.ext.libraryVersion
+    versionCode rootProject.ext.materialFancyButtonLibraryVersionCode
+    versionName rootProject.ext.materialFancyButtonLibraryVersionName
   }
   buildTypes {
     release {
@@ -22,12 +22,22 @@ android {
 
 dependencies {
   compile "com.android.support:appcompat-v7:$supportLibVersion"
-  compile project(':library')
+  compile project(':materialfancybuttons')
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile project(path: ':devicon-typeface-library')
-  compile project(path: ':fontawesome-typeface-library')
-  compile project(path: ':community-material-typeface-library')
+
+
+  //  compile project(path: ':fontawesome-typeface')
+  compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
+
+  //  compile project(path: ':community-material-typeface')
+  compile 'com.rilixtech:community-material-typeface:1.9.32.2'
+
+//  compile project(path: ':devicon-typeface')
+  compile 'com.rilixtech:devicon-typeface:2.0.0.3'
+
+
+
   compile project(path: ':entypo-typeface-library')
   compile project(path: ':foundation-icons-typeface-library')
   compile project(path: ':google-material-typeface-library')
@@ -39,4 +49,10 @@ dependencies {
   compile project(path: ':pixeden-7-stroke-typeface-library')
   compile project(path: ':typeicons-typeface-library')
   compile project(path: ':weather-icons-typeface-library')
+
+  compile "com.mikepenz:iconics-core:2.8.7@aar"
+  compile 'com.mikepenz:fontawesome-typeface:4.7.0.1@aar'
+  compile 'com.mikepenz:devicon-typeface:2.0.0.3@aar'
+
+
 }

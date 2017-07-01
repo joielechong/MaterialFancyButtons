@@ -1,1 +1,0 @@
--keep class com.rilixtech.community_material_typeface_library.CommunityMaterial { *; }

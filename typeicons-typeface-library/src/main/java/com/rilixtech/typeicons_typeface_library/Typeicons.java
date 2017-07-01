@@ -3,8 +3,8 @@ package com.rilixtech.typeicons_typeface_library;
 import android.content.Context;
 import android.graphics.Typeface;
 
-import com.rilixtech.typeface.IIcon;
-import com.rilixtech.typeface.ITypeface;
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;

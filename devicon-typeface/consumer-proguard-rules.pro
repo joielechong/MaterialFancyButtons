@@ -1,0 +1,1 @@
+-keep class com.rilixtech.devicon_typeface.DevIcon { *; }

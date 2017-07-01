@@ -1,6 +1,6 @@
 # Material Fancy Button
 
-Beautiful Fancy Button with endorphins.
+Beautiful Fancy Button on endorphins.
 
 Icons, Borders, Radius ... for Android buttons
 
@@ -52,19 +52,19 @@ compile 'com.github.medyo:fancybuttons:1.8.3'
 If you want to use a precompiled font, add the font that you want to use from below list:
 
 ```gradle
-compile 'com.mikepenz:google-material-typeface:3.0.1.1.original@aar'
-compile 'com.mikepenz:material-design-iconic-typeface:2.2.0.3@aar'
-compile 'com.mikepenz:fontawesome-typeface:4.7.0.1@aar'
-compile 'com.mikepenz:octicons-typeface:3.2.0.3@aar'
-compile 'com.mikepenz:meteocons-typeface:1.1.0.3@aar'
-compile 'com.mikepenz:community-material-typeface:1.9.32.2@aar'
-compile 'com.mikepenz:weather-icons-typeface:2.0.10.3@aar'
-compile 'com.mikepenz:typeicons-typeface:2.0.7.3@aar'
-compile 'com.mikepenz:entypo-typeface:1.0.0.3@aar'
-compile 'com.mikepenz:devicon-typeface:2.0.0.3@aar'
-compile 'com.mikepenz:foundation-icons-typeface:3.0.0.3@aar'
-compile 'com.mikepenz:ionicons-typeface:2.0.1.3@aar'
-compile 'com.mikepenz:pixeden-7-stroke-typeface:1.2.0.1@aar'
+compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
+compile 'com.rilixtech:community-material-typeface:1.9.32.2'
+
+compile 'com.rilixtech:google-material-typeface:3.0.1.1.original@aar'
+compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3@aar'
+compile 'com.rilixtech:meteocons-typeface:1.1.0.3@aar'
+compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
+compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
+compile 'com.rilixtech:entypo-typeface:1.0.0.3@aar'
+compile 'com.rilixtech:devicon-typeface:2.0.0.3@aar'
+compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3@aar'
+compile 'com.rilixtech:ionicons-typeface:2.0.1.3@aar'
+compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
 ### Usage
 
@@ -112,11 +112,11 @@ so it will be look like this:
 
 If you use a precompiled font icon (like fontawesome) instead manual copying to asset folder with:
 ```gradle
-compile 'com.mikepenz:fontawesome-typeface:4.7.0.1@aar'
+compile 'com.rilixtech:fontawesome-typeface:4.7.0.1@aar'
 ```
 then you can use a more simpler way:
 
-    fancy:fb_icon="faw_star"
+    fancy:fb_icon="fawi_star"
 
 so it will be look like this:
 
@@ -124,7 +124,7 @@ so it will be look like this:
 	android:id="@+id/btn_preview"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	fancy:fb_icon="faw_star"/>
+	fancy:fb_icon="fawi_star"/>
 
 This is the recommended way, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
 Please be noted that when using fancy:fb_icon you don't need to use fancy:fb_iconFont and fancy:fb_fontIconResource. Iff both value is present, they will be override and ignored.
