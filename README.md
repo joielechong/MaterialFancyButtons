@@ -4,8 +4,9 @@ Beautiful Fancy Button on endorphins.
 
 Icons, Borders, Radius ... for Android buttons
 
-[ ![jCenter](https://api.bintray.com/packages/medyo/maven/fancybuttons/images/download.svg) ](https://bintray.com/medyo/maven/fancybuttons/_latestVersion)  [![jitPack](https://jitpack.io/v/medyo/Fancybuttons.svg)](https://jitpack.io/#medyo/Fancybuttons)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FancyButtons-lightgrey.svg?style=flat)](http://android-arsenal.com/details/1/681)
+
+## IN PROGRESS
+====================
 
 <img src="/resources/cover.png" width="80%" alt="Android About Page Cover"/>
 
@@ -159,35 +160,35 @@ The following list is within this format:
 
 * [Google Material Design Icons](https://github.com/google/material-design-icons)
   * "gmdi"
-  * **ORIGINAL by Google** compile 'com.mikepenz:google-material-typeface:+.original@aar'
+  * **ORIGINAL by Google** compile 'com.rilixtech:google-material-typeface:+.original@aar'
 * [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
   * "gmii"
   * **Google Material Iconic**
-  * `compile 'com.mikepenz:material-design-iconic-typeface:+@aar'`
+  * `compile 'com.rilixtech:material-design-iconic-typeface:+@aar'`
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
   * "meti"
-  * compile 'com.mikepenz:meteocons-typeface:+@aar'
+  * compile 'com.rilixtech:meteocons-typeface:+@aar'
 * [Octicons](https://github.com/github/octicons)
   * "octi"
-  * compile 'com.mikepenz:octicons-typeface:+@aar'
+  * compile 'com.rilixtech:octicons-typeface:+@aar'
 * [Weather Icons](https://erikflowers.github.io/weather-icons/)
   * "wici"
-  * compile 'com.mikepenz:weather-icons-typeface:+@aar'
+  * compile 'com.rilixtech:weather-icons-typeface:+@aar'
 * [Typeicons](http://typicons.com/)
   * "typi"
-  * compile 'com.mikepenz:typeicons-typeface:+@aar'
+  * compile 'com.rilixtech:typeicons-typeface:+@aar'
 * [Entypo](http://www.entypo.com/)
   * "enti"
-  * compile 'com.mikepenz:entypo-typeface:+@aar'
+  * compile 'com.rilixtech:entypo-typeface:+@aar'
 * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
   * "foui"
-  * compile 'com.mikepenz:foundation-icons-typeface:+@aar'
+  * compile 'com.rilixtech:foundation-icons-typeface:+@aar'
 * [Ionicons](http://ionicons.com/)
   * "ioni"
-  * compile 'com.mikepenz:ionicons-typeface:+@aar'
+  * compile 'com.rilixtech:ionicons-typeface:+@aar'
 * [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
   * "pe7i"
-  * compile 'com.mikepenz:pixeden-7-stroke-typeface:+@aar'
+  * compile 'com.rilixtech:pixeden-7-stroke-typeface:+@aar'
 
 Licenses for all included fonts are linked inside the class or can be found on the coresponding repoistories.
 
@@ -251,7 +252,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 
 **1 - Spotify Button**
 
-![FancyButton Spotify](https://raw.github.com/medyo/fancybuttons/master/resources/spotify-button.png)
+![FancyButton Spotify](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/spotify-button.png)
 
 	<com.rilixtech.MaterialFancyButton
 		android:id="@+id/btn_spotify"
@@ -274,7 +275,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 
 **2 - Facebook Button**
 
-![FancyButton Facebook](https://raw.github.com/medyo/fancybuttons/master/resources/facebook-button.png)
+![FancyButton Facebook](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/facebook-button.png)
 
 	FancyButton facebookLoginBtn = new MaterialFancyButton(this);
     facebookLoginBtn.setText("Login with Facebook");
@@ -287,12 +288,12 @@ Default Attributes have more priority than Attributes with prefix fancy.
     facebookLoginBtn.setIconPosition(FancyButton.POSITION_LEFT);
     facebookLoginBtn.setFontIconSize(30);
 
-See the [example project](https://github.com/medyo/fancybuttons/tree/master/samples/src/main/java/mehdi/sakout/fancybuttons/samples) for more samples
+See the [example project](https://github.com/joielechong/MaterialFancyButtons/tree/master/samples/src/main/java/com/rilixtech/materialfancybuttons/sample) for more samples
 
 
 - - - -
 
-![FancyButtons Android](/resources/fancy.png)![FancyButtons Android](/resources/fancy2.png)![FancyButtons Android](/resources/fancy3.png)
+![MaterialFancyButtons Android](/resources/fancy.png)![MaterialFancyButtons Android](/resources/fancy2.png)![MaterialFancyButtons Android](/resources/fancy3.png)
 
 ### FAQ
 
@@ -300,7 +301,7 @@ See the [example project](https://github.com/medyo/fancybuttons/tree/master/samp
 Just Paste your font inside `assets/fonts/` folder for Text fonts or inside `assets/iconfonts/` for icon fonts eg : entypo
 
 ## Contributions
-MaterialFancyButtons needs you to build the missing features :
+MaterialFancyButtons needs you to build the missing features:
 * Supporting Circular buttons
 * Add elevation (Material Design)
 
