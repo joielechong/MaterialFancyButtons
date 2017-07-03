@@ -29,44 +29,34 @@ Icons, Borders, Radius ... for Android buttons
 * Icon Size
 * Icon Padding
 
-**Already available fonts**
-- [Google Material Design Icons](https://github.com/google/material-design-icons)
-- [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
-- [Fontawesome](http://fontawesome.io)
-- [Meteocons](http://www.alessioatzeni.com/meteocons/)
-- [Octicons](https://github.com/github/octicons)
-- [Community Material](http://materialdesignicons.com/)
-- [Weather Icons](https://erikflowers.github.io/weather-icons/)
-- [Typeicons](http://typicons.com/)
-- [Entypo](http://www.entypo.com/)
-- [Devicon](http://devicon.fr/)
-- [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
-- [Ionicons](http://ionicons.com/)
-
 
 ### Installation
 ```gradle
-compile 'com.github.medyo:fancybuttons:1.8.3'
+compile 'com.rilixtech:materialfancybuttons:1.8.6'
 ```
+
 ## Additional, Choose your desired fonts
 If you want to use a precompiled font, add the font that you want to use from below list:
 
 ```gradle
-compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
-compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
 compile 'com.rilixtech:community-material-typeface:1.9.32.2'
+compile 'com.rilixtech:devicon-typeface:2.0.0.3'
+compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
+compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 
+
+compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original@aar'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3@aar'
 compile 'com.rilixtech:meteocons-typeface:1.1.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
 compile 'com.rilixtech:entypo-typeface:1.0.0.3@aar'
-compile 'com.rilixtech:devicon-typeface:2.0.0.3@aar'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3@aar'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3@aar'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
+
 ### Usage
 
 1 - Include MaterialFancyButton namespace to the root element:
@@ -76,9 +66,9 @@ compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 2 - Add the MaterialFancyButton View with custom params:
 
 	<com.rilixtech.MaterialFancyButton
-	android:id="@+id/btn_preview"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"/>
+	    android:id="@+id/btn_preview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"/>
 
 3 - Paste your font inside `assets/fonts/` folder for Text fonts or inside `assets/iconfonts/` for icon fonts eg : fontawesome
     Then add the following attribute:
@@ -91,11 +81,11 @@ compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 so it will be look like this:
 
 	<com.rilixtech.MaterialFancyButton
-	android:id="@+id/btn_preview"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	fancy:fb_textFont="robotothin.ttf"
-    fancy:fb_text="your text"/>
+	    android:id="@+id/btn_preview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    fancy:fb_textFont="robotothin.ttf"
+        fancy:fb_text="your text"/>
 
  For icon:
 
@@ -105,15 +95,15 @@ so it will be look like this:
 so it will be look like this:
 
 	<com.rilixtech.MaterialFancyButton
-	android:id="@+id/btn_preview"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	fancy:fb_iconFont="fontawesome.ttf"
-    fancy:fb_fontIconResource="&#xf087;"/>
+	   android:id="@+id/btn_preview"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   fancy:fb_iconFont="fontawesome.ttf"
+       fancy:fb_fontIconResource="&#xf087;"/>
 
 If you use a precompiled font icon (like fontawesome) instead manual copying to asset folder with:
 ```gradle
-compile 'com.rilixtech:fontawesome-typeface:4.7.0.1@aar'
+compile 'com.rilixtech:fontawesome-typeface:4.7.0.1'
 ```
 then you can use a more simpler way:
 
@@ -122,13 +112,85 @@ then you can use a more simpler way:
 so it will be look like this:
 
 	<com.rilixtech.MaterialFancyButton
-	android:id="@+id/btn_preview"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	fancy:fb_icon="fawi_star"/>
+	    android:id="@+id/btn_preview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    fancy:fb_icon="fawi_star"/>
 
 This is the recommended way, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
 Please be noted that when using fancy:fb_icon you don't need to use fancy:fb_iconFont and fancy:fb_fontIconResource. Iff both value is present, they will be override and ignored.
+
+### Use Icon Font
+The are already available fonts that you can use, you can select it from the list below. To use it, you need to add a string value to `fb_icon` attribute like this:
+
+	<com.rilixtech.MaterialFancyButton
+	    android:id="@+id/btn_preview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    fancy:fb_icon="fawi_star"/>
+
+Here we use Font Awesome icon, because we use `fawi_star` as the value for `fancy:fb_icon`. `fawi` prefix is the prefix for Font Awesome.
+
+The following list is within this format:
+* Font Icon link
+  * "Prefix", this is prefix for each icon in the font
+  * `compile 'com.rilixtech:...'`, this is the dependency to use the icon font.
+
+**Icon Font List:**
+
+* [Community Material](http://materialdesignicons.com/)
+  * "cmdi"
+  * `compile 'com.rilixtech:community-material-typeface:1.9.32.2'`
+
+* [Devicon](http://devicon.fr/)
+  * "devi"
+  * `compile 'com.rilixtech:devicon-typeface:2.0.0.3'`
+
+* [Fontawesome](http://fontawesome.io)
+  * "fawi"
+  * `compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'`
+
+* [MFGLabs Iconset](https://github.com/MfgLabs/mfglabs-iconset)
+  * "mfgi"
+  * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
+
+
+
+
+* [Google Material Design Icons](https://github.com/google/material-design-icons)
+  * "gmdi"
+  * **ORIGINAL by Google** compile 'com.mikepenz:google-material-typeface:+.original@aar'
+* [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
+  * "gmii"
+  * **Google Material Iconic**
+  * `compile 'com.mikepenz:material-design-iconic-typeface:+@aar'`
+* [Meteocons](http://www.alessioatzeni.com/meteocons/)
+  * "meti"
+  * compile 'com.mikepenz:meteocons-typeface:+@aar'
+* [Octicons](https://github.com/github/octicons)
+  * "octi"
+  * compile 'com.mikepenz:octicons-typeface:+@aar'
+* [Weather Icons](https://erikflowers.github.io/weather-icons/)
+  * "wici"
+  * compile 'com.mikepenz:weather-icons-typeface:+@aar'
+* [Typeicons](http://typicons.com/)
+  * "typi"
+  * compile 'com.mikepenz:typeicons-typeface:+@aar'
+* [Entypo](http://www.entypo.com/)
+  * "enti"
+  * compile 'com.mikepenz:entypo-typeface:+@aar'
+* [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
+  * "foui"
+  * compile 'com.mikepenz:foundation-icons-typeface:+@aar'
+* [Ionicons](http://ionicons.com/)
+  * "ioni"
+  * compile 'com.mikepenz:ionicons-typeface:+@aar'
+* [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
+  * "pe7i"
+  * compile 'com.mikepenz:pixeden-7-stroke-typeface:+@aar'
+
+Licenses for all included fonts are linked inside the class or can be found on the coresponding repoistories.
+
 ####  Supported Attributes
 
 | XML Attribute        | Java Attribute           | Description  |
