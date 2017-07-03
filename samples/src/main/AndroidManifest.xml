@@ -28,13 +28,18 @@
     </activity>
 
     <activity
-        android:name=".CommunityMaterialButtons"
+        android:name=".CommunityMaterialButtonsActivity"
         android:label="@string/title_activity_community_material_buttons">
     </activity>
 
     <activity
-        android:name=".DeviconButtons"
+        android:name=".DeviconButtonsActivity"
         android:label="@string/title_activity_devicon_buttons">
+    </activity>
+
+    <activity
+        android:name=".MFGLabsIconsetButtonsActivity"
+        android:label="@string/title_activity_mfglabs">
     </activity>
 
   </application>

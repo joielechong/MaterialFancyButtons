@@ -10,9 +10,9 @@ Icons, Borders, Radius ... for Android buttons
 <img src="/resources/cover.png" width="80%" alt="Android About Page Cover"/>
 
 ## Overview
-![FancyButtons Android](https://raw.github.com/medyo/fancybuttons/master/resources/no-drawables.png)
+![MaterialFancyButtons](https://github.com/joielechong/MaterialFancyButtons/master/resources/no-drawables.png)
 
-### Demo Application : [Download APK](https://raw.github.com/medyo/fancybuttons/master/resources/fancybuttons_samples.apk)
+### Demo Application : [Download APK](https://github.com/joielechong/MaterialFancyButtons/master/resources/fancybuttons_samples.apk)
 
 ## Features
 
@@ -52,7 +52,8 @@ compile 'com.github.medyo:fancybuttons:1.8.3'
 If you want to use a precompiled font, add the font that you want to use from below list:
 
 ```gradle
-compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
+compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
+compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
 compile 'com.rilixtech:community-material-typeface:1.9.32.2'
 
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original@aar'

@@ -10,9 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
-
-  //private String[] listItems = { "XML buttons", "Programmatically Buttons", "Community Material Buttons", "Devicon Buttons" };
-
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
@@ -22,10 +19,13 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
   }
 
   private String[] getListItems() {
-    String[] listItems = {getString(R.string.title_activity_xml_buttons),
-    getString(R.string.title_activity_program_buttons),
+    String[] listItems = {
+        getString(R.string.title_activity_xml_buttons),
+        getString(R.string.title_activity_program_buttons),
         getString(R.string.title_activity_community_material_buttons),
-        getString(R.string.title_activity_devicon_buttons)};
+        getString(R.string.title_activity_devicon_buttons),
+        getString(R.string.title_activity_mfglabs)
+    };
     return listItems;
   }
 
@@ -59,12 +59,17 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentProg);
         break;
       case 2:
-        Intent intentCommunity = new Intent(MainActivity.this, CommunityMaterialButtons.class);
+        Intent intentCommunity =
+            new Intent(MainActivity.this, CommunityMaterialButtonsActivity.class);
         startActivity(intentCommunity);
         break;
       case 3:
-        Intent intentDevIcon = new Intent(MainActivity.this, DeviconButtons.class);
+        Intent intentDevIcon = new Intent(MainActivity.this, DeviconButtonsActivity.class);
         startActivity(intentDevIcon);
+        break;
+      case 4:
+        Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
+        startActivity(intentMFGLabs);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");

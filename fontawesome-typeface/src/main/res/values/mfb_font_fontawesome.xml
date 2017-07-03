@@ -205,7 +205,7 @@
   <string name="fawi_undo">fawi_undo</string>
   <string name="fawi_gavel">fawi_gavel</string>
   <string name="fawi_tachometer">fawi_tachometer</string>
-  <string name="fawi_comment_o">fawi_comment_o</string>
+  <string name="fawi_commenti_o">fawi_commenti_o</string>
   <string name="fawi_comments_o">fawi_comments_o</string>
   <string name="fawi_bolt">fawi_bolt</string>
   <string name="fawi_sitemap">fawi_sitemap</string>
@@ -428,7 +428,7 @@
   <string name="fawi_git_square">fawi_git_square</string>
   <string name="fawi_git">fawi_git</string>
   <string name="fawi_hacker_news">fawi_hacker_news</string>
-  <string name="fawi_tencent_weibo">fawi_tencent_weibo</string>
+  <string name="fawi_tencenti_weibo">fawi_tencenti_weibo</string>
   <string name="fawi_qq">fawi_qq</string>
   <string name="fawi_weixin">fawi_weixin</string>
   <string name="fawi_paper_plane">fawi_paper_plane</string>

@@ -308,7 +308,7 @@ public class Ionicons implements ITypeface {
 		ion_cube('\uf318'),
 		ion_disc('\uf12d'),
 		ion_document('\uf12f'),
-		ion_document_text('\uf12e'),
+		ion_documenti_text('\uf12e'),
 		ion_drag('\uf130'),
 		ion_earth('\uf276'),
 		ion_easel('\uf3c2'),
