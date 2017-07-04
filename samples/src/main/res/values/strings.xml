@@ -10,6 +10,7 @@
     <string name="title_activity_devicon_buttons">Devicon Buttons</string>
     <string name="title_activity_mfglabs">MFGLabs Iconset Buttons</string>
     <string name="title_activity_foundation_icons">Foundation Icons Buttons</string>
+    <string name="title_activity_google_material">Google Material Buttons</string>
 
 
     <string name="icon_user">&#xf007;</string>

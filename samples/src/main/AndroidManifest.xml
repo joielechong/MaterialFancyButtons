@@ -47,6 +47,11 @@
         android:label="@string/title_activity_foundation_icons">
     </activity>
 
+    <activity
+        android:name=".GoogleMaterialButtonsActivity"
+        android:label="@string/title_activity_google_material">
+    </activity>
+
   </application>
 
 </manifest>
