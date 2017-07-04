@@ -1,4 +1,93 @@
-foui_address_book('\uf100'),
+package com.rilixtech.foundation_icons_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class FoundationIcons implements ITypeface {
+	private static final String TTF_FILE = "foundation-icons-font-v3.0.0.1.ttf";
+	private static final String MAPPING_FONT_PREFIX = "foui";
+
+	private static Typeface typeface = null;
+	private static HashMap<String, Character> mChars;
+
+	@Override public IIcon getIcon(String key) {
+		return Icon.valueOf(key);
+	}
+
+	@Override public HashMap<String, Character> getCharacters() {
+		if (mChars == null) {
+			HashMap<String, Character> aChars = new HashMap<String, Character>();
+			for (Icon v : Icon.values()) {
+				aChars.put(v.name(), v.character);
+			}
+			mChars = aChars;
+		}
+		return mChars;
+	}
+
+	@Override public String getMappingPrefix() {
+		return MAPPING_FONT_PREFIX;
+	}
+
+	@Override public String getFontName() {
+		return "Foundation Icons";
+	}
+
+	@Override public String getVersion() {
+		return "3.0.0.1";
+	}
+
+	@Override public int getIconCount() {
+		return mChars.size();
+	}
+
+	@Override public Collection<String> getIcons() {
+		Collection<String> icons = new LinkedList<String>();
+		for (Icon value : Icon.values()) {
+			icons.add(value.name());
+		}
+		return icons;
+	}
+
+	@Override public String getAuthor() {
+		return "ZURB Inc.";
+	}
+
+	@Override public String getUrl() {
+		return "http://zurb.com/playground/foundation-icon-fonts-3";
+	}
+
+	@Override public String getDescription() {
+		return "Customize your icons to be any size, color, style in CSS";
+	}
+
+	@Override public String getLicense() {
+		return "MIT Open Source License";
+	}
+
+	@Override public String getLicenseUrl() {
+		return "https://github.com/zurb/foundation-icons/blob/master/MIT-LICENSE.txt";
+	}
+
+	@Override public Typeface getTypeface(Context context) {
+		if (typeface == null) {
+			try {
+				typeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + TTF_FILE);
+			} catch (Exception e) {
+				return null;
+			}
+		}
+		return typeface;
+	}
+
+	public enum Icon implements IIcon {
+		foui_address_book('\uf100'),
 		foui_alert('\uf101'),
 		foui_align_center('\uf102'),
 		foui_align_justify('\uf103'),
@@ -281,3 +370,33 @@ foui_address_book('\uf100'),
 		foui_yen('\uf218'),
 		foui_zoom_in('\uf219'),
 		foui_zoom_out('\uf21a');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new FoundationIcons();
+            }
+            return typeface;
+        }
+    }
+}

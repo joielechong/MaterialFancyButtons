@@ -1,1 +1,0 @@
--keep class com.rilixtech.foundation_icons_typeface_library.FoundationIcons { *; }
