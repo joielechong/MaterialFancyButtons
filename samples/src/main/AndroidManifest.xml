@@ -42,6 +42,11 @@
         android:label="@string/title_activity_mfglabs">
     </activity>
 
+    <activity
+        android:name=".FoundationIconsButtonsActivity"
+        android:label="@string/title_activity_foundation_icons">
+    </activity>
+
   </application>
 
 </manifest>

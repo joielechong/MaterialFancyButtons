@@ -24,7 +24,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_program_buttons),
         getString(R.string.title_activity_community_material_buttons),
         getString(R.string.title_activity_devicon_buttons),
-        getString(R.string.title_activity_mfglabs)
+        getString(R.string.title_activity_mfglabs),
+        getString(R.string.title_activity_foundation_icons),
     };
     return listItems;
   }
@@ -70,6 +71,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 4:
         Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
         startActivity(intentMFGLabs);
+        break;
+      case 5:
+        Intent intentFoundationIcons = new Intent(MainActivity.this, FoundationIconsButtonsActivity.class);
+        startActivity(intentFoundationIcons);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");
