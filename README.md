@@ -44,6 +44,7 @@ compile 'com.rilixtech:community-material-typeface:1.9.32.2'
 compile 'com.rilixtech:devicon-typeface:2.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
+compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
 
 
 compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
@@ -53,7 +54,6 @@ compile 'com.rilixtech:meteocons-typeface:1.1.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
 compile 'com.rilixtech:entypo-typeface:1.0.0.3@aar'
-compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3@aar'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3@aar'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
@@ -156,6 +156,10 @@ The following list is within this format:
   * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
 
 
+* [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
+  * "foui"
+  * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
+
 
 
 * [Google Material Design Icons](https://github.com/google/material-design-icons)
@@ -180,9 +184,6 @@ The following list is within this format:
 * [Entypo](http://www.entypo.com/)
   * "enti"
   * compile 'com.rilixtech:entypo-typeface:+@aar'
-* [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
-  * "foui"
-  * compile 'com.rilixtech:foundation-icons-typeface:+@aar'
 * [Ionicons](http://ionicons.com/)
   * "ioni"
   * compile 'com.rilixtech:ionicons-typeface:+@aar'
