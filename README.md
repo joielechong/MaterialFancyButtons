@@ -11,9 +11,9 @@ Icons, Borders, Radius ... for Android buttons
 <img src="/resources/cover.png" width="80%" alt="Android About Page Cover"/>
 
 ## Overview
-![MaterialFancyButtons](https://github.com/joielechong/MaterialFancyButtons/master/resources/no-drawables.png)
+![MaterialFancyButtons](https://github.com/joielechong/MaterialFancyButtons/blob/master/resources/no-drawables.png)
 
-### Demo Application : [Download APK](https://github.com/joielechong/MaterialFancyButtons/master/resources/fancybuttons_samples.apk)
+### Demo Application : [Download APK](https://github.com/joielechong/MaterialFancyButtons/blob/master/resources/fancybuttons_samples.apk)
 
 ## Features
 
@@ -252,7 +252,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 
 **1 - Spotify Button**
 
-![FancyButton Spotify](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/spotify-button.png)
+![MaterialFancyButton Spotify](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/spotify-button.png)
 
 	<com.rilixtech.MaterialFancyButton
 		android:id="@+id/btn_spotify"
@@ -275,9 +275,9 @@ Default Attributes have more priority than Attributes with prefix fancy.
 
 **2 - Facebook Button**
 
-![FancyButton Facebook](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/facebook-button.png)
+![MaterialFancyButton Facebook](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/facebook-button.png)
 
-	FancyButton facebookLoginBtn = new MaterialFancyButton(this);
+	MaterialFancyButton facebookLoginBtn = new MaterialFancyButton(this);
     facebookLoginBtn.setText("Login with Facebook");
     facebookLoginBtn.setBackgroundColor(Color.parseColor("#3b5998"));
     facebookLoginBtn.setFocusBackgroundColor(Color.parseColor("#5474b8"));
@@ -312,7 +312,6 @@ MaterialFancyButtons needs you to build the missing features:
 
 # Developed By
 
-* Joielechong
  * [Joielechong](http://www.github.com/joielechong)
 
 
