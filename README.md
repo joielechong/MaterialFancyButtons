@@ -42,10 +42,11 @@ If you want to use a precompiled font, add the font that you want to use from be
 ```gradle
 compile 'com.rilixtech:community-material-typeface:1.9.32.2'
 compile 'com.rilixtech:devicon-typeface:2.0.0.3'
+compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
-compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
+compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 
 
 
@@ -148,6 +149,10 @@ The following list is within this format:
   * "devi"
   * `compile 'com.rilixtech:devicon-typeface:2.0.0.3'`
 
+* [Entypo](http://www.entypo.com/)
+  * "enti"
+  * `compile 'com.rilixtech:entypo-typeface:1.0.0.3'`
+
 * [Fontawesome](http://fontawesome.io)
   * "fawi"
   * `compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'`
@@ -163,6 +168,8 @@ The following list is within this format:
 * [Google Material Design Icons](https://github.com/google/material-design-icons)
   * "gmdi"
   * `compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'`
+
+
 
 
 
@@ -182,9 +189,6 @@ The following list is within this format:
 * [Typeicons](http://typicons.com/)
   * "typi"
   * compile 'com.rilixtech:typeicons-typeface:+@aar'
-* [Entypo](http://www.entypo.com/)
-  * "enti"
-  * compile 'com.rilixtech:entypo-typeface:+@aar'
 * [Ionicons](http://ionicons.com/)
   * "ioni"
   * compile 'com.rilixtech:ionicons-typeface:+@aar'

@@ -9,7 +9,7 @@ public class EntypoButtonsActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_mfglabs_iconset_buttons);
+    setContentView(R.layout.activity_entypo_buttons);
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {

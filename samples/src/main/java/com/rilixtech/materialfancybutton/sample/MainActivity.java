@@ -24,10 +24,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_program_buttons),
         getString(R.string.title_activity_community_material_buttons),
         getString(R.string.title_activity_devicon_buttons),
-        getString(R.string.title_activity_mfglabs),
+        getString(R.string.title_activity_entypo),
         getString(R.string.title_activity_foundation_icons),
         getString(R.string.title_activity_google_material),
-        getString(R.string.title_activity_entypo),
+        getString(R.string.title_activity_mfglabs),
     };
     return listItems;
   }
@@ -71,8 +71,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentDevIcon);
         break;
       case 4:
-        Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
-        startActivity(intentMFGLabs);
+        Intent intentEntypo = new Intent(MainActivity.this, EntypoButtonsActivity.class);
+        startActivity(intentEntypo);
         break;
       case 5:
         Intent intentFoundationIcons = new Intent(MainActivity.this, FoundationIconsButtonsActivity.class);
@@ -83,8 +83,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentGoogleMaterial);
         break;
       case 7:
-        Intent intentEntypo = new Intent(MainActivity.this, EntypoButtonsActivity.class);
-        startActivity(intentEntypo);
+        Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
+        startActivity(intentMFGLabs);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");
