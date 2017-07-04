@@ -45,10 +45,11 @@ compile 'com.rilixtech:devicon-typeface:2.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
+compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
+
 
 
 compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
-compile 'com.rilixtech:google-material-typeface:3.0.1.1.original@aar'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3@aar'
 compile 'com.rilixtech:meteocons-typeface:1.1.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
@@ -155,16 +156,16 @@ The following list is within this format:
   * "mfgi"
   * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
 
-
 * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
   * "foui"
   * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
 
-
-
 * [Google Material Design Icons](https://github.com/google/material-design-icons)
   * "gmdi"
-  * **ORIGINAL by Google** compile 'com.rilixtech:google-material-typeface:+.original@aar'
+  * `compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'`
+
+
+
 * [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
   * "gmii"
   * **Google Material Iconic**
