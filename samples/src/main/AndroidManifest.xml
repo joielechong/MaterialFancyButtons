@@ -38,8 +38,8 @@
     </activity>
 
     <activity
-        android:name=".MFGLabsIconsetButtonsActivity"
-        android:label="@string/title_activity_mfglabs">
+        android:name=".EntypoButtonsActivity"
+        android:label="@string/title_activity_entypo">
     </activity>
 
     <activity
@@ -53,8 +53,13 @@
     </activity>
 
     <activity
-        android:name=".EntypoButtonsActivity"
-        android:label="@string/title_activity_entypo">
+        android:name=".IoniconsButtonsActivity"
+        android:label="@string/title_activity_ionicons">
+    </activity>
+
+    <activity
+        android:name=".MFGLabsIconsetButtonsActivity"
+        android:label="@string/title_activity_mfglabs">
     </activity>
 
   </application>

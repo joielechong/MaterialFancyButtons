@@ -27,6 +27,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_entypo),
         getString(R.string.title_activity_foundation_icons),
         getString(R.string.title_activity_google_material),
+        getString(R.string.title_activity_ionicons),
         getString(R.string.title_activity_mfglabs),
     };
     return listItems;
@@ -83,6 +84,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentGoogleMaterial);
         break;
       case 7:
+        Intent intentIonics = new Intent(MainActivity.this, IoniconsButtonsActivity.class);
+        startActivity(intentIonics);
+        break;
+      case 8:
         Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
         startActivity(intentMFGLabs);
         break;
