@@ -1,0 +1,1 @@
+-keep class com.rilixtech.google_material_typeface.GoogleMaterial { *; }

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+group rootProject.ext.publishedGroupId
+
+ext.googleMaterialVersionName = '3.0.1.1.original'
+ext.googleMaterialVersionCode = 30011
+
+ext.libraryName = 'google-material-typeface'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    consumerProguardFiles 'consumer-proguard-rules.pro'
+    versionCode googleMaterialVersionCode
+    versionName googleMaterialVersionName
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  compile project(path: ':materialfancybuttons')
+}
+
+if (project.hasProperty('pushall') || project.hasProperty('googleMaterialOnly')) {
+
+  ext {
+    //For bintray and jcenter distribution
+    bintrayName = libraryName
+    libraryName = libraryName
+    //This artifact name should be the same with library module name
+    artifact = libraryName
+    libraryDescription =
+        'This is Google Material TypeFace for MaterialFancyButtons. Material design icons are the official icon set from Google that are designed under the material design guidelines.'
+    libraryVersion = googleMaterialVersionName
+
+    bintrayRepo = rootProject.ext.bintrayRepo
+    publishedGroupId = rootProject.ext.publishedGroupId
+    siteUrl = rootProject.ext.siteUrl
+    gitUrl = rootProject.ext.gitUrl
+    developerId = rootProject.ext.developerId
+    developerName = rootProject.ext.developerName
+    developerEmail = rootProject.ext.developerEmail
+    organization = rootProject.ext.organization
+    licenseName = rootProject.ext.licenseName
+    licenseUrl = rootProject.ext.licenseUrl
+    allLicenses = [rootProject.ext.allLicenses]
+  }
+
+  apply from: '../install.gradle'
+  apply from: '../bintray.gradle'
+}

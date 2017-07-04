@@ -42,8 +42,8 @@ dependencies {
 
   compile project(path: ':entypo-typeface')
   compile project(path: ':foundation-icons-typeface')
-  compile project(path: ':google-material-typeface-library')
-  compile project(path: ':google-material-typeface-library')
+  compile project(path: ':google-material-typeface')
+  compile project(path: ':google-material-typeface')
   compile project(path: ':ionicons-typeface-library')
   compile project(path: ':material-design-iconic-typeface-library')
   compile project(path: ':meteocons-typeface-library')
