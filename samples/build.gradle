@@ -50,7 +50,7 @@ dependencies {
 
 
   compile project(path: ':ionicons-typeface')
-  compile project(path: ':material-design-iconic-typeface-library')
+  compile project(path: ':material-design-iconic-typeface')
   compile project(path: ':meteocons-typeface-library')
   compile project(path: ':octicons-typeface-library')
   compile project(path: ':pixeden-7-stroke-typeface-library')

@@ -1,4 +1,97 @@
-mdii_3d_rotation('\uf101'),
+package com.rilixtech.material_design_iconic_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class MaterialDesignIconic implements ITypeface {
+    private static final String TTF_FILE = "material-design-iconic-font-v2.2.0.ttf";
+    private static final String MAPPING_FONT_PREFIX = "mdii";
+
+    private static Typeface typeface = null;
+
+    private static HashMap<String, Character> mChars;
+
+    @Override public IIcon getIcon(String key) {
+        return Icon.valueOf(key);
+    }
+
+    @Override public HashMap<String, Character> getCharacters() {
+        if (mChars == null) {
+            HashMap<String, Character> aChars = new HashMap<String, Character>();
+            for (Icon v : Icon.values()) {
+                aChars.put(v.name(), v.character);
+            }
+            mChars = aChars;
+        }
+
+        return mChars;
+    }
+
+    @Override public String getMappingPrefix() {
+        return MAPPING_FONT_PREFIX;
+    }
+
+    @Override public String getFontName() {
+        return "Material Design Iconic";
+    }
+
+    @Override public String getVersion() {
+        return "2.2.0";
+    }
+
+    @Override public int getIconCount() {
+        return mChars.size();
+    }
+
+    @Override public Collection<String> getIcons() {
+        Collection<String> icons = new LinkedList<String>();
+
+        for (Icon value : Icon.values()) {
+            icons.add(value.name());
+        }
+
+        return icons;
+    }
+
+    @Override public String getAuthor() {
+        return "Google. TTF created by Sergey Kupletsky";
+    }
+
+    @Override public String getUrl() {
+        return "http://zavoloklom.github.io/material-design-iconic-font/";
+    }
+
+    @Override public String getDescription() {
+        return "Material Design Iconic Font is a full suite of material design icons (created and maintained by Google) for easy scalable vector graphics on websites.";
+    }
+
+    @Override public String getLicense() {
+        return "SIL OFL 1.1";
+    }
+
+    @Override public String getLicenseUrl() {
+        return "http://scripts.sil.org/OFL";
+    }
+
+    @Override public Typeface getTypeface(Context context) {
+        if (typeface == null) {
+            try {
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + TTF_FILE);
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        return typeface;
+    }
+
+    public static enum Icon implements IIcon {
+        mdii_3d_rotation('\uf101'),
         mdii_airplane_off('\uf102'),
         mdii_airplane('\uf103'),
         mdii_album('\uf104'),
@@ -884,3 +977,33 @@ mdii_3d_rotation('\uf101'),
         mdii_local_wc('\uf211'),
         mdii_my_location('\uf299'),
         mdii_directions('\uf1e7');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new MaterialDesignIconic();
+            }
+            return typeface;
+        }
+    }
+}

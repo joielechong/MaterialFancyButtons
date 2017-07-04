@@ -1,0 +1,1 @@
+-keep class material_design_iconic_typeface.MaterialDesignIconic { *; }

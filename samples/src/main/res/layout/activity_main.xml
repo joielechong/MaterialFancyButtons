@@ -3,11 +3,13 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="MergeRootFrame" >
+    tools:ignore="MergeRootFrame"
+    >
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@android:id/list"
-        android:layout_gravity="left|top" />
+  <ListView
+      android:id="@android:id/list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="left|top"
+      />
 </FrameLayout>
