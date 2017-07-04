@@ -4,6 +4,7 @@ group = rootProject.ext.publishedGroupId
 
 ext.entypoVersionName = '1.0.0.3'
 ext.entypoVersionCode = 10003
+ext.libraryName = 'entypo-typeface'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -37,10 +38,10 @@ if (project.hasProperty('pushall') || project.hasProperty('entypoOnly')) {
   ext {
 
     //For bintray and jcenter distribution
-    bintrayName = 'entypo-typeface'
-    libraryName = 'entypo-typeface'
+    bintrayName = libraryName
+//    libraryName = libraryName
     //This artifact name should be the same with library module name
-    artifact = 'entypo-typeface'
+    artifact = libraryName
     libraryDescription =
         'This is Entypo TypeFace for MaterialFancyButtons. 411 carefully crafted premium pictograms by Daniel Bruce.'
     libraryVersion = entypoVersionName

@@ -52,6 +52,11 @@
         android:label="@string/title_activity_google_material">
     </activity>
 
+    <activity
+        android:name=".EntypoButtonsActivity"
+        android:label="@string/title_activity_entypo">
+    </activity>
+
   </application>
 
 </manifest>

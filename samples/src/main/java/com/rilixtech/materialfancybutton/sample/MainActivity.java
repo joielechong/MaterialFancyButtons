@@ -27,6 +27,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_mfglabs),
         getString(R.string.title_activity_foundation_icons),
         getString(R.string.title_activity_google_material),
+        getString(R.string.title_activity_entypo),
     };
     return listItems;
   }
@@ -80,6 +81,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 6:
         Intent intentGoogleMaterial = new Intent(MainActivity.this, GoogleMaterialButtonsActivity.class);
         startActivity(intentGoogleMaterial);
+        break;
+      case 7:
+        Intent intentEntypo = new Intent(MainActivity.this, EntypoButtonsActivity.class);
+        startActivity(intentEntypo);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");

@@ -1,1 +1,1 @@
--keep class com.rilixtech.entypo_typeface_library.Entypo { *; }
+-keep class com.rilixtech.entypo_typeface.Entypo { *; }
