@@ -49,7 +49,7 @@ dependencies {
   compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 
 
-  compile project(path: ':ionicons-typeface-library')
+  compile project(path: ':ionicons-typeface')
   compile project(path: ':material-design-iconic-typeface-library')
   compile project(path: ':meteocons-typeface-library')
   compile project(path: ':octicons-typeface-library')

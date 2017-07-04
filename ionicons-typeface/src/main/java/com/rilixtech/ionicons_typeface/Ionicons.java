@@ -1,4 +1,93 @@
-ioni_alert('\uf101'),
+package com.rilixtech.ionicons_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class Ionicons implements ITypeface {
+	private static final String TTF_FILE = "ionicons-font-v2.0.1.1.ttf";
+	private static final String MAPPING_FONT_PREFIX = "ioni";
+
+	private static Typeface typeface = null;
+	private static HashMap<String, Character> mChars;
+
+	@Override public IIcon getIcon(String key) {
+		return Icon.valueOf(key);
+	}
+
+	@Override public HashMap<String, Character> getCharacters() {
+		if (mChars == null) {
+			HashMap<String, Character> aChars = new HashMap<String, Character>();
+			for (Icon v : Icon.values()) {
+				aChars.put(v.name(), v.character);
+			}
+			mChars = aChars;
+		}
+		return mChars;
+	}
+
+	@Override public String getMappingPrefix() {
+		return MAPPING_FONT_PREFIX;
+	}
+
+	@Override public String getFontName() {
+		return "Ionicons";
+	}
+
+	@Override public String getVersion() {
+		return "2.0.1.1";
+	}
+
+	@Override public int getIconCount() {
+		return mChars.size();
+	}
+
+	@Override public Collection<String> getIcons() {
+		Collection<String> icons = new LinkedList<String>();
+		for (Icon value : Icon.values()) {
+			icons.add(value.name());
+		}
+		return icons;
+	}
+
+	@Override public String getAuthor() {
+		return "Benjsperry";
+	}
+
+	@Override public String getUrl() {
+		return "http://ionicons.com/";
+	}
+
+	@Override public String getDescription() {
+		return "The premium icon font for Ionic Framework.";
+	}
+
+	@Override public String getLicense() {
+		return "MIT Licensed";
+	}
+
+	@Override public String getLicenseUrl() {
+		return "https://github.com/driftyco/ionicons/blob/master/LICENSE";
+	}
+
+	@Override public Typeface getTypeface(Context context) {
+		if (typeface == null) {
+			try {
+				typeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + TTF_FILE);
+			} catch (Exception e) {
+				return null;
+			}
+		}
+		return typeface;
+	}
+
+    public enum Icon implements IIcon {
+        ioni_alert('\uf101'),
 		ioni_alert_circled('\uf100'),
 		ioni_android_add('\uf2c7'),
 		ioni_android_add_circle('\uf359'),
@@ -730,4 +819,34 @@ ioni_alert('\uf101'),
 		ioni_wineglass('\uf2b9'),
 		ioni_woman('\uf25d'),
 		ioni_wrench('\uf2ba'),
-		ioni_xbox('\uf30c')
+		ioni_xbox('\uf30c');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new Ionicons();
+            }
+            return typeface;
+        }
+    }
+}
