@@ -30,6 +30,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_ionicons), getString(R.string.title_activity_mfglabs),
         getString(R.string.title_activity_material_design_iconic),
         getString(R.string.title_activity_meteocons),
+        getString(R.string.title_activity_octicons),
+
     };
     return listItems;
   }
@@ -101,6 +103,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 10:
         Intent intentMeteo = new Intent(MainActivity.this, MeteoconsButtonsActivity.class);
         startActivity(intentMeteo);
+        break;
+      case 11:
+        Intent intentOcticons = new Intent(MainActivity.this, OcticonsButtonsActivity.class);
+        startActivity(intentOcticons);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");

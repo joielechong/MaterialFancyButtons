@@ -71,6 +71,11 @@
         android:label="@string/title_activity_meteocons">
     </activity>
 
+    <activity
+        android:name=".OcticonsButtonsActivity"
+        android:label="@string/title_activity_octicons">
+    </activity>
+
   </application>
 
 </manifest>
