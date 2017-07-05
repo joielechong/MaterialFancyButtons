@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="define_mfb_font_meteocons">com.rilixtech.meteocons_typeface.Meteocons</string>
+
+  <string name="meti_windy_rain_inv">meti_windy_rain_inv</string>
+  <string name="meti_snow_inv">meti_snow_inv</string>
+  <string name="meti_snow_heavy_inv">meti_snow_heavy_inv</string>
+  <string name="meti_hail_inv">meti_hail_inv</string>
+  <string name="meti_clouds_inv">meti_clouds_inv</string>
+  <string name="meti_clouds_flash_inv">meti_clouds_flash_inv</string>
+  <string name="meti_temperature">meti_temperature</string>
+  <string name="meti_compass">meti_compass</string>
+  <string name="meti_na">meti_na</string>
+  <string name="meti_celcius">meti_celcius</string>
+  <string name="meti_fahrenheit">meti_fahrenheit</string>
+  <string name="meti_clouds_flash_alt">meti_clouds_flash_alt</string>
+  <string name="meti_sun_inv">meti_sun_inv</string>
+  <string name="meti_moon_inv">meti_moon_inv</string>
+  <string name="meti_cloud_sun_inv">meti_cloud_sun_inv</string>
+  <string name="meti_cloud_moon_inv">meti_cloud_moon_inv</string>
+  <string name="meti_cloud_inv">meti_cloud_inv</string>
+  <string name="meti_cloud_flash_inv">meti_cloud_flash_inv</string>
+  <string name="meti_drizzle_inv">meti_drizzle_inv</string>
+  <string name="meti_rain_inv">meti_rain_inv</string>
+  <string name="meti_windy_inv">meti_windy_inv</string>
+  <string name="meti_sunrise">meti_sunrise</string>
+  <string name="meti_sun">meti_sun</string>
+  <string name="meti_moon">meti_moon</string>
+  <string name="meti_eclipse">meti_eclipse</string>
+  <string name="meti_mist">meti_mist</string>
+  <string name="meti_wind">meti_wind</string>
+  <string name="meti_snowflake">meti_snowflake</string>
+  <string name="meti_cloud_sun">meti_cloud_sun</string>
+  <string name="meti_cloud_moon">meti_cloud_moon</string>
+  <string name="meti_fog_sun">meti_fog_sun</string>
+  <string name="meti_fog_moon">meti_fog_moon</string>
+  <string name="meti_fog_cloud">meti_fog_cloud</string>
+  <string name="meti_fog">meti_fog</string>
+  <string name="meti_cloud">meti_cloud</string>
+  <string name="meti_cloud_flash">meti_cloud_flash</string>
+  <string name="meti_cloud_flash_alt">meti_cloud_flash_alt</string>
+  <string name="meti_drizzle">meti_drizzle</string>
+  <string name="meti_rain">meti_rain</string>
+  <string name="meti_windy">meti_windy</string>
+  <string name="meti_windy_rain">meti_windy_rain</string>
+  <string name="meti_snow">meti_snow</string>
+  <string name="meti_snow_alt">meti_snow_alt</string>
+  <string name="meti_snow_heavy">meti_snow_heavy</string>
+  <string name="meti_hail">meti_hail</string>
+  <string name="meti_clouds">meti_clouds</string>
+  <string name="meti_clouds_flash">meti_clouds_flash</string>
+
+</resources>

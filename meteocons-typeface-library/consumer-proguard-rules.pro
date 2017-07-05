@@ -1,1 +1,0 @@
--keep class com.rilixtech.meteocons_typeface_library.Meteoconcs { *; }

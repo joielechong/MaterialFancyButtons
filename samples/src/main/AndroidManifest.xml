@@ -66,6 +66,11 @@
         android:label="@string/title_activity_material_design_iconic">
     </activity>
 
+    <activity
+        android:name=".MeteoconsButtonsActivity"
+        android:label="@string/title_activity_meteocons">
+    </activity>
+
   </application>
 
 </manifest>

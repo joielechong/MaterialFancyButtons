@@ -29,6 +29,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_google_material),
         getString(R.string.title_activity_ionicons), getString(R.string.title_activity_mfglabs),
         getString(R.string.title_activity_material_design_iconic),
+        getString(R.string.title_activity_meteocons),
     };
     return listItems;
   }
@@ -96,6 +97,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 9:
         Intent intentMaterialDesign = new Intent(MainActivity.this, MaterialDesignIconicButtonsActivity.class);
         startActivity(intentMaterialDesign);
+        break;
+      case 10:
+        Intent intentMeteo = new Intent(MainActivity.this, MeteoconsButtonsActivity.class);
+        startActivity(intentMeteo);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");
