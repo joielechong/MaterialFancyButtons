@@ -294,7 +294,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
     facebookLoginBtn.setIconPosition(FancyButton.POSITION_LEFT);
     facebookLoginBtn.setFontIconSize(30);
 
-See the [example project](https://github.com/joielechong/MaterialFancyButtons/tree/master/samples/src/main/java/com/rilixtech/materialfancybuttons/sample) for more samples
+See the [example project](https://github.com/joielechong/MaterialFancyButtons/tree/master/samples/src/main/java/com/rilixtech/materialfancybutton/sample) for more samples
 
 
 - - - -

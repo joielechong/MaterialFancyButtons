@@ -48,20 +48,16 @@ dependencies {
 //  compile project(path: ':entypo-typeface')
   compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 
-
   compile project(path: ':ionicons-typeface')
 //  compile project(path: ':material-design-iconic-typeface')
   compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
+
 
   compile project(path: ':meteocons-typeface-library')
   compile project(path: ':octicons-typeface-library')
   compile project(path: ':pixeden-7-stroke-typeface-library')
   compile project(path: ':typicons-typeface')
   compile project(path: ':weather-icons-typeface-library')
-
-  compile "com.mikepenz:iconics-core:2.8.7@aar"
-  compile 'com.mikepenz:fontawesome-typeface:4.7.0.1@aar'
-  compile 'com.mikepenz:devicon-typeface:2.0.0.3@aar'
 
 
 }
