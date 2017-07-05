@@ -47,15 +47,14 @@ compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
+compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
 
 
 
 compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
-compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3@aar'
 compile 'com.rilixtech:meteocons-typeface:1.1.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
-compile 'com.rilixtech:entypo-typeface:1.0.0.3@aar'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3@aar'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
@@ -68,7 +67,7 @@ compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 
 2 - Add the MaterialFancyButton View with custom params:
 
-	<com.rilixtech.MaterialFancyButton
+	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"/>
@@ -83,7 +82,7 @@ compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 
 so it will be look like this:
 
-	<com.rilixtech.MaterialFancyButton
+	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -97,7 +96,7 @@ so it will be look like this:
 
 so it will be look like this:
 
-	<com.rilixtech.MaterialFancyButton
+	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	   android:id="@+id/btn_preview"
 	   android:layout_width="wrap_content"
 	   android:layout_height="wrap_content"
@@ -114,7 +113,7 @@ then you can use a more simpler way:
 
 so it will be look like this:
 
-	<com.rilixtech.MaterialFancyButton
+	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -126,7 +125,7 @@ Please be noted that when using fancy:fb_icon you don't need to use fancy:fb_ico
 ### Use Icon Font
 The are already available fonts that you can use, you can select it from the list below. To use it, you need to add a string value to `fb_icon` attribute like this:
 
-	<com.rilixtech.MaterialFancyButton
+	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -157,10 +156,6 @@ The following list is within this format:
   * "fawi"
   * `compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'`
 
-* [MFGLabs Iconset](https://github.com/MfgLabs/mfglabs-iconset)
-  * "mfgi"
-  * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
-
 * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
   * "foui"
   * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
@@ -169,14 +164,19 @@ The following list is within this format:
   * "gmdi"
   * `compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'`
 
-
-
-
-
 * [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
   * "gmii"
   * **Google Material Iconic**
-  * `compile 'com.rilixtech:material-design-iconic-typeface:+@aar'`
+  * `compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'`
+
+* [MFGLabs Iconset](https://github.com/MfgLabs/mfglabs-iconset)
+  * "mfgi"
+  * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
+
+
+
+
+
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
   * "meti"
   * compile 'com.rilixtech:meteocons-typeface:+@aar'
@@ -248,7 +248,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 ####  Supported Getters
 
 | Function        | Description  |
-| ------------- |:-------------:| -----:|
+| ------------- | -----:|
 | getText() | Returns Text Value of the button|
 | getTextViewObject() | Returns TextView Object|
 | getIconFontObject() | Returns icon defined by fb_fontIconResource|
@@ -260,7 +260,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 
 ![MaterialFancyButton Spotify](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/spotify-button.png)
 
-	<com.rilixtech.MaterialFancyButton
+	<com.rilixtech.materialfancybutton.MaterialFancyButton
 		android:id="@+id/btn_spotify"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

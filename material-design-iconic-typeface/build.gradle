@@ -4,7 +4,7 @@ group rootProject.ext.publishedGroupId
 
 ext.materialDesignVersionName = '2.2.0.3'
 ext.materialDesignVersionCode = 22003
-ext.libraryName = 'material-design-icon-typeface'
+ext.libraryName = 'material-design-iconic-typeface'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
