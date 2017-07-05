@@ -53,7 +53,10 @@ dependencies {
   compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
 
 
-  compile project(path: ':meteocons-typeface')
+//  compile project(path: ':meteocons-typeface')
+  compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
+
+
   compile project(path: ':octicons-typeface-library')
   compile project(path: ':pixeden-7-stroke-typeface-library')
   compile project(path: ':typicons-typeface')

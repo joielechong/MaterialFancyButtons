@@ -48,11 +48,11 @@ compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
+compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 
 
 
 compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
-compile 'com.rilixtech:meteocons-typeface:1.1.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3@aar'
@@ -173,13 +173,13 @@ The following list is within this format:
   * "mfgi"
   * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
 
-
-
-
-
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
   * "meti"
-  * compile 'com.rilixtech:meteocons-typeface:+@aar'
+  * `compile 'com.rilixtech:meteocons-typeface:1.1.0.3'`
+
+
+
+
 * [Octicons](https://github.com/github/octicons)
   * "octi"
   * compile 'com.rilixtech:octicons-typeface:+@aar'
