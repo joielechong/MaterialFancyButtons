@@ -9,7 +9,7 @@ public class OcticonsButtonsActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_meteocons_buttons);
+    setContentView(R.layout.activity_octicons_buttons);
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
