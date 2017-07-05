@@ -1,4 +1,113 @@
-octi_alert('\uf02d'),
+package com.rilixtech.octicons_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class Octicons implements ITypeface {
+    private static final String TTF_FILE = "octicons-v3.2.0.ttf";
+    private static final String MAPPING_FONT_PREFIX = "octi";
+
+    private static Typeface typeface = null;
+
+    private static HashMap<String, Character> mChars;
+
+    @Override
+    public IIcon getIcon(String key) {
+        return Icon.valueOf(key);
+    }
+
+    @Override
+    public HashMap<String, Character> getCharacters() {
+        if (mChars == null) {
+            HashMap<String, Character> aChars = new HashMap<>();
+            for (Icon v : Icon.values()) {
+                aChars.put(v.name(),
+                        v.character);
+            }
+            mChars = aChars;
+        }
+
+        return mChars;
+    }
+
+    @Override
+    public String getMappingPrefix() {
+        return MAPPING_FONT_PREFIX;
+    }
+
+    @Override
+    public String getFontName() {
+        return "Octicons";
+    }
+
+    @Override
+    public String getVersion() {
+        return "3.2.0";
+    }
+
+    @Override
+    public int getIconCount() {
+        return mChars.size();
+    }
+
+    @Override
+    public Collection<String> getIcons() {
+        Collection<String> icons = new LinkedList<String>();
+
+        for (Icon value : Icon.values()) {
+            icons.add(value.name());
+        }
+
+        return icons;
+    }
+
+    @Override
+    public String getAuthor() {
+        return "GitHub";
+    }
+
+    @Override
+    public String getUrl() {
+        return "https://github.com/github/octicons";
+    }
+
+    @Override
+    public String getDescription() {
+        return "GitHub's icon font https://octicons.github.com/";
+    }
+
+    @Override
+    public String getLicense() {
+        return " SIL OFL 1.1";
+    }
+
+    @Override
+    public String getLicenseUrl() {
+        return "http://scripts.sil.org/OFL";
+    }
+
+    @Override
+    public Typeface getTypeface(Context context) {
+        if (typeface == null) {
+            try {
+                typeface = Typeface.createFromAsset(context.getAssets(),
+                        "fonts/" + TTF_FILE);
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        return typeface;
+    }
+
+    public enum Icon implements IIcon {
+        //Octicons
+        octi_alert('\uf02d'),
         octi_arrow_down('\uf03f'),
         octi_arrow_left('\uf040'),
         octi_arrow_right('\uf03e'),
@@ -191,3 +300,33 @@ octi_alert('\uf02d'),
         octi_remove_close('\uf081'),
         octi_x('\uf081'),
         octi_zap('\u26A1');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new Octicons();
+            }
+            return typeface;
+        }
+    }
+}

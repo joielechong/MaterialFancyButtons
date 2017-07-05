@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
-ext.mfglabsVersionCode = 1000
-ext.mfglabsVersionVersionName = '1.0'
-ext.libraryName= 'mfglabs-iconset-typeface'
+ext.octiconsVersionCode = 32003
+ext.octiconsVersionName = '3.2.0.3'
+ext.libraryName = 'octicons-typeface'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -12,8 +12,8 @@ android {
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     consumerProguardFiles 'consumer-proguard-rules.pro'
-    versionCode mfglabsVersionCode
-    versionName mfglabsVersionVersionName
+    versionCode octiconsVersionCode
+    versionName octiconsVersionName
   }
   buildTypes {
     release {
@@ -31,7 +31,7 @@ dependencies {
   compile project(path: ':materialfancybuttons')
 }
 
-if (project.hasProperty('pushall') || project.hasProperty('mfglabsTypefaceOnly')) {
+if (project.hasProperty('pushall') || project.hasProperty('octiconsOnly')) {
   ext {
 
     //For bintray and jcenter distribution
@@ -39,8 +39,9 @@ if (project.hasProperty('pushall') || project.hasProperty('mfglabsTypefaceOnly')
     libraryName = libraryName
     //This artifact name should be the same with library module name
     artifact = libraryName
-    libraryDescription = 'Awesome web font icon by MFG Labs'
-    libraryVersion = mfglabsVersionVersionName
+    libraryDescription =
+        'Otcicons Typeface for MaterialFancyButtons. GitHub\'s icon font https://octicons.github.com/'
+    libraryVersion = octiconsVersionName
 
     bintrayRepo = rootProject.ext.bintrayRepo
     publishedGroupId = rootProject.ext.publishedGroupId
