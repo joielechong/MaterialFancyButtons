@@ -81,8 +81,8 @@ compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 
  For text:
 
-    fancy:fb_textFont="fontawesome.ttf"
-    fancy:fb_text="your text"
+    fancy:mfb_textFont="fontawesome.ttf"
+    fancy:mfb_text="your text"
 
 so it will be look like this:
 
@@ -90,13 +90,13 @@ so it will be look like this:
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    fancy:fb_textFont="robotothin.ttf"
-        fancy:fb_text="your text"/>
+	    fancy:mfb_textFont="robotothin.ttf"
+        fancy:mfb_text="your text"/>
 
  For icon:
 
-    fancy:fb_iconFont="fontawesome.ttf"
-    fancy:fb_fontIconResource="&#xf087;"
+    fancy:mfb_iconFont="fontawesome.ttf"
+    fancy:mfb_fontIconResource="&#xf087;"
 
 so it will be look like this:
 
@@ -104,8 +104,8 @@ so it will be look like this:
 	   android:id="@+id/btn_preview"
 	   android:layout_width="wrap_content"
 	   android:layout_height="wrap_content"
-	   fancy:fb_iconFont="fontawesome.ttf"
-       fancy:fb_fontIconResource="&#xf087;"/>
+	   fancy:mfb_iconFont="fontawesome.ttf"
+       fancy:mfb_fontIconResource="&#xf087;"/>
 
 If you use a precompiled font icon (like fontawesome) instead manual copying to asset folder with:
 ```gradle
@@ -113,7 +113,7 @@ compile 'com.rilixtech:fontawesome-typeface:4.7.0.1'
 ```
 then you can use a more simpler way:
 
-    fancy:fb_icon="fawi_star"
+    fancy:mfb_icon="fawi_star"
 
 so it will be look like this:
 
@@ -121,21 +121,21 @@ so it will be look like this:
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    fancy:fb_icon="fawi_star"/>
+	    fancy:mfb_icon="fawi_star"/>
 
 This is the recommended way, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
-Please be noted that when using fancy:fb_icon you don't need to use fancy:fb_iconFont and fancy:fb_fontIconResource. Iff both value is present, they will be override and ignored.
+Please be noted that when using fancy:mfb_icon you don't need to use fancy:mfb_iconFont and fancy:mfb_fontIconResource. Iff both value is present, they will be override and ignored.
 
 ### Use Icon Font
-The are already available fonts that you can use, you can select it from the list below. To use it, you need to add a string value to `fb_icon` attribute like this:
+The are already available fonts that you can use, you can select it from the list below. To use it, you need to add a string value to `mfb_icon` attribute like this:
 
 	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    fancy:fb_icon="fawi_star"/>
+	    fancy:mfb_icon="fawi_star"/>
 
-Here we use Font Awesome icon, because we use `fawi_star` as the value for `fancy:fb_icon`. `fawi` prefix is the prefix for Font Awesome.
+Here we use Font Awesome icon, because we use `fawi_star` as the value for `fancy:mfb_icon`. `fawi` prefix is the prefix for Font Awesome.
 
 The following list is within this format:
 * Font Icon link
@@ -209,35 +209,35 @@ Licenses for all included fonts are linked inside the class or can be found on t
 
 | XML Attribute        | Java Attribute           | Description  |
 | ------------- |:-------------:| -----:|
-| fancy:fb_text      | setText(String)     | Text of the button |
-| fancy:fb_textColor     | setTextColor(int)      |  Text Color of the button |
-| fancy:fb_textSize | setTextSize(int)      |    Size of the text |
-| fancy:fb_textFont | setCustomTextFont(String)      |    FontFamily of the text|
-| fancy:fb_textGravity | setTextGravity(Int)      |    Gravity of the text|
-| fancy:fb_icon | setIcon(String), setIcon(char) | Set icon from icon font list. Need the font library (fontawesome_typeface_library, etc) to works. This will override fancy:fb_fontIconResource and fancy:fb_iconFont |
-| fancy:fb_iconResource | setIconResource(Drawable)      |    Drawable icon of the button|
-| fancy:fb_iconPosition | setsetIconPosition(int)      |    Position of the icon : Left, Right, Top, Bottom|
-| fancy:fb_fontIconResource | setIconResource(String)      |    font icon of the button|
-| fancy:fb_fontIconSize | setFontIconSize(int)      |    Size of the icon |
-| fancy:fb_iconFont | setCustomIconFont(String)      |    FontFamily of the icon|
-| fancy:fb_borderWidth | setBorderWidth(int)      |    Width of the border|
-| fancy:fb_borderColor | setBorderColor(int)      |    Color of the border|
-| fancy:fb_defaultColor | setBackgroundColor(int)      |    Background color of the button|
-| fancy:fb_focusColor | setFocusBackgroundColor(int)      |    Focus Color of button background|
-| fancy:fb_disabledColor | setDisableBackgroundColor(int)      |    Disabled Color of button background|
-| fancy:fb_disabledTextColor | setDisableTextColor(int)      |    Disabled Color of button text|
-| fancy:fb_disabledBorderColor | setDisableBorderColor(int)      |    Disabled Color of button border|
+| fancy:mfb_text      | setText(String)     | Text of the button |
+| fancy:mfb_textColor     | setTextColor(int)      |  Text Color of the button |
+| fancy:mfb_textSize | setTextSize(int)      |    Size of the text |
+| fancy:mfb_textFont | setCustomTextFont(String)      |    FontFamily of the text|
+| fancy:mfb_textGravity | setTextGravity(Int)      |    Gravity of the text|
+| fancy:mfb_icon | setIcon(String), setIcon(char) | Set icon from icon font list. Need the font library (fontawesome_typeface_library, etc) to works. This will override fancy:mfb_fontIconResource and fancy:mfb_iconFont |
+| fancy:mfb_iconResource | setIconResource(Drawable)      |    Drawable icon of the button|
+| fancy:mfb_iconPosition | setsetIconPosition(int)      |    Position of the icon : Left, Right, Top, Bottom|
+| fancy:mfb_fontIconResource | setIconResource(String)      |    font icon of the button|
+| fancy:mfb_fontIconSize | setFontIconSize(int)      |    Size of the icon |
+| fancy:mfb_iconFont | setCustomIconFont(String)      |    FontFamily of the icon|
+| fancy:mfb_borderWidth | setBorderWidth(int)      |    Width of the border|
+| fancy:mfb_borderColor | setBorderColor(int)      |    Color of the border|
+| fancy:mfb_defaultColor | setBackgroundColor(int)      |    Background color of the button|
+| fancy:mfb_focusColor | setFocusBackgroundColor(int)      |    Focus Color of button background|
+| fancy:mfb_disabledColor | setDisableBackgroundColor(int)      |    Disabled Color of button background|
+| fancy:mfb_disabledTextColor | setDisableTextColor(int)      |    Disabled Color of button text|
+| fancy:mfb_disabledBorderColor | setDisableBorderColor(int)      |    Disabled Color of button border|
 | fancy:mfb_radius | setRadius(int)      |    Radius of the button|
 | fancy:mfb_radiusTopLeft | setRadiusTopLeft(int)      |    Radius top left of the button|
 | fancy:mfb_radiusTopRight | setRadiusTopRight(int)      |    Radius top right of the button|
 | fancy:mfb_radiusBottomLeft | setRadiusBottomLeft(int)      |    Radius bottom left of the button|
 | fancy:mfb_radiusBottomRight | setRadiusBottomRight(int)      |    Radius bottom right of the button|
-| fancy:fb_iconPaddingLeft | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:fb_iconPaddingRight | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:fb_iconPaddingTop | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:fb_iconPaddingBottom | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:fb_ghost | setGhost(boolean)      |    Ghost (Hollow)|
-| fancy:fb_useSystemFont | setUsingSystemFont(boolean) | If enabled, the button title will ignore its custom font and use the default system font |
+| fancy:mfb_iconPaddingLeft | setIconPadding(int,int,int,int)      |    Icon Padding|
+| fancy:mfb_iconPaddingRight | setIconPadding(int,int,int,int)      |    Icon Padding|
+| fancy:mfb_iconPaddingTop | setIconPadding(int,int,int,int)      |    Icon Padding|
+| fancy:mfb_iconPaddingBottom | setIconPadding(int,int,int,int)      |    Icon Padding|
+| fancy:mfb_ghost | setGhost(boolean)      |    Ghost (Hollow)|
+| fancy:mfb_useSystemFont | setUsingSystemFont(boolean) | If enabled, the button title will ignore its custom font and use the default system font |
 
 For setting the radius of the button, you can also use `setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight)`
 
@@ -275,16 +275,16 @@ Default Attributes have more priority than Attributes with prefix fancy.
 		android:paddingLeft="20dp"
 		android:paddingRight="20dp"
 		android:paddingTop="10dp"
-		fancy:fb_borderColor="#FFFFFF"
-		fancy:fb_borderWidth="1dp"
-		fancy:fb_defaultColor="#7ab800"
-		fancy:fb_focusColor="#9bd823"
-		fancy:fb_iconFont="fontawesome.ttf"
-		fancy:fb_fontIconResource="&#xf04b;"
-		fancy:fb_iconPosition="left"
+		fancy:mfb_borderColor="#FFFFFF"
+		fancy:mfb_borderWidth="1dp"
+		fancy:mfb_defaultColor="#7ab800"
+		fancy:mfb_focusColor="#9bd823"
+		fancy:mfb_iconFont="fontawesome.ttf"
+		fancy:mfb_fontIconResource="&#xf04b;"
+		fancy:mfb_iconPosition="left"
 		fancy:mfb_radius="30dp"
-		fancy:fb_text="SHUFFLE PLAY"
-		fancy:fb_textColor="#FFFFFF" />
+		fancy:mfb_text="SHUFFLE PLAY"
+		fancy:mfb_textColor="#FFFFFF" />
 
 **2 - Facebook Button**
 

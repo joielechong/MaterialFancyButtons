@@ -9,9 +9,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-/**
- * Created by mikepenz on 01.11.14.
- */
 public class FontAwesome implements ITypeface {
   private static final String TTF_FILE = "fontawesome-font-v4.7.ttf";
   private static final String MAPPING_FONT_PREFIX = "fawi";

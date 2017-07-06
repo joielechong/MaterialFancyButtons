@@ -42,6 +42,11 @@
     </activity>
 
     <activity
+        android:name=".FontAwesomeActivity"
+        android:label="@string/title_activity_fontawesome">
+    </activity>
+
+    <activity
         android:name=".FoundationIconsButtonsActivity"
         android:label="@string/title_activity_foundation_icons">
     </activity>

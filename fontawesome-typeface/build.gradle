@@ -4,6 +4,7 @@ group = rootProject.ext.publishedGroupId
 
 ext.fontAwesomeVersionName = '4.7.0.4'
 ext.fontAwesomeVersionCode = 47004
+ext.libraryName = 'fontawesome-typeface'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -41,11 +42,12 @@ if (project.hasProperty('pushall') || project.hasProperty('fontawesomeonly')) {
   ext {
 
     //For bintray and jcenter distribution
-    bintrayName = 'fontawesome-typeface'
-    libraryName = 'fontawesome-typeface'
+    bintrayName = libraryName
+//    libraryName = 'fontawesome-typeface'
     //This artifact name should be the same with library module name
-    artifact = 'fontawesome-typeface'
-    libraryDescription = 'This is Font Awesome TypeFace for MaterialFancyButtons. Font Awesome is a full suite of 675 pictographic icons for easy scalable vector graphics on websites, created and maintained by Dave Gandy. Stay up to date @fontawesome.'
+    artifact = libraryName
+    libraryDescription =
+        'Font Awesome TypeFace for MaterialFancyButtons. Font Awesome is a full suite of 675 pictographic icons for easy scalable vector graphics on websites, created and maintained by Dave Gandy. Stay up to date @fontawesome.'
     libraryVersion = fontAwesomeVersionName
 
     bintrayRepo = rootProject.ext.bintrayRepo
@@ -56,8 +58,8 @@ if (project.hasProperty('pushall') || project.hasProperty('fontawesomeonly')) {
     developerName = rootProject.ext.developerName
     developerEmail = rootProject.ext.developerEmail
     organization = rootProject.ext.organization
-    licenseName =rootProject.ext.licenseName
-    licenseUrl =rootProject.ext.licenseUrl
+    licenseName = rootProject.ext.licenseName
+    licenseUrl = rootProject.ext.licenseUrl
     allLicenses = [rootProject.ext.allLicenses]
   }
 

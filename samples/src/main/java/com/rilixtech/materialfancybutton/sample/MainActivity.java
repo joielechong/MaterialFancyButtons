@@ -25,6 +25,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_community_material_buttons),
         getString(R.string.title_activity_devicon_buttons),
         getString(R.string.title_activity_entypo),
+        getString(R.string.title_activity_fontawesome),
         getString(R.string.title_activity_foundation_icons),
         getString(R.string.title_activity_google_material),
         getString(R.string.title_activity_ionicons), getString(R.string.title_activity_mfglabs),
@@ -82,44 +83,48 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentEntypo);
         break;
       case 5:
+        Intent intentFontAwesome = new Intent(MainActivity.this, FontAwesomeActivity.class);
+        startActivity(intentFontAwesome);
+        break;
+      case 6:
         Intent intentFoundationIcons =
             new Intent(MainActivity.this, FoundationIconsButtonsActivity.class);
         startActivity(intentFoundationIcons);
         break;
-      case 6:
+      case 7:
         Intent intentGoogleMaterial =
             new Intent(MainActivity.this, GoogleMaterialButtonsActivity.class);
         startActivity(intentGoogleMaterial);
         break;
-      case 7:
+      case 8:
         Intent intentIonics = new Intent(MainActivity.this, IoniconsButtonsActivity.class);
         startActivity(intentIonics);
         break;
-      case 8:
+      case 9:
         Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
         startActivity(intentMFGLabs);
         break;
-      case 9:
+      case 10:
         Intent intentMaterialDesign = new Intent(MainActivity.this, MaterialDesignIconicButtonsActivity.class);
         startActivity(intentMaterialDesign);
         break;
-      case 10:
+      case 11:
         Intent intentMeteo = new Intent(MainActivity.this, MeteoconsButtonsActivity.class);
         startActivity(intentMeteo);
         break;
-      case 11:
+      case 12:
         Intent intentOcticons = new Intent(MainActivity.this, OcticonsButtonsActivity.class);
         startActivity(intentOcticons);
         break;
-      case 12:
+      case 13:
         Intent intentPixeden = new Intent(MainActivity.this, Pixeden7StrokeActivity.class);
         startActivity(intentPixeden);
         break;
-      case 13:
+      case 14:
         Intent intentTypicons = new Intent(MainActivity.this, TypiconsActivity.class);
         startActivity(intentTypicons);
         break;
-      case 14:
+      case 15:
         Intent intentWeatherIcons = new Intent(MainActivity.this, WeatherIconsActivity.class);
         startActivity(intentWeatherIcons);
         break;

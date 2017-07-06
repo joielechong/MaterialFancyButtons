@@ -8,35 +8,35 @@
     <attr name="android:textSize"/>
     <attr name="android:textAllCaps"/>
 
-    <attr format="color" name="fb_defaultColor"/>
-    <attr format="string" name="fb_text"/>
+    <attr format="color" name="mfb_defaultColor"/>
+    <attr format="string" name="mfb_text"/>
 
-    <attr format="color" name="fb_textColor"/>
-    <attr format="color" name="fb_iconColor"/>
+    <attr format="color" name="mfb_textColor"/>
+    <attr format="color" name="mfb_iconColor"/>
 
-    <attr format="string" name="fb_textFont"/>
-    <attr format="string" name="fb_iconFont"/>
+    <attr format="string" name="mfb_textFont"/>
+    <attr format="string" name="mfb_iconFont"/>
 
-    <attr format="dimension" name="fb_textSize"/>
-    <attr format="integer" name="fb_iconResource"/>
-    <attr format="string" name="fb_icon"/>
-    <attr format="string" name="fb_fontIconResource"/>
-    <attr format="dimension" name="fb_fontIconSize"/>
-    <attr format="enum" name="fb_iconPosition">
+    <attr format="dimension" name="mfb_textSize"/>
+    <attr format="integer" name="mfb_iconResource"/>
+    <attr format="string" name="mfb_icon"/>
+    <attr format="string" name="mfb_fontIconResource"/>
+    <attr format="dimension" name="mfb_fontIconSize"/>
+    <attr format="enum" name="mfb_iconPosition">
       <enum name="left" value="1"/>
       <enum name="right" value="2"/>
       <enum name="top" value="3"/>
       <enum name="bottom" value="4"/>
     </attr>
 
-    <attr format="enum" name="fb_textPosition">
+    <attr format="enum" name="mfb_textPosition">
       <enum name="left" value="1"/>
       <enum name="right" value="2"/>
       <enum name="top" value="3"/>
       <enum name="bottom" value="4"/>
     </attr>
 
-    <attr format="enum" name="fb_textGravity">
+    <attr format="enum" name="mfb_textGravity">
       <enum name="top" value="0x30"/>
       <enum name="bottom" value="0x50"/>
       <enum name="left" value="0x03"/>
@@ -53,17 +53,17 @@
       <enum name="end" value="0x00800005"/>
     </attr>
 
-    <attr format="dimension" name="fb_iconPaddingLeft"/>
-    <attr format="dimension" name="fb_iconPaddingRight"/>
-    <attr format="dimension" name="fb_iconPaddingTop"/>
-    <attr format="dimension" name="fb_iconPaddingBottom"/>
+    <attr format="dimension" name="mfb_iconPaddingLeft"/>
+    <attr format="dimension" name="mfb_iconPaddingRight"/>
+    <attr format="dimension" name="mfb_iconPaddingTop"/>
+    <attr format="dimension" name="mfb_iconPaddingBottom"/>
 
-    <attr format="color" name="fb_borderColor"/>
-    <attr format="dimension" name="fb_borderWidth"/>
-    <attr format="color" name="fb_focusColor"/>
-    <attr format="color" name="fb_disabledColor"/>
-    <attr format="color" name="fb_disabledTextColor"/>
-    <attr format="color" name="fb_disabledBorderColor"/>
+    <attr format="color" name="mfb_borderColor"/>
+    <attr format="dimension" name="mfb_borderWidth"/>
+    <attr format="color" name="mfb_focusColor"/>
+    <attr format="color" name="mfb_disabledColor"/>
+    <attr format="color" name="mfb_disabledTextColor"/>
+    <attr format="color" name="mfb_disabledBorderColor"/>
 
     <attr format="dimension" name="mfb_radius"/>
     <attr format="dimension" name="mfb_radiusTopLeft"/>
@@ -71,10 +71,10 @@
     <attr format="dimension" name="mfb_radiusBottomLeft"/>
     <attr format="dimension" name="mfb_radiusBottomRight"/>
 
-    <attr format="boolean" name="fb_textAllCaps"/>
+    <attr format="boolean" name="mfb_textAllCaps"/>
 
-    <attr format="boolean" name="fb_ghost"/>
-    <attr format="boolean" name="fb_useSystemFont"/>
+    <attr format="boolean" name="mfb_ghost"/>
+    <!--<attr format="boolean" name="fb_useSystemFont"/>-->
   </declare-styleable>
 
 </resources> 

@@ -27,8 +27,8 @@ dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
 
-  //  compile project(path: ':fontawesome-typeface')
-  compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
+    compile project(path: ':fontawesome-typeface')
+//  compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 
   //  compile project(path: ':community-material-typeface')
   compile 'com.rilixtech:community-material-typeface:1.9.32.2'

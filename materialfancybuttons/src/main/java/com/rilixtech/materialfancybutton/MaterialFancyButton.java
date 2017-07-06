@@ -81,15 +81,12 @@ public class MaterialFancyButton extends LinearLayout {
   public static final int POSITION_TOP = 3;
   public static final int POSITION_BOTTOM = 4;
 
-  //private String mDefaultIconFont = null; //"fontawesome.ttf";
-  //private String mDefaultTextFont = null; //"robotoregular.ttf";
-
   private ImageView mIconView;
   private TextView mFontIconView;
   private TextView mTextView;
 
   private boolean mGhost = false; // Default is a solid button !
-  private boolean mUseSystemFont = false; // Default is using robotoregular.ttf
+  //private boolean mUseSystemFont = false; // Default is using robotoregular.ttf
   private boolean mUseRippleEffect = true;
 
   /**
@@ -199,9 +196,9 @@ public class MaterialFancyButton extends LinearLayout {
     textView.setTextSize(FontUtil.pxToSp(getContext(), mDefaultTextSize));
     textView.setLayoutParams(
         new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-    if (!isInEditMode() && !mUseSystemFont) {
-      textView.setTypeface(mTextTypeFace); //we can pass null in first arg
-    }
+    //if (!isInEditMode() && !mUseSystemFont) {
+    //  textView.setTypeface(mTextTypeFace); //we can pass null in first arg
+    //}
     return textView;
   }
 
@@ -296,42 +293,42 @@ public class MaterialFancyButton extends LinearLayout {
   private void initAttributesArray(TypedArray attrsArray) {
 
     mDefaultBackgroundColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_defaultColor,
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_defaultColor,
             mDefaultBackgroundColor);
-    mFocusBackgroundColor = attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_focusColor,
+    mFocusBackgroundColor = attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_focusColor,
         mFocusBackgroundColor);
     mDisabledBackgroundColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_disabledColor,
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_disabledColor,
             mDisabledBackgroundColor);
 
     mEnabled = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_android_enabled, true);
 
     mDisabledTextColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_disabledTextColor,
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_disabledTextColor,
             mDisabledTextColor);
     mDisabledBorderColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_disabledBorderColor,
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_disabledBorderColor,
             mDisabledBorderColor);
     mDefaultTextColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_textColor, mDefaultTextColor);
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_textColor, mDefaultTextColor);
     // if default color is set then the icon's color is the same (the default for icon's color)
     mDefaultIconColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_iconColor, mDefaultTextColor);
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_iconColor, mDefaultTextColor);
 
     mDefaultTextSize =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_textSize,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_textSize,
             mDefaultTextSize);
     mDefaultTextSize =
         (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_android_textSize,
             mDefaultTextSize);
 
     mDefaultTextGravity =
-        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_fb_textGravity, mDefaultTextGravity);
+        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_textGravity, mDefaultTextGravity);
 
     mBorderColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_fb_borderColor, mBorderColor);
+        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_borderColor, mBorderColor);
     mBorderWidth =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_borderWidth,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_borderWidth,
             mBorderWidth);
 
     // Handle radius for button.
@@ -352,53 +349,53 @@ public class MaterialFancyButton extends LinearLayout {
             mRadius);
 
     mFontIconSize =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_fontIconSize,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_fontIconSize,
             mFontIconSize);
 
     mIconPaddingLeft =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingLeft,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingLeft,
             mIconPaddingLeft);
     mIconPaddingRight =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingRight,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingRight,
             mIconPaddingRight);
     mIconPaddingTop =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingTop,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingTop,
             mIconPaddingTop);
     mIconPaddingBottom =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_fb_iconPaddingBottom,
+        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingBottom,
             mIconPaddingBottom);
 
     mTextAllCaps =
-        attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_textAllCaps, false);
+        attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_mfb_textAllCaps, false);
     mTextAllCaps =
         attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_android_textAllCaps, false);
 
-    mGhost = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_ghost, mGhost);
-    mUseSystemFont = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_useSystemFont,
-        mUseSystemFont);
+    mGhost = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_mfb_ghost, mGhost);
+    //mUseSystemFont = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_useSystemFont,
+    //    mUseSystemFont);
 
-    String text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_text);
+    String text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_text);
 
-    if (text == null) { //no fb_text attribute
+    if (text == null) { //no mfb_text attribute
       text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_android_text);
     }
 
     mIconPosition =
-        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_fb_iconPosition, mIconPosition);
+        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_iconPosition, mIconPosition);
 
     String fontIcon =
-        attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_fontIconResource);
+        attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_fontIconResource);
 
-    String iconFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_iconFont);
-    String textFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_textFont);
+    String iconFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_iconFont);
+    String textFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_textFont);
 
     try {
-      mIconResource = attrsArray.getDrawable(R.styleable.MaterialFancyButtonAttrs_fb_iconResource);
+      mIconResource = attrsArray.getDrawable(R.styleable.MaterialFancyButtonAttrs_mfb_iconResource);
     } catch (Exception e) {
       mIconResource = null;
     }
 
-    mIcon = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_fb_icon);
+    mIcon = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_icon);
 
     Log.d(TAG, "mIcon = " + mIcon);
     if (fontIcon != null) mFontIcon = fontIcon;
@@ -991,14 +988,14 @@ public class MaterialFancyButton extends LinearLayout {
     }
   }
 
-  /**
-   * If enabled, the button title will ignore its custom font and use the default system font
-   *
-   * @param status : true || false
-   */
-  @SuppressWarnings("unused") public void setUsingSystemFont(boolean status) {
-    this.mUseSystemFont = status;
-  }
+  ///**
+  // * If enabled, the button title will ignore its custom font and use the default system font
+  // *
+  // * @param status : true || false
+  // */
+  //@SuppressWarnings("unused") public void setUsingSystemFont(boolean status) {
+  //  this.mUseSystemFont = status;
+  //}
 
   /**
    * Return Text of the button
