@@ -61,9 +61,12 @@ dependencies {
 //  compile project(path: ':octicons-typeface')
   compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 
+//  compile project(path: ':pixeden-7-stroke-typeface')
+  compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 
 
-  compile project(path: ':pixeden-7-stroke-typeface')
+
+
   compile project(path: ':typicons-typeface')
   compile project(path: ':weather-icons-typeface-library')
 

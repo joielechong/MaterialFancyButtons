@@ -36,6 +36,13 @@ Icons, Borders, Radius ... for Android buttons
 compile 'com.rilixtech:materialfancybuttons:1.8.6'
 ```
 
+Add maven to your build.gradle
+```gradle
+maven {
+      url "http://dl.bintray.com/rilixtech/maven"
+    }
+```
+
 ## Additional, Choose your desired fonts
 If you want to use a precompiled font, add the font that you want to use from below list:
 
@@ -51,12 +58,12 @@ compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
 compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
+compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 
 
 
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
-compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
 
 ### Usage
@@ -185,6 +192,10 @@ The following list is within this format:
   * "octi"
   * `compile 'com.rilixtech:octicons-typeface:3.2.0.3'`
 
+* [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
+  * "pe7i"
+  * `compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'`
+
 
 
 
@@ -194,9 +205,7 @@ The following list is within this format:
 * [Typeicons](http://typicons.com/)
   * "typi"
   * compile 'com.rilixtech:typeicons-typeface:+@aar'
-* [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
-  * "pe7i"
-  * compile 'com.rilixtech:pixeden-7-stroke-typeface:+@aar'
+
 
 Licenses for all included fonts are linked inside the class or can be found on the coresponding repoistories.
 
