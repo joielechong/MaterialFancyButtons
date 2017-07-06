@@ -60,9 +60,7 @@ compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 compile 'com.rilixtech:typicons-typeface:2.0.7.3'
-
-
-compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
+compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 ```
 
 ### Usage
@@ -199,12 +197,9 @@ The following list is within this format:
   * "typi"
   * `compile 'com.rilixtech:typicons-typeface:2.0.7.3'`
 
-
-
-
 * [Weather Icons](https://erikflowers.github.io/weather-icons/)
   * "wici"
-  * compile 'com.rilixtech:weather-icons-typeface:+@aar'
+  * `compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'`
 
 
 
