@@ -1,1 +1,1 @@
--keep class com.rilixtech.typeicons_typeface_library.Typeicons { *; }
+-keep class com.rilixtech.typicons_typeface.Typicons { *; }

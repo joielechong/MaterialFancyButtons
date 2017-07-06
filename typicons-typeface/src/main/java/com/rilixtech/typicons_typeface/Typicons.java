@@ -1,4 +1,106 @@
-typi_adjust_brightness('\ue000'),
+package com.rilixtech.typicons_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class Typicons implements ITypeface {
+    private static final String TTF_FILE = "typicons-font-v2.0.7.1.ttf";
+    private static final String MAPPING_FONT_PREFIX = "typi";
+
+    private static Typeface typeface = null;
+    private static HashMap<String, Character> mChars;
+
+    @Override
+    public IIcon getIcon(String key) {
+        return Icon.valueOf(key);
+    }
+
+    @Override
+    public HashMap<String, Character> getCharacters() {
+        if (mChars == null) {
+            HashMap<String, Character> aChars = new HashMap<String, Character>();
+            for (Icon v : Icon.values()) {
+                aChars.put(v.name(), v.character);
+            }
+            mChars = aChars;
+        }
+        return mChars;
+    }
+
+    @Override
+    public String getMappingPrefix() {
+        return MAPPING_FONT_PREFIX;
+    }
+
+    @Override
+    public String getFontName() {
+        return "Typicons";
+    }
+
+    @Override
+    public String getVersion() {
+        return "2.0.7.1";
+    }
+
+    @Override
+    public int getIconCount() {
+        return mChars.size();
+    }
+
+    @Override
+    public Collection<String> getIcons() {
+        Collection<String> icons = new LinkedList<String>();
+        for (Icon value : Icon.values()) {
+            icons.add(value.name());
+        }
+        return icons;
+    }
+
+    @Override
+    public String getAuthor() {
+        return "Stephen Hutchings";
+    }
+
+    @Override
+    public String getUrl() {
+        return "http://typicons.com/";
+    }
+
+    @Override
+    public String getDescription() {
+        return "336 pixel perfect, all-purpose vector icons";
+    }
+
+    @Override
+    public String getLicense() {
+        return "SIL OPEN FONT LICENSE";
+    }
+
+    @Override
+    public String getLicenseUrl() {
+        return "http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web";
+    }
+
+    @Override
+    public Typeface getTypeface(Context context) {
+        if (typeface == null) {
+            try {
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + TTF_FILE);
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        return typeface;
+    }
+
+    public enum Icon implements IIcon {
+        typi_adjust_brightness('\ue000'),
         typi_adjust_contrast('\ue001'),
         typi_anchor_outline('\ue002'),
         typi_anchor('\ue003'),
@@ -334,3 +436,33 @@ typi_adjust_brightness('\ue000'),
         typi_zoom_out('\ue14d'),
         typi_zoom_outline('\ue14e'),
         typi_zoom('\ue14f');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new Typicons();
+            }
+            return typeface;
+        }
+    }
+}
