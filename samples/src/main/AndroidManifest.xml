@@ -76,6 +76,11 @@
         android:label="@string/title_activity_octicons">
     </activity>
 
+    <activity
+        android:name=".Pixeden7StrokeActivity"
+        android:label="@string/title_activity_pixeden7">
+    </activity>
+
   </application>
 
 </manifest>

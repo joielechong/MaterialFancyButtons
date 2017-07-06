@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="define_mfb_font_pixeden7stroke">com.rilixtech.pixeden_7_stroke_typeface_library.Pixeden7Stroke</string>
+  <string name="define_mfb_font_pixeden7stroke">com.rilixtech.pixeden_7_stroke_typeface.Pixeden7Stroke</string>
 
   <string name="pe7i_7s_album">pe7i_7s_album</string>
   <string name="pe7i_7s_arc">pe7i_7s_arc</string>
