@@ -1,4 +1,97 @@
-wici_day_sunny('\uf00d'),
+package com.rilixtech.weather_icons_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class WeatherIcons implements ITypeface {
+    private static final String TTF_FILE = "weather-icons-v2.0.10.ttf";
+    private static final String MAPPING_FONT_PREFIX = "wici";
+
+    private static Typeface typeface = null;
+
+    private static HashMap<String, Character> mChars;
+
+    @Override public IIcon getIcon(String key) {
+        return Icon.valueOf(key);
+    }
+
+    @Override public HashMap<String, Character> getCharacters() {
+        if (mChars == null) {
+            HashMap<String, Character> aChars = new HashMap<String, Character>();
+            for (Icon v : Icon.values()) {
+                aChars.put(v.name(), v.character);
+            }
+            mChars = aChars;
+        }
+
+        return mChars;
+    }
+
+    @Override public String getMappingPrefix() {
+        return MAPPING_FONT_PREFIX;
+    }
+
+    @Override public String getFontName() {
+        return "Weather Icons";
+    }
+
+    @Override public String getVersion() {
+        return "2.0.10";
+    }
+
+    @Override public int getIconCount() {
+        return mChars.size();
+    }
+
+    @Override public Collection<String> getIcons() {
+        Collection<String> icons = new LinkedList<String>();
+
+        for (Icon value : Icon.values()) {
+            icons.add(value.name());
+        }
+
+        return icons;
+    }
+
+    @Override public String getAuthor() {
+        return "Erik Flowers";
+    }
+
+    @Override public String getUrl() {
+        return "http://weathericons.io/";
+    }
+
+    @Override public String getDescription() {
+        return "Weather Icons is the only icon font and CSS with 222 weather themed icons, ready to be dropped right into Bootstrap, or any project that needs high quality weather, maritime, and meteorological based icons!";
+    }
+
+    @Override public String getLicense() {
+        return "SIL OFL 1.1";
+    }
+
+    @Override public String getLicenseUrl() {
+        return "http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL";
+    }
+
+    @Override public Typeface getTypeface(Context context) {
+        if (typeface == null) {
+            try {
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + TTF_FILE);
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        return typeface;
+    }
+
+    public enum Icon implements IIcon {
+        wici_day_sunny('\uf00d'),
         wici_day_cloudy('\uf002'),
         wici_day_cloudy_gusts('\uf000'),
         wici_day_cloudy_windy('\uf001'),
@@ -588,3 +681,33 @@ wici_day_sunny('\uf00d'),
         wici_wu_sunny('\uf00d'),
         wici_wu_tstorms('\uf01e'),
         wici_wu_unknown('\uf00d');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new WeatherIcons();
+            }
+            return typeface;
+        }
+    }
+}

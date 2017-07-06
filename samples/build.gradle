@@ -67,7 +67,7 @@ dependencies {
 //  compile project(path: ':typicons-typeface')
   compile 'com.rilixtech:typicons-typeface:2.0.7.3'
 
-  compile project(path: ':weather-icons-typeface-library')
+  compile project(path: ':weather-icons-typeface')
 
 
 }

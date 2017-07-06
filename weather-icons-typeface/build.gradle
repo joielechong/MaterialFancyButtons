@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
-ext.typiconsVersionCode = 20703
-ext.typiconsVersionName = '2.0.7.3'
-ext.libraryName = 'typicons-typeface'
+ext.weatherIconsVersionCode = 20103
+ext.weatherIconsVersionName = '2.0.10.3'
+ext.libraryName = 'weather-icons-typeface'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -12,8 +12,8 @@ android {
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     consumerProguardFiles 'consumer-proguard-rules.pro'
-    versionCode typiconsVersionCode
-    versionName typiconsVersionName
+    versionCode weatherIconsVersionCode
+    versionName weatherIconsVersionName
   }
   buildTypes {
     release {
@@ -32,7 +32,7 @@ dependencies {
 }
 
 
-if (project.hasProperty('pushall') || project.hasProperty('typiconsOnly')) {
+if (project.hasProperty('pushall') || project.hasProperty('weatherIconsOnly')) {
   ext {
 
     //For bintray and jcenter distribution
@@ -40,8 +40,8 @@ if (project.hasProperty('pushall') || project.hasProperty('typiconsOnly')) {
     //This artifact name should be the same with library module name
     artifact = libraryName
     libraryDescription =
-        'Typicons Typeface for MaterialFancyButtons. Typicons are free-to-use vector icons embedded in a webfont for easy use in your user interfaces, whether it be on the web or in a native application.'
-    libraryVersion = typiconsVersionName
+        'Weather Icons Typeface for MaterialFancyButtons. Weather Icons is the only icon font and CSS with 222 weather themed icons, ready to be dropped right into Bootstrap, or any project that needs high quality weather, maritime, and meteorological based icons!'
+    libraryVersion = weatherIconsVersionName
 
     bintrayRepo = rootProject.ext.bintrayRepo
     publishedGroupId = rootProject.ext.publishedGroupId
@@ -59,3 +59,4 @@ if (project.hasProperty('pushall') || project.hasProperty('typiconsOnly')) {
   apply from: '../install.gradle'
   apply from: '../bintray.gradle'
 }
+

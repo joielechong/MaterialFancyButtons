@@ -1,0 +1,1 @@
+-keep class com.rilixtech.weather_icons_typeface.WeatherIcons { *; }

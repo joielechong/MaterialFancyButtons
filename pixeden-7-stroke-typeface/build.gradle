@@ -36,7 +36,6 @@ if (project.hasProperty('pushall') || project.hasProperty('pixeden7StrokeOnly'))
 
     //For bintray and jcenter distribution
     bintrayName = libraryName
-    libraryName = libraryName
     //This artifact name should be the same with library module name
     artifact = libraryName
     libraryDescription =
