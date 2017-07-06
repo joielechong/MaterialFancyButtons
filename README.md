@@ -50,10 +50,10 @@ compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
 compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
+compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 
 
 
-compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
