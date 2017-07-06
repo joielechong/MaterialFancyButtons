@@ -86,6 +86,11 @@
         android:label="@string/title_activity_typicons">
     </activity>
 
+    <activity
+        android:name=".WeatherIconsActivity"
+        android:label="@string/title_activity_weather_icons">
+    </activity>
+
   </application>
 
 </manifest>

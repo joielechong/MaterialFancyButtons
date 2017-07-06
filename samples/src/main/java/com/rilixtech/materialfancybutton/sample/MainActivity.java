@@ -33,6 +33,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_octicons),
         getString(R.string.title_activity_pixeden7),
         getString(R.string.title_activity_typicons),
+        getString(R.string.title_activity_weather_icons),
 
     };
     return listItems;
@@ -117,6 +118,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 13:
         Intent intentTypicons = new Intent(MainActivity.this, TypiconsActivity.class);
         startActivity(intentTypicons);
+        break;
+      case 14:
+        Intent intentWeatherIcons = new Intent(MainActivity.this, WeatherIconsActivity.class);
+        startActivity(intentWeatherIcons);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");
