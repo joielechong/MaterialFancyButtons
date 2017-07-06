@@ -49,13 +49,13 @@ compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
 compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
+compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 
 
 
 compile 'com.rilixtech:octicons-typeface:3.2.0.3@aar'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
 compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
-compile 'com.rilixtech:ionicons-typeface:2.0.1.3@aar'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1@aar'
 ```
 
@@ -164,6 +164,10 @@ The following list is within this format:
   * "gmdi"
   * `compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'`
 
+* [Ionicons](http://ionicons.com/)
+  * "ioni"
+  * `compile 'com.rilixtech:ionicons-typeface:2.0.1.3'`
+
 * [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
   * "gmii"
   * **Google Material Iconic**
@@ -177,21 +181,19 @@ The following list is within this format:
   * "meti"
   * `compile 'com.rilixtech:meteocons-typeface:1.1.0.3'`
 
-
-
-
 * [Octicons](https://github.com/github/octicons)
   * "octi"
-  * compile 'com.rilixtech:octicons-typeface:+@aar'
+  * `compile 'com.rilixtech:octicons-typeface:3.2.0.3'`
+
+
+
+
 * [Weather Icons](https://erikflowers.github.io/weather-icons/)
   * "wici"
   * compile 'com.rilixtech:weather-icons-typeface:+@aar'
 * [Typeicons](http://typicons.com/)
   * "typi"
   * compile 'com.rilixtech:typeicons-typeface:+@aar'
-* [Ionicons](http://ionicons.com/)
-  * "ioni"
-  * compile 'com.rilixtech:ionicons-typeface:+@aar'
 * [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
   * "pe7i"
   * compile 'com.rilixtech:pixeden-7-stroke-typeface:+@aar'
