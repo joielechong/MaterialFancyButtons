@@ -59,11 +59,10 @@ compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
-
+compile 'com.rilixtech:typicons-typeface:2.0.7.3'
 
 
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3@aar'
-compile 'com.rilixtech:typeicons-typeface:2.0.7.3@aar'
 ```
 
 ### Usage
@@ -196,15 +195,17 @@ The following list is within this format:
   * "pe7i"
   * `compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'`
 
+* [Typeicons](http://typicons.com/)
+  * "typi"
+  * `compile 'com.rilixtech:typicons-typeface:2.0.7.3'`
+
 
 
 
 * [Weather Icons](https://erikflowers.github.io/weather-icons/)
   * "wici"
   * compile 'com.rilixtech:weather-icons-typeface:+@aar'
-* [Typeicons](http://typicons.com/)
-  * "typi"
-  * compile 'com.rilixtech:typeicons-typeface:+@aar'
+
 
 
 Licenses for all included fonts are linked inside the class or can be found on the coresponding repoistories.
