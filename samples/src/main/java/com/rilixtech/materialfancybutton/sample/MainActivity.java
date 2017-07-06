@@ -32,6 +32,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_meteocons),
         getString(R.string.title_activity_octicons),
         getString(R.string.title_activity_pixeden7),
+        getString(R.string.title_activity_typicons),
 
     };
     return listItems;
@@ -112,6 +113,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
       case 12:
         Intent intentPixeden = new Intent(MainActivity.this, Pixeden7StrokeActivity.class);
         startActivity(intentPixeden);
+        break;
+      case 13:
+        Intent intentTypicons = new Intent(MainActivity.this, TypiconsActivity.class);
+        startActivity(intentTypicons);
         break;
       default:
         throw new IllegalArgumentException("Hold up, hold my phone :)");

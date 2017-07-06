@@ -81,6 +81,11 @@
         android:label="@string/title_activity_pixeden7">
     </activity>
 
+    <activity
+        android:name=".TypiconsActivity"
+        android:label="@string/title_activity_typicons">
+    </activity>
+
   </application>
 
 </manifest>
