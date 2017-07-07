@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="define_vaadin_icons">year;author;libraryName;libraryWebsite</string>
+    <string name="library_vaadin_icons_author">Jarmo Kemppainen</string>
+    <string name="library_vaadin_icons_authorWebsite"></string>
+    <string name="library_vaadin_icons_libraryName">Vaadin Icons</string>
+    <string name="library_vaadin_icons_libraryDescription">Vaadin Icons is a set of 600+ icons designed for web applications. Free to use, anywhere!</string>
+    <string name="library_vaadin_icons_libraryWebsite">https://vaadin.com/icons/</string>
+    <string name="library_vaadin_icons_libraryVersion">4.1.0</string>
+    <string name="library_vaadin_icons_licenseId">CC BY 4.0</string>
+    <string name="library_vaadin_icons_isOpenSource">true</string>
+    <string name="library_vaadin_icons_repositoryLink">https://github.com/vaadin/vaadin-icons/</string>
+    <!-- Custom variables section -->
+    <string name="library_vaadin_icons_year"> </string>
+</resources> 

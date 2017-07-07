@@ -1,4 +1,97 @@
-vaai_abacus('\ue682'),
+package com.rilixtech.vaadin_icons_typeface;
+
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.rilixtech.materialfancybutton.typeface.IIcon;
+import com.rilixtech.materialfancybutton.typeface.ITypeface;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+public class VaadinIcons implements ITypeface {
+    private static final String TTF_FILE = "vaadin-icons-v4.1.0.ttf";
+    private static final String MAPPING_FONT_PREFIX = "vaai";
+
+    private static Typeface typeface = null;
+
+    private static HashMap<String, Character> mChars;
+
+    @Override public IIcon getIcon(String key) {
+        return Icon.valueOf(key);
+    }
+
+    @Override public HashMap<String, Character> getCharacters() {
+        if (mChars == null) {
+            HashMap<String, Character> aChars = new HashMap<String, Character>();
+            for (Icon v : Icon.values()) {
+                aChars.put(v.name(), v.character);
+            }
+            mChars = aChars;
+        }
+
+        return mChars;
+    }
+
+    @Override public String getMappingPrefix() {
+        return MAPPING_FONT_PREFIX;
+    }
+
+    @Override public String getFontName() {
+        return "Vaadin Icons";
+    }
+
+    @Override public String getVersion() {
+        return "4.1.0";
+    }
+
+    @Override public int getIconCount() {
+        return mChars.size();
+    }
+
+    @Override public Collection<String> getIcons() {
+        Collection<String> icons = new LinkedList<String>();
+
+        for (Icon value : Icon.values()) {
+            icons.add(value.name());
+        }
+
+        return icons;
+    }
+
+    @Override public String getAuthor() {
+        return "Jarmo Kemppainen";
+    }
+
+    @Override public String getUrl() {
+        return "https://vaadin.com/icons/";
+    }
+
+    @Override public String getDescription() {
+        return "Vaadin Icons is a set of 600+ icons designed for web applications. Free to use, anywhere!";
+    }
+
+    @Override public String getLicense() {
+        return "Creative Commons licenses: CC-BY license";
+    }
+
+    @Override public String getLicenseUrl() {
+        return "https://creativecommons.org/licenses/by/4.0/";
+    }
+
+    @Override public Typeface getTypeface(Context context) {
+        if (typeface == null) {
+            try {
+                typeface = Typeface.createFromAsset(context.getAssets(), "fonts/" + TTF_FILE);
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        return typeface;
+    }
+
+    public enum Icon implements IIcon {
+        vaai_abacus('\ue682'),
         vaai_absolute_position('\ue61e'),
         vaai_accessibility('\ue683'),
         vaai_accordion_menu('\ue61f'),
@@ -634,3 +727,33 @@ vaai_abacus('\ue682'),
         vaai_trending_up('\ue961'),
         vaai_user_star('\ue962'),
         vaai_wallet('\ue963');
+
+        char character;
+
+        Icon(char character) {
+            this.character = character;
+        }
+
+        public String getFormattedName() {
+            return "{" + name() + "}";
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String getName() {
+            return name();
+        }
+
+        // remember the typeface so we can use it later
+        private static ITypeface typeface;
+
+        public ITypeface getTypeface() {
+            if (typeface == null) {
+                typeface = new VaadinIcons();
+            }
+            return typeface;
+        }
+    }
+}
