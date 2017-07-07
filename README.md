@@ -60,6 +60,7 @@ compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 compile 'com.rilixtech:typicons-typeface:2.0.7.3'
+compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 ```
 
@@ -196,6 +197,10 @@ The following list is within this format:
 * [Typeicons](http://typicons.com/)
   * "typi"
   * `compile 'com.rilixtech:typicons-typeface:2.0.7.3'`
+
+* [Vaadin Icons](https://github.com/vaadin/vaadin-icons/)
+  * "vaai"
+  * `compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'`
 
 * [Weather Icons](https://erikflowers.github.io/weather-icons/)
   * "wici"
