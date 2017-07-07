@@ -34,6 +34,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_octicons),
         getString(R.string.title_activity_pixeden7),
         getString(R.string.title_activity_typicons),
+        getString(R.string.title_activity_vaadin_icons),
         getString(R.string.title_activity_weather_icons),
 
     };
@@ -125,6 +126,10 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentTypicons);
         break;
       case 15:
+        Intent intentVaadin = new Intent(MainActivity.this, VaadinIconsActivity.class);
+        startActivity(intentVaadin);
+        break;
+      case 16:
         Intent intentWeatherIcons = new Intent(MainActivity.this, WeatherIconsActivity.class);
         startActivity(intentWeatherIcons);
         break;
