@@ -5,9 +5,6 @@ Beautiful Fancy Button on endorphins.
 Icons, Borders, Radius ... for Android buttons
 
 
-## IN PROGRESS
-====================
-
 <img src="/resources/cover.png" width="80%" alt="Android About Page Cover"/>
 
 ## Overview
