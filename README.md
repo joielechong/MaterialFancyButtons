@@ -64,6 +64,12 @@ compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 
 **Icon Font List:**
 
+The following list is within this format:
+* Font Icon link
+  * "Prefix", this is prefix for each icon in the font
+  * `compile 'com.rilixtech:...'`, this is the dependency to use the icon font.
+
+
 * [Community Material](http://materialdesignicons.com/)
   * "cmdi"
   * `compile 'com.rilixtech:community-material-typeface:1.9.32.2'`
@@ -176,11 +182,11 @@ so it will be look like this:
 	   fancy:mfb_iconFont="fontawesome.ttf"
        fancy:mfb_fontIconResource="&#xf087;"/>
 
-If you use a precompiled font icon (like fontawesome) instead manual copying to asset folder with:
+If you use a precompiled font icon (like fontawesome) instead manual copying to asset folder, you need to add the font icon with:
 ```gradle
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.1'
 ```
-then you can use a more simpler way:
+then you can use:
 
     fancy:mfb_icon="fawi_star"
 
@@ -192,8 +198,8 @@ so it will be look like this:
 	    android:layout_height="wrap_content"
 	    fancy:mfb_icon="fawi_star"/>
 
-This is the recommended way, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
-Please be noted that when using fancy:mfb_icon you don't need to use fancy:mfb_iconFont and fancy:mfb_fontIconResource. Iff both value is present, they will be override and ignored.
+**This is the recommended way**, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
+Please be noted that when using fancy:mfb_icon you don't need to use `fancy:mfb_iconFont` and `fancy:mfb_fontIconResource`. If both value is present, they will be override and ignored.
 
 ### Use Icon Font
 The are already available fonts that you can use, you can select it from the list below. To use it, you need to add a string value to `mfb_icon` attribute like this:
@@ -205,12 +211,6 @@ The are already available fonts that you can use, you can select it from the lis
 	    fancy:mfb_icon="fawi_star"/>
 
 Here we use Font Awesome icon, because we use `fawi_star` as the value for `fancy:mfb_icon`. `fawi` prefix is the prefix for Font Awesome.
-
-The following list is within this format:
-* Font Icon link
-  * "Prefix", this is prefix for each icon in the font
-  * `compile 'com.rilixtech:...'`, this is the dependency to use the icon font.
-
 
 ####  Supported Attributes
 
