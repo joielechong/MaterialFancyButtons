@@ -64,6 +64,9 @@ dependencies {
   //  compile project(path: ':pixeden-7-stroke-typeface')
   compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 
+    compile project(path: ':themify-icons-typeface')
+//  compile 'com.rilixtech:themify-icons-typeface:0.1.2'
+
   //  compile project(path: ':typicons-typeface')
   compile 'com.rilixtech:typicons-typeface:2.0.7.3'
 
