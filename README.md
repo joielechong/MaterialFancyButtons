@@ -59,10 +59,81 @@ compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
+compile 'com.rilixtech:themify-icons-typeface:0.1.2'
 compile 'com.rilixtech:typicons-typeface:2.0.7.3'
 compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 ```
+
+**Icon Font List:**
+
+* [Community Material](http://materialdesignicons.com/)
+  * "cmdi"
+  * `compile 'com.rilixtech:community-material-typeface:1.9.32.2'`
+
+* [Devicon](http://devicon.fr/)
+  * "devi"
+  * `compile 'com.rilixtech:devicon-typeface:2.0.0.3'`
+
+* [Entypo](http://www.entypo.com/)
+  * "enti"
+  * `compile 'com.rilixtech:entypo-typeface:1.0.0.3'`
+
+* [Fontawesome](http://fontawesome.io)
+  * "fawi"
+  * `compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'`
+
+* [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
+  * "foui"
+  * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
+
+* [Google Material Design Icons](https://github.com/google/material-design-icons)
+  * "gmdi"
+  * `compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'`
+
+* [Ionicons](http://ionicons.com/)
+  * "ioni"
+  * `compile 'com.rilixtech:ionicons-typeface:2.0.1.3'`
+
+* [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
+  * "gmii"
+  * **Google Material Iconic**
+  * `compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'`
+
+* [MFGLabs Iconset](https://github.com/MfgLabs/mfglabs-iconset)
+  * "mfgi"
+  * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
+
+* [Meteocons](http://www.alessioatzeni.com/meteocons/)
+  * "meti"
+  * `compile 'com.rilixtech:meteocons-typeface:1.1.0.3'`
+
+* [Octicons](https://github.com/github/octicons)
+  * "octi"
+  * `compile 'com.rilixtech:octicons-typeface:3.2.0.3'`
+
+* [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
+  * "pe7i"
+  * `compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'`
+
+* [Themify Icons](http://themify.me/themify-icons)
+  * "thei"
+  * `compile 'com.rilixtech:themify-icons-typeface:0.1.2'`
+
+* [Typeicons](http://typicons.com/)
+  * "typi"
+  * `compile 'com.rilixtech:typicons-typeface:2.0.7.3'`
+
+* [Vaadin Icons](https://github.com/vaadin/vaadin-icons/)
+  * "vaai"
+  * `compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'`
+
+* [Weather Icons](https://erikflowers.github.io/weather-icons/)
+  * "wici"
+  * `compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'`
+
+Licenses for all included fonts are linked inside the class or can be found on the coresponding repoistories.
+
 
 ### Usage
 
@@ -143,72 +214,6 @@ The following list is within this format:
   * "Prefix", this is prefix for each icon in the font
   * `compile 'com.rilixtech:...'`, this is the dependency to use the icon font.
 
-**Icon Font List:**
-
-* [Community Material](http://materialdesignicons.com/)
-  * "cmdi"
-  * `compile 'com.rilixtech:community-material-typeface:1.9.32.2'`
-
-* [Devicon](http://devicon.fr/)
-  * "devi"
-  * `compile 'com.rilixtech:devicon-typeface:2.0.0.3'`
-
-* [Entypo](http://www.entypo.com/)
-  * "enti"
-  * `compile 'com.rilixtech:entypo-typeface:1.0.0.3'`
-
-* [Fontawesome](http://fontawesome.io)
-  * "fawi"
-  * `compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'`
-
-* [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
-  * "foui"
-  * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
-
-* [Google Material Design Icons](https://github.com/google/material-design-icons)
-  * "gmdi"
-  * `compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'`
-
-* [Ionicons](http://ionicons.com/)
-  * "ioni"
-  * `compile 'com.rilixtech:ionicons-typeface:2.0.1.3'`
-
-* [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
-  * "gmii"
-  * **Google Material Iconic**
-  * `compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'`
-
-* [MFGLabs Iconset](https://github.com/MfgLabs/mfglabs-iconset)
-  * "mfgi"
-  * `compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'`
-
-* [Meteocons](http://www.alessioatzeni.com/meteocons/)
-  * "meti"
-  * `compile 'com.rilixtech:meteocons-typeface:1.1.0.3'`
-
-* [Octicons](https://github.com/github/octicons)
-  * "octi"
-  * `compile 'com.rilixtech:octicons-typeface:3.2.0.3'`
-
-* [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
-  * "pe7i"
-  * `compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'`
-
-* [Typeicons](http://typicons.com/)
-  * "typi"
-  * `compile 'com.rilixtech:typicons-typeface:2.0.7.3'`
-
-* [Vaadin Icons](https://github.com/vaadin/vaadin-icons/)
-  * "vaai"
-  * `compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'`
-
-* [Weather Icons](https://erikflowers.github.io/weather-icons/)
-  * "wici"
-  * `compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'`
-
-
-
-Licenses for all included fonts are linked inside the class or can be found on the coresponding repoistories.
 
 ####  Supported Attributes
 
