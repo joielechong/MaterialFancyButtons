@@ -1,4 +1,4 @@
-include ':samples', ':mfglabs-iconset-typeface'
+include ':samples', ':mfglabs-iconset-typeface', ':themify-icons-typeface'
 include ':materialfancybuttons'
 include ':icontext2string'
 include ':fontawesome-typeface'

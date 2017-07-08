@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="define_mfb_font_vaadin_icons">com.rilixtech.vaadin_icons_typeface.VaadinIcons</string>
+
   <string name="vaai_abacus">vaai_abacus</string>
   <string name="vaai_absolute_position">vaai_absolute_position</string>
   <string name="vaai_accessibility">vaai_accessibility</string>
