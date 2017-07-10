@@ -1,31 +1,27 @@
 # Material Fancy Button
 
-README in Bahasa Indonesia : [README-ID.md](https://github.com/joielechong/MaterialFancyButtons/blob/master/README-ID.md)
+Fancy Button yang indah dikarenakan endorphins.
 
+Ikon, Border, Radius ... untuk button Android. Dengan 16 Icon Fonts yang dapat dipilih yang sudah dikompilasi sebelumnya!
 
-Beautiful Fancy Button on endorphins.
-
-Icons, Borders, Radius ... for Android buttons. With selectable 16 Icon Fonts precompiled!
-
-No need to manually using `&#xf087;` for icon font character anymore!
-
+Tidak perlu lagi secara manual menggunakan `&#xf087;` untuk karakter ikon font lagi!
 
 <img src="/resources/cover.png" width="80%" alt="Android About Page Cover"/>
 
-## Overview
+## Tinjauan
 ![MaterialFancyButtons](https://github.com/joielechong/MaterialFancyButtons/blob/master/resources/no-drawables.png)
 
-### Demo Application : [Download APK](https://github.com/joielechong/MaterialFancyButtons/blob/master/resources/fancybuttons_samples.apk)
+### Aplikasi demo : [Download APK](https://github.com/joielechong/MaterialFancyButtons/blob/master/resources/fancybuttons_samples.apk)
 
-## Features
+## Fitur
 
 * Border (stroke, radius, color)
-    * Top left border
-    * Top right border
-    * Bottom left border
-    * Bottom right border
+    * Border radius atas kiri
+    * Border radius atas kanan
+    * Border radius bawah kiri
+    * Border radius bawah kanan
 * Background (normal, focus)
-* Icon (Drawable, font icon)
+* Ikon (Drawable, Ikon font)
     * [Community Material](http://materialdesignicons.com/)
     * [Devicon](http://devicon.fr/)
     * [Entypo](http://www.entypo.com/)
@@ -43,29 +39,29 @@ No need to manually using `&#xf087;` for icon font character anymore!
     * [Vaadin Icons](https://github.com/vaadin/vaadin-icons/)
     * [Weather Icons](https://erikflowers.github.io/weather-icons/)
 	* Custom font
-* Icon (Position, size)
-    * right
-    * left
-    * top
-    * bottom
-* Icon Size
-* Icon Padding
+* Ikon (Posisi, ukuran)
+    * kanan
+    * kiri
+    * atas
+    * bawah
+* Ukuran ikon
+* Padding ikon
 
 
-### Installation
-
+### Pemasangan
+Tambahkan Material Fancy Button:
 ```gradle
 compile 'com.rilixtech:materialfancybuttons:1.8.7'
 ```
 
-Add maven to your build.gradle:
+Tambahkan maven ke build.gradle:
 ```gradle
 maven {
       url "http://dl.bintray.com/rilixtech/maven"
     }
 ```
 
-Choose your desired icon fonts from a precompiled font list, add the font that you want to use from below list:
+Pilih ikon font yang kamu suka dari daftar font yang sudah dikompilasi, pilih dari daftar berikut:
 
 ```gradle
 compile 'com.rilixtech:community-material-typeface:1.9.32.2'
@@ -86,14 +82,14 @@ compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'
 compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 ```
 
-**Icon Font List:**
+**Daftar Ikon Font:**
 
-The following list is within this format:
-* Font Icon link
-  * "Prefix", this is prefix for each icon in the font
-  * `compile 'com.rilixtech:...'`, this is the dependency to use the icon font.
+Daftar berikut mengikuti format:
+* Link font icon
+  * "Prefix", Merupakan prefix dari tiap ikon font
+  * `compile 'com.rilixtech:...'`, Ini merupakan dependensi yang perlu ditambahkan untuk menggunakan font.
 
- **Icon List:**
+ **Daftar Ikon:**
 
 * [Community Material](http://materialdesignicons.com/)
   * "cmdi"
@@ -160,38 +156,38 @@ The following list is within this format:
   * "wici"
   * `compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'`
 
-Licenses for all included fonts are linked inside the class or can be found on the corresponding repositories.
+Lisensi dari setiap font sudah disertakan dalam class nya masing-masing atau juga dapat ditemukan di repositorinya.
 
 
-### Basic Usage Example
-1 - Add MaterialFancyButton to your dependencies:
+### Contoh Penggunaan Dasar
+1 - Tambahkan MaterialFancyButton ke dependencies:
 ```gradle
 compile 'com.rilixtech:materialfancybuttons:1.8.7'
 ```
 
-2 - Include MaterialFancyButton namespace to the root element:
+2 - Masukkan MaterialFancyButton namespace ke element root:
 
 	xmlns:fancy="http://schemas.android.com/apk/res-auto"
 
-3 - Add the MaterialFancyButton View:
+3 - Tambahkan View MaterialFancyButton:
 
 	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"/>
 
-4 - Select the font that you desire, for example FontAwesome. Add it as dependencies:
+4 - Pilih ikon font yang kamu mau, contohnya FontAwesome. tambahkan di dependencies:
 ```gradle
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 ```
- All icon font characters will be included in **String Resource**.
+ Semua karakter ikon font akan berada dalam **string resource**.
 
-5 - Add the attribute for icon font character that you want, for example star icon. It should be in `prefix_icon_name` format.
-    Because we use FontAwesome the prefix is `fawi` and the icon character is `fawi_star`. Use `fancy:mfb_icon` attribute:
+5 - Tambahkan attribut untuk karakter font ikon yang kamu inginkan, contohnya ikon bintang. Nama ikon tersebut harus dalam format `prefix_nama_ikon`.
+    Karena kita menggunakan FontAwesome, maka prefiks nya `fawi` dan karakter ikonnya `fawi_star`. Gunakan attribut `fancy:mfb_icon`:
 
     fancy:mfb_icon="@string/fawi_star"
 
- So it become:
+ Sehingga menjadi:
 
 	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
@@ -199,21 +195,21 @@ compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 	    android:layout_height="wrap_content"
 	    fancy:mfb_icon="@string/fawi_star"/>
 
-**This is the recommended way**, so you don't need to manually copy the font and remembering all the characters of the font, which is very tedious and error prone.
+**Ini merupakan cara yang direkomendasikan**, sehingga kamu tidak perlu mengkopi secara manual semua font yang kamu perlu dan mengingat semua karakter dari font, sehingga menghindari pekerjaan yang melelahkan dan rawan kesalahan.
 
-### Custom Font
-If you want to use custom Font, follow this easy steps:
+### Font Kustom
+Jika kamu ingin menggunakan Font kustom, ikuti langkah mudah berikut ini:
 
-1 - Paste your font inside `assets/fonts/` folder for Text fonts or inside `assets/iconfonts/` for icon fonts eg : fontawesome
+1 - Kopi dan salin font k dalam folder `assets/fonts/` untuk teks font ata ke dalam `assets/iconfonts/` untuk ikon font. Sebagai contoh : Fontawesome.
 
-2 - Then add the following attribute:
+2 - Tambahkan attribut berikut:
 
- For text:
+ Untuk teks text:
 
     fancy:mfb_textFont="robotothin.ttf"
     fancy:mfb_text="your text"
 
-so it will be look like this:
+ Sehingga menjadi seperti berikut ini:
 
 	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	    android:id="@+id/btn_preview"
@@ -222,12 +218,12 @@ so it will be look like this:
 	    fancy:mfb_textFont="robotothin.ttf"
         fancy:mfb_text="your text"/>
 
- For icon:
+ Untuk icon:
 
     fancy:mfb_iconFont="fontawesome.ttf"
     fancy:mfb_fontIconResource="&#xf087;"
 
-so it will be look like this:
+ Sehingga menjadi seperti berikut ini:
 
 	<com.rilixtech.materialfancybutton.MaterialFancyButton
 	   android:id="@+id/btn_preview"
@@ -236,66 +232,66 @@ so it will be look like this:
 	   fancy:mfb_iconFont="fontawesome.ttf"
        fancy:mfb_fontIconResource="&#xf087;"/>
 
-**Please be noted** that when using `fancy:mfb_icon` you don't need to use `fancy:mfb_iconFont` and `fancy:mfb_fontIconResource`. If both value is present, they will be override and ignored.
+**Mohon dicatat** bahwa di saat menggunakan `fancy:mfb_icon` kamu tidak perlu menggunakan `fancy:mfb_iconFont` dan `fancy:mfb_fontIconResource`. Jika kedua attribut ini ada, maka attribut ini akan diabaikan.
 
-####  Supported Attributes
+####  Attribut yang Didukung
 
-| XML Attribute        | Java Method           | Description  |
+| Attribut XML        | Method Java         | Penjelasan  |
 | ------------- |:-------------:| -----:|
-| fancy:mfb_text      | setText(String)     | Text of the button |
-| fancy:mfb_textColor     | setTextColor(int)      |  Text Color of the button |
-| fancy:mfb_textSize | setTextSize(int)      |    Size of the text |
-| fancy:mfb_textFont | setCustomTextFont(String)      |    FontFamily of the text|
-| fancy:mfb_textGravity | setTextGravity(Int)      |    Gravity of the text|
-| fancy:mfb_icon | setIcon(String), setIcon(char) | Set icon from icon font list. Need the font library (fontawesome_typeface_library, etc) to works. This will override fancy:mfb_fontIconResource and fancy:mfb_iconFont |
-| fancy:mfb_iconResource | setIconResource(Drawable)      |    Drawable icon of the button|
-| fancy:mfb_iconPosition | setsetIconPosition(int)      |    Position of the icon : Left, Right, Top, Bottom|
-| fancy:mfb_fontIconResource | setIconResource(String)      |    font icon of the button|
-| fancy:mfb_fontIconSize | setFontIconSize(int)      |    Size of the icon |
-| fancy:mfb_iconFont | setCustomIconFont(String)      |    FontFamily of the icon|
-| fancy:mfb_borderWidth | setBorderWidth(int)      |    Width of the border|
-| fancy:mfb_borderColor | setBorderColor(int)      |    Color of the border|
-| fancy:mfb_defaultColor | setBackgroundColor(int)      |    Background color of the button|
-| fancy:mfb_focusColor | setFocusBackgroundColor(int)      |    Focus Color of button background|
-| fancy:mfb_disabledColor | setDisableBackgroundColor(int)      |    Disabled Color of button background|
-| fancy:mfb_disabledTextColor | setDisableTextColor(int)      |    Disabled Color of button text|
-| fancy:mfb_disabledBorderColor | setDisableBorderColor(int)      |    Disabled Color of button border|
-| fancy:mfb_radius | setRadius(int)      |    Radius of the button|
-| fancy:mfb_radiusTopLeft | setRadiusTopLeft(int)      |    Radius top left of the button|
-| fancy:mfb_radiusTopRight | setRadiusTopRight(int)      |    Radius top right of the button|
-| fancy:mfb_radiusBottomLeft | setRadiusBottomLeft(int)      |    Radius bottom left of the button|
-| fancy:mfb_radiusBottomRight | setRadiusBottomRight(int)      |    Radius bottom right of the button|
-| fancy:mfb_iconPaddingLeft | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:mfb_iconPaddingRight | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:mfb_iconPaddingTop | setIconPadding(int,int,int,int)      |    Icon Padding|
-| fancy:mfb_iconPaddingBottom | setIconPadding(int,int,int,int)      |    Icon Padding|
+| fancy:mfb_text      | setText(String)     | Teks dari button |
+| fancy:mfb_textColor     | setTextColor(int)      |  Warna teks dari button |
+| fancy:mfb_textSize | setTextSize(int)      |    Ukuran dari text |
+| fancy:mfb_textFont | setCustomTextFont(String)      |    FontFamily dari teks|
+| fancy:mfb_textGravity | setTextGravity(Int)      |    Gravity dari teks|
+| fancy:mfb_icon | setIcon(String), setIcon(char) | Set ikon dari ikon font. Membutuhkan ikon font library (fontawesome_typeface, etc) untuk bekerja. Meniadakan efek dari fancy:mfb_fontIconResource dan fancy:mfb_iconFont |
+| fancy:mfb_iconResource | setIconResource(Drawable)      |    Ikon Drawable dari button|
+| fancy:mfb_iconPosition | setsetIconPosition(int)      |    Posisi dari ikon : Kiri, Kanan, Atas, Bawah|
+| fancy:mfb_fontIconResource | setIconResource(String)      |    Ikon font dari button|
+| fancy:mfb_fontIconSize | setFontIconSize(int)      |    Ukuran dari ikon |
+| fancy:mfb_iconFont | setCustomIconFont(String)      |    FontFamily dari ikon|
+| fancy:mfb_borderWidth | setBorderWidth(int)      |    Lebar dari border|
+| fancy:mfb_borderColor | setBorderColor(int)      |    Color dari border|
+| fancy:mfb_defaultColor | setBackgroundColor(int)      |    Background color dari button|
+| fancy:mfb_focusColor | setFocusBackgroundColor(int)      |    Warna Fokus dari background button|
+| fancy:mfb_disabledColor | setDisableBackgroundColor(int)      |    Warna Disabled dari background button|
+| fancy:mfb_disabledTextColor | setDisableTextColor(int)      |    Warna Disabled dari teks button|
+| fancy:mfb_disabledBorderColor | setDisableBorderColor(int)      |    Disabled Color dari border button|
+| fancy:mfb_radius | setRadius(int)      |    Radius dari button|
+| fancy:mfb_radiusTopLeft | setRadiusTopLeft(int)      |    Radius atas kiri dari button|
+| fancy:mfb_radiusTopRight | setRadiusTopRight(int)      |    Radius kanan atas dari button|
+| fancy:mfb_radiusBottomLeft | setRadiusBottomLeft(int)      |    Radius kiri bawah dari button|
+| fancy:mfb_radiusBottomRight | setRadiusBottomRight(int)      |    Radius kanan bawah dari button|
+| fancy:mfb_iconPaddingLeft | setIconPadding(int,int,int,int)      |    Padding Ikon|
+| fancy:mfb_iconPaddingRight | setIconPadding(int,int,int,int)      |    Padding Ikon|
+| fancy:mfb_iconPaddingTop | setIconPadding(int,int,int,int)      |    Padding Ikon|
+| fancy:mfb_iconPaddingBottom | setIconPadding(int,int,int,int)      |    Padding Ikon|
 | fancy:mfb_ghost | setGhost(boolean)      |    Ghost (Hollow)|
 
-For setting the radius of the button, you can also use `setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight)`
+Untuk menyeting radius dari button, kamu dapat menggunakan `setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight)`
 
-Also you can use Attributes with default prefix (android:) which makes migrating of your project more fast.
-Default Attributes have more priority than Attributes with prefix fancy.
+Kamu juga dapat menggunakan prefiks bawaan (android:) yang membuat proses migrasi proyekmu lebih cepat.
+Attribut Bawaan memiliki prioritas lebih tinggi dari attribut `fancy:`
 
-#### Supported default Attributes
-| XML Attribute    |
+#### Attribut Bawaan yang Didukung
+| Attribut XML    |
 | ------------- |
 | android:enabled |
 | android:text |
 | android:textSize |
 | android:textAllCaps |
 
-####  Supported Getters
+####  Getter yang didukung
 
-| Method        | Description  |
+| Method        | Deskripsi  |
 | ------------- | -----:|
-| getText() | Returns Text Value of the button|
-| getTextViewObject() | Returns TextView Object|
-| getIconFontObject() | Returns icon defined by fb_fontIconResource|
-| getIconImageObject() | Returns icon defined by fb_iconResource |
+| getText() | Mengembalikan nilai Text dari button|
+| getTextViewObject() | Mengembalikan Object TextView|
+| getIconFontObject() | Mengembalikan ikon yang didefinisikan dengan `fb_fontIconResource`|
+| getIconImageObject() | Mengembalikan ikon yang didefinisikan dengan `fb_iconResource` |
 
-#### Sample
+#### Sampel
 
-**1 - Spotify Button**
+**1 - Button Spotify**
 
 ![MaterialFancyButton Spotify](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/spotify-button.png)
 
@@ -318,12 +314,12 @@ Default Attributes have more priority than Attributes with prefix fancy.
 		fancy:mfb_text="SHUFFLE PLAY"
 		fancy:mfb_textColor="#FFFFFF" />
 
-**2 - Facebook Button**
+**2 - Button Facebook**
 
 ![MaterialFancyButton Facebook](https://raw.github.com/joielechong/MaterialFancyButtons/master/resources/facebook-button.png)
 
 	MaterialFancyButton facebookLoginBtn = new MaterialFancyButton(this);
-    facebookLoginBtn.setText("Login with Facebook");
+    facebookLoginBtn.setText("Login dengan Facebook");
     facebookLoginBtn.setBackgroundColor(Color.parseColor("#3b5998"));
     facebookLoginBtn.setFocusBackgroundColor(Color.parseColor("#5474b8"));
     facebookLoginBtn.setTextSize(17);
@@ -333,7 +329,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
     facebookLoginBtn.setIconPosition(FancyButton.POSITION_LEFT);
     facebookLoginBtn.setFontIconSize(30);
 
-See the [example project](https://github.com/joielechong/MaterialFancyButtons/tree/master/samples/src/main/java/com/rilixtech/materialfancybutton/sample) for more samples
+Lihat [example project](https://github.com/joielechong/MaterialFancyButtons/tree/master/samples/src/main/java/com/rilixtech/materialfancybutton/sample) for more samples
 
 
 - - - -
@@ -342,25 +338,25 @@ See the [example project](https://github.com/joielechong/MaterialFancyButtons/tr
 
 ### FAQ
 
-**How to add new fonts ?**
-Just Paste your font inside `assets/fonts/` folder for Text fonts or inside `assets/iconfonts/` for icon fonts eg : entypo
+**Bagaimana menambahkan font baru?**
+Salin font ke dalam folder `assets/fonts/` untuk teks font atau ke dalam folder `assets/iconfonts/` untuk font ikon. Contohnya : entypo
 
-## Contributions
-MaterialFancyButtons needs you to build the missing features:
-* Supporting Circular buttons
-* Add elevation (Material Design)
+## Kontribusi
+MaterialFancyButtons membutuhkanmu untuk menambahkan fitur berikut:
+* Dukungan button Circular
+* Tambahkan elevasi (Material Design)
 
 # Credits
 
-- [El Mehdi Sakout](http://twitter.com/medyo80) The creator of [FancyButtons](https://github.com/medyo/fancybuttons) which is the origin of this project.
-- [mikepenz.com](http://mikepenz.com) He is the creator of [Android-Iconics](https://github.com/mikepenz/Android-Iconics/) which is the origin of the icon font project.
+- [El Mehdi Sakout](http://twitter.com/medyo80) pembuat [FancyButtons](https://github.com/medyo/fancybuttons) yang merupakan asal dari proyek ini.
+- [mikepenz.com](http://mikepenz.com) pembuat [Android-Iconics](https://github.com/mikepenz/Android-Iconics/) yang merupakan dasar dari pembuatan ikon font proyek ini.
 
-# Developed By
+# Dikembangkan Oleh
 
  * [Joielechong](http://www.github.com/joielechong)
 
 
-# License
+# Lisensi
 
     Copyright 2017 Joielechong
 

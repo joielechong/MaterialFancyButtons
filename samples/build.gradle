@@ -22,7 +22,8 @@ android {
 
 dependencies {
   compile "com.android.support:appcompat-v7:$supportLibVersion"
-  compile project(':materialfancybuttons')
+//  compile project(':materialfancybuttons')
+  compile 'com.rilixtech:materialfancybuttons:1.8.7'
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
