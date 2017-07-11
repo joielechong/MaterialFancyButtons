@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+ext.mobiriseIconsVersionCode = 1000
+ext.mobiriseIconsVersionName = '1.0.0'
+ext.libraryName = 'mobirise-icons-typeface'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    consumerProguardFiles 'consumer-proguard-rules.pro'
+    versionCode mobiriseIconsVersionCode
+    versionName mobiriseIconsVersionName
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile project(path: ':materialfancybuttons')
+}
+
+
+if (project.hasProperty('pushall') || project.hasProperty('mobiriseIconsOnly')) {
+  ext {
+
+    //For bintray and jcenter distribution
+    bintrayName = libraryName
+    //This artifact name should be the same with library module name
+    artifact = libraryName
+    libraryDescription =
+        'mobirise Icons Typeface for MaterialFancyButtons. A free, open source set of 150 elegant, pixel-perfect vector icons from Free Website Builder.'
+    libraryVersion = mobiriseIconsVersionName
+
+    bintrayRepo = rootProject.ext.bintrayRepo
+    publishedGroupId = rootProject.ext.publishedGroupId
+    siteUrl = rootProject.ext.siteUrl
+    gitUrl = rootProject.ext.gitUrl
+    developerId = rootProject.ext.developerId
+    developerName = rootProject.ext.developerName
+    developerEmail = rootProject.ext.developerEmail
+    organization = rootProject.ext.organization
+    licenseName = rootProject.ext.licenseName
+    licenseUrl = rootProject.ext.licenseUrl
+    allLicenses = [rootProject.ext.allLicenses]
+  }
+
+  apply from: '../install.gradle'
+  apply from: '../bintray.gradle'
+}

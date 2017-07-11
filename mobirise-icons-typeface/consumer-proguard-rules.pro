@@ -1,0 +1,1 @@
+-keep class com.rilixtech.mobirise_icons_typeface.MobiriseIcons { *; }
