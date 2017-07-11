@@ -27,7 +27,6 @@ dependencies {
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
-
 //  compile project(path: ':fontawesome-typeface')
     compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 
@@ -60,8 +59,8 @@ dependencies {
   compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 
 
-    compile project(path: ':mobirise-icons-typeface')
-//  compile 'com.rilixtech:mobirise-icons-typeface:1.0.0'
+//    compile project(path: ':mobirise-icons-typeface')
+  compile 'com.rilixtech:mobirise-icons-typeface:1.0.0'
 
   //  compile project(path: ':octicons-typeface')
   compile 'com.rilixtech:octicons-typeface:3.2.0.3'
