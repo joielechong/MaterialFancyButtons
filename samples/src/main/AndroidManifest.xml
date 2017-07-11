@@ -77,6 +77,11 @@
     </activity>
 
     <activity
+        android:name=".MobiriseIconsActivity"
+        android:label="@string/title_activity_mobiriseicons">
+    </activity>
+
+    <activity
         android:name=".OcticonsButtonsActivity"
         android:label="@string/title_activity_octicons">
     </activity>

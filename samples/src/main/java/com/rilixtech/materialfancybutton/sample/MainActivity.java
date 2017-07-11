@@ -31,6 +31,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         getString(R.string.title_activity_ionicons), getString(R.string.title_activity_mfglabs),
         getString(R.string.title_activity_material_design_iconic),
         getString(R.string.title_activity_meteocons),
+        getString(R.string.title_activity_mobiriseicons),
         getString(R.string.title_activity_octicons),
         getString(R.string.title_activity_pixeden7),
         getString(R.string.title_activity_themify_icons),
@@ -115,26 +116,30 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
         startActivity(intentMeteo);
         break;
       case 12:
+        Intent intentMobirise = new Intent(MainActivity.this, MobiriseIconsActivity.class);
+        startActivity(intentMobirise);
+        break;
+      case 13:
         Intent intentOcticons = new Intent(MainActivity.this, OcticonsButtonsActivity.class);
         startActivity(intentOcticons);
         break;
-      case 13:
+      case 14:
         Intent intentPixeden = new Intent(MainActivity.this, Pixeden7StrokeActivity.class);
         startActivity(intentPixeden);
         break;
-      case 14:
+      case 15:
         Intent intentThemify = new Intent(MainActivity.this, ThemifyIconsActivity.class);
         startActivity(intentThemify);
         break;
-      case 15:
+      case 16:
         Intent intentTypicons = new Intent(MainActivity.this, TypiconsActivity.class);
         startActivity(intentTypicons);
         break;
-      case 16:
+      case 17:
         Intent intentVaadin = new Intent(MainActivity.this, VaadinIconsActivity.class);
         startActivity(intentVaadin);
         break;
-      case 17:
+      case 18:
         Intent intentWeatherIcons = new Intent(MainActivity.this, WeatherIconsActivity.class);
         startActivity(intentWeatherIcons);
         break;
