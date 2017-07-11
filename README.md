@@ -5,7 +5,7 @@ README in Bahasa Indonesia : [README-ID.md](https://github.com/joielechong/Mater
 
 Beautiful Fancy Button on endorphins.
 
-Icons, Borders, Radius ... for Android buttons. With selectable 17 Icon Fonts precompiled!
+Icons, Borders, Radius ... for Android buttons. With selectable 18 Icon Fonts precompiled!
 
 No need to manually using `&#xf087;` for icon font character anymore!
 
@@ -31,6 +31,7 @@ No need to manually using `&#xf087;` for icon font character anymore!
     * [Entypo](http://www.entypo.com/)
     * [Fontawesome](http://fontawesome.io)
     * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
+    * [Glyphicons Halflings](http://glyphicons.com/)
     * [Google Material Design Icons](https://github.com/google/material-design-icons)
     * [Ionicons](http://ionicons.com/)
     * [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
@@ -116,6 +117,10 @@ The following list is within this format:
 * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
   * "foui"
   * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
+
+* [Glyphicons Halflings](http://glyphicons.com/)
+  * "glyi"
+  * `compile 'com.rilixtech:glyphicons-halflings-typeface:1.0.0'`
 
 * [Google Material Design Icons](https://github.com/google/material-design-icons)
   * "gmdi"
