@@ -5,7 +5,7 @@ README in Bahasa Indonesia : [README-ID.md](https://github.com/joielechong/Mater
 
 Beautiful Fancy Button on endorphins.
 
-Icons, Borders, Radius ... for Android buttons. With selectable 17 Icon Fonts precompiled!
+Icons, Borders, Radius ... for Android buttons. With selectable 18 Icon Fonts precompiled!
 
 No need to manually using `&#xf087;` for icon font character anymore!
 
@@ -38,6 +38,7 @@ No need to manually using `&#xf087;` for icon font character anymore!
     * [Meteocons](http://www.alessioatzeni.com/meteocons/)
     * [Mobirise Icons](https://mobiriseicons.com/)
     * [Octicons](https://github.com/github/octicons)
+    * [PICOL](http://picol.org/)
     * [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
     * [Themify Icons](http://themify.me/themify-icons)
     * [Typeicons](http://typicons.com/)
@@ -81,6 +82,7 @@ compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 compile 'com.rilixtech:mobirise-icons-typeface:1.0.0'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
+compile 'com.rilixtech:picol-typeface:1.0.0'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 compile 'com.rilixtech:themify-icons-typeface:0.1.2'
 compile 'com.rilixtech:typicons-typeface:2.0.7.3'
@@ -145,6 +147,10 @@ The following list is within this format:
 * [Octicons](https://github.com/github/octicons)
   * "octi"
   * `compile 'com.rilixtech:octicons-typeface:3.2.0.3'`
+
+* [PICOL](http://picol.org/)
+  * "pici"
+  * `compile 'com.rilixtech:picol-typeface:1.0.0'`
 
 * [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
   * "pe7i"
