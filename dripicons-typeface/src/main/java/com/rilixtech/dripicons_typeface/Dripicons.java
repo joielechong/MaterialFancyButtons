@@ -89,6 +89,9 @@ public class Dripicons implements ITypeface {
     return typeface;
   }
 
+  private static final char a = 0x0027;
+  private static final char back_slash = 0x005C;
+
   public enum Icon implements IIcon {
     drpi_alarm('\u0061'),
     drpi_align_center('\u0062'),
@@ -158,7 +161,7 @@ public class Dripicons implements ITypeface {
     drpi_device_mobile('\u0024'),
     drpi_device_tablet('\u0025'),
     drpi_direction('\u0026'),
-    drpi_disc('\u0027'),
+    drpi_disc(a),
     drpi_document('\u0028'),
     drpi_document_delete('\u0029'),
     drpi_document_edit('\u002a'),
@@ -183,7 +186,7 @@ public class Dripicons implements ITypeface {
     drpi_forward('\u007c'),
     drpi_gaming('\u007d'),
     drpi_gear('\u007e'),
-    drpi_graduation('\u005c'),
+    drpi_graduation(back_slash),
     drpi_graph_bar('\ue000'),
     drpi_graph_line('\ue001'),
     drpi_graph_pie('\ue002'),

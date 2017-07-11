@@ -42,6 +42,11 @@
     </activity>
 
     <activity
+        android:name=".DripiconsActivity"
+        android:label="@string/title_activity_dripicons_buttons">
+    </activity>
+
+    <activity
         android:name=".FontAwesomeActivity"
         android:label="@string/title_activity_fontawesome">
     </activity>
