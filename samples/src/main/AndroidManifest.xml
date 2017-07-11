@@ -87,10 +87,14 @@
     </activity>
 
     <activity
+        android:name=".PicolIconsActivity"
+        android:label="@string/title_activity_picol">
+    </activity>
+
+    <activity
         android:name=".Pixeden7StrokeActivity"
         android:label="@string/title_activity_pixeden7">
     </activity>
-
 
     <activity
         android:name=".ThemifyIconsActivity"
