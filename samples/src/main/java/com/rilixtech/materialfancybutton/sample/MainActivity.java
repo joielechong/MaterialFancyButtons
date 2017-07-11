@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,6 +92,8 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     nameClasses = getNameAndClasses();
     setListAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, getNames(nameClasses)));
     getListView().setOnItemClickListener(this);
+    TextView titleTv = (TextView) findViewById(R.id.title_tv);
+    titleTv.setText("MaterialFancyButtons example with " + (nameClasses.size() - 2) + " icon fonts");
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {

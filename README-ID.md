@@ -24,6 +24,7 @@ Tidak perlu lagi secara manual menggunakan `&#xf087;` untuk karakter ikon font l
 * Ikon (Drawable, Ikon font)
     * [Community Material](http://materialdesignicons.com/)
     * [Devicon](http://devicon.fr/)
+    * [Dripicons](http://demo.amitjakhu.com/dripicons/)
     * [Entypo](http://www.entypo.com/)
     * [Fontawesome](http://fontawesome.io)
     * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
@@ -68,6 +69,7 @@ Pilih ikon font yang kamu suka dari daftar font yang sudah dikompilasi, pilih da
 ```gradle
 compile 'com.rilixtech:community-material-typeface:1.9.32.2'
 compile 'com.rilixtech:devicon-typeface:2.0.0.3'
+compile 'com.rilixtech:dripicons-typeface:2.0.0'
 compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
@@ -102,6 +104,10 @@ Daftar berikut mengikuti format:
 * [Devicon](http://devicon.fr/)
   * "devi"
   * `compile 'com.rilixtech:devicon-typeface:2.0.0.3'`
+
+* [Dripicons](http://demo.amitjakhu.com/dripicons/)
+  * "drpi"
+  * `compile 'com.rilixtech:dripicons-typeface:2.0.0'`
 
 * [Entypo](http://www.entypo.com/)
   * "enti"

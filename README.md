@@ -5,7 +5,7 @@ README in Bahasa Indonesia : [README-ID.md](https://github.com/joielechong/Mater
 
 Beautiful Fancy Button on endorphins.
 
-Icons, Borders, Radius ... for Android buttons. With selectable 18 Icon Fonts precompiled!
+Icons, Borders, Radius ... for Android buttons. With selectable 19 Icon Fonts precompiled!
 
 No need to manually using `&#xf087;` for icon font character anymore!
 
@@ -28,6 +28,7 @@ No need to manually using `&#xf087;` for icon font character anymore!
 * Icon (Drawable, font icon)
     * [Community Material](http://materialdesignicons.com/)
     * [Devicon](http://devicon.fr/)
+    * [Dripicons](http://demo.amitjakhu.com/dripicons/)
     * [Entypo](http://www.entypo.com/)
     * [Fontawesome](http://fontawesome.io)
     * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
@@ -72,6 +73,7 @@ Choose your desired icon fonts from a precompiled font list, add the font that y
 ```gradle
 compile 'com.rilixtech:community-material-typeface:1.9.32.2'
 compile 'com.rilixtech:devicon-typeface:2.0.0.3'
+compile 'com.rilixtech:dripicons-typeface:2.0.0'
 compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
@@ -106,6 +108,10 @@ The following list is within this format:
 * [Devicon](http://devicon.fr/)
   * "devi"
   * `compile 'com.rilixtech:devicon-typeface:2.0.0.3'`
+
+* [Dripicons](http://demo.amitjakhu.com/dripicons/)
+  * "drpi"
+  * `compile 'com.rilixtech:dripicons-typeface:2.0.0'`
 
 * [Entypo](http://www.entypo.com/)
   * "enti"
