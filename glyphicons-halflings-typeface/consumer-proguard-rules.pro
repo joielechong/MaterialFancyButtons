@@ -1,0 +1,1 @@
+-keep class com.rilixtech.glyphicons_halflings_typeface.GlyphiconsHalflings { *; }
