@@ -1,0 +1,1 @@
+-keep class com.rilixtech.picol_typeface.Picol { *; }

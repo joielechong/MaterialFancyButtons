@@ -1,4 +1,4 @@
-include ':samples', ':mfglabs-iconset-typeface', ':themify-icons-typeface',
+include ':samples', ':mfglabs-iconset-typeface', ':themify-icons-typeface', ':picol-typeface',
     ':mobirise-icons-typeface'
 include ':materialfancybuttons'
 include ':icontext2string'
