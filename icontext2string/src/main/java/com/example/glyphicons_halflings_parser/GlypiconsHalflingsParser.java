@@ -51,6 +51,7 @@ public class GlypiconsHalflingsParser {
             iconName = iconNameTexts[0];
             iconName = iconName.replace(".", "");
             iconName = iconName.replace("-", "_");
+            iconName = iconName.replace("glyphicon", ICON_PREFIX);
             // get the icon name.
           } else {
             // get the icon value.

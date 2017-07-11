@@ -52,6 +52,11 @@
     </activity>
 
     <activity
+        android:name=".GlyphiconsHalflingsActivity"
+        android:label="@string/title_activity_glyphicons_halflings">
+    </activity>
+
+    <activity
         android:name=".GoogleMaterialButtonsActivity"
         android:label="@string/title_activity_google_material">
     </activity>
