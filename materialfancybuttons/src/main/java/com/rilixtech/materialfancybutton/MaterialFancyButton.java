@@ -443,12 +443,13 @@ public class MaterialFancyButton extends LinearLayout {
     });
     if (mGhost) {
       // Hollow Background
-      if (android.os.Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
-        defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        defaultDrawable.setColor(getContext().getColor(android.R.color.transparent));
       } else {
-        defaultDrawable.setColor(
-            getResources().getColor(android.R.color.transparent, getContext().getTheme()));
+        //noinspection deprecation
+        defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
       }
+
     } else {
       defaultDrawable.setColor(mDefaultBackgroundColor);
     }
@@ -481,11 +482,11 @@ public class MaterialFancyButton extends LinearLayout {
     if (!mEnabled) {
       defaultDrawable.setStroke(mBorderWidth, mDisabledBorderColor);
       if (mGhost) {
-        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-          disabledDrawable.setColor(getResources().getColor(android.R.color.transparent));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+          disabledDrawable.setColor(getContext().getColor(android.R.color.transparent));
         } else {
-          disabledDrawable.setColor(
-              getResources().getColor(android.R.color.transparent, getContext().getTheme()));
+          //noinspection deprecation
+          disabledDrawable.setColor(getResources().getColor(android.R.color.transparent));
         }
       }
     }
