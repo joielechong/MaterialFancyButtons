@@ -1,0 +1,1 @@
+-keep class com.rilixtech.dripicons_typeface.Dripicons { *; }

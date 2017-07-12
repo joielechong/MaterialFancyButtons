@@ -8,44 +8,74 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
+
+  private List<NameClass> nameClasses;
+
+  private class NameClass {
+    String name;
+    Class clazz;
+
+    NameClass(String name, Class clazz) {
+      this.name = name;
+      this.clazz = clazz;
+    }
+  }
+
+  private List<NameClass> getNameAndClasses() {
+    List<NameClass> list = new ArrayList<>();
+    list.add(new NameClass(getString(R.string.title_xml_buttons), XmlButtons.class));
+    list.add(new NameClass(getString(R.string.title_program_buttons), ProgramButtons.class));
+    list.add(new NameClass(getString(R.string.title_community_material_buttons),
+        CommunityMaterialButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_devicon_buttons), DeviconButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_dripicons_buttons), DripiconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_entypo), EntypoButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_fontawesome), FontAwesomeActivity.class));
+    list.add(new NameClass(getString(R.string.title_foundation_icons), FoundationIconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_activity_glyphicons_halflings), GlyphiconsHalflingsActivity.class));
+    list.add(new NameClass(getString(R.string.title_google_material), GoogleMaterialButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_ionicons), IoniconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_mfglabs), MFGLabsIconsetButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_material_design_iconic), MaterialDesignIconicButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_meteocons), MeteoconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_mobiriseicons), MobiriseIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_octicons), OcticonsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_picol), PicolIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_pixeden7), Pixeden7StrokeActivity.class));
+    list.add(new NameClass(getString(R.string.title_themify_icons), ThemifyIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_typicons), TypiconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_vaadin_icons), VaadinIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_weather_icons), WeatherIconsActivity.class));
+
+    return list;
+  }
+
+  private List<String> getNames(List<NameClass> nameClasses) {
+    List<String> names = new ArrayList<>();
+    for (NameClass nameClass : nameClasses) {
+      names.add(nameClass.name);
+    }
+    return names;
+  }
+
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
-    setListAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, getListItems()));
+    nameClasses = getNameAndClasses();
+    setListAdapter(
+        new ArrayAdapter(this, android.R.layout.simple_list_item_1, getNames(nameClasses)));
     getListView().setOnItemClickListener(this);
-  }
-
-  private String[] getListItems() {
-    String[] listItems = {
-        getString(R.string.title_activity_xml_buttons),
-        getString(R.string.title_activity_program_buttons),
-        getString(R.string.title_activity_community_material_buttons),
-        getString(R.string.title_activity_devicon_buttons),
-        getString(R.string.title_activity_entypo),
-        getString(R.string.title_activity_fontawesome),
-        getString(R.string.title_activity_foundation_icons),
-            getString(R.string.title_activity_glyphicons_halflings),
-        getString(R.string.title_activity_google_material),
-        getString(R.string.title_activity_ionicons), getString(R.string.title_activity_mfglabs),
-        getString(R.string.title_activity_material_design_iconic),
-        getString(R.string.title_activity_meteocons),
-        getString(R.string.title_activity_mobiriseicons),
-        getString(R.string.title_activity_octicons),
-        getString(R.string.title_activity_pixeden7),
-        getString(R.string.title_activity_themify_icons),
-        getString(R.string.title_activity_typicons),
-        getString(R.string.title_activity_vaadin_icons),
-        getString(R.string.title_activity_weather_icons),
-
-    };
-    return listItems;
+    TextView titleTv = (TextView) findViewById(R.id.title_tv);
+    titleTv.setText(
+        "MaterialFancyButtons example with " + (nameClasses.size() - 2) + " icon fonts");
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
-
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.main, menu);
     return true;
@@ -63,93 +93,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
   }
 
   @Override public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-    switch (position) {
-      case 0:
-        Intent intentXML = new Intent(MainActivity.this, XmlButtons.class);
-        startActivity(intentXML);
-        break;
-      case 1:
-        Intent intentProg = new Intent(MainActivity.this, ProgramButtons.class);
-        startActivity(intentProg);
-        break;
-      case 2:
-        Intent intentCommunity =
-            new Intent(MainActivity.this, CommunityMaterialButtonsActivity.class);
-        startActivity(intentCommunity);
-        break;
-      case 3:
-        Intent intentDevIcon = new Intent(MainActivity.this, DeviconButtonsActivity.class);
-        startActivity(intentDevIcon);
-        break;
-      case 4:
-        Intent intentEntypo = new Intent(MainActivity.this, EntypoButtonsActivity.class);
-        startActivity(intentEntypo);
-        break;
-      case 5:
-        Intent intentFontAwesome = new Intent(MainActivity.this, FontAwesomeActivity.class);
-        startActivity(intentFontAwesome);
-        break;
-      case 6:
-        Intent intentFoundationIcons =
-            new Intent(MainActivity.this, FoundationIconsButtonsActivity.class);
-        startActivity(intentFoundationIcons);
-        break;
-      case 7:
-        Intent intentGlyphiconsHalflings =
-                new Intent(MainActivity.this, GlyphiconsHalflingsActivity.class);
-        startActivity(intentGlyphiconsHalflings);
-        break;
-      case 8:
-        Intent intentGoogleMaterial =
-            new Intent(MainActivity.this, GoogleMaterialButtonsActivity.class);
-        startActivity(intentGoogleMaterial);
-        break;
-      case 9:
-        Intent intentIonics = new Intent(MainActivity.this, IoniconsButtonsActivity.class);
-        startActivity(intentIonics);
-        break;
-      case 10:
-        Intent intentMFGLabs = new Intent(MainActivity.this, MFGLabsIconsetButtonsActivity.class);
-        startActivity(intentMFGLabs);
-        break;
-      case 11:
-        Intent intentMaterialDesign = new Intent(MainActivity.this, MaterialDesignIconicButtonsActivity.class);
-        startActivity(intentMaterialDesign);
-        break;
-      case 12:
-        Intent intentMeteo = new Intent(MainActivity.this, MeteoconsButtonsActivity.class);
-        startActivity(intentMeteo);
-        break;
-      case 13:
-        Intent intentMobirise = new Intent(MainActivity.this, MobiriseIconsActivity.class);
-        startActivity(intentMobirise);
-        break;
-      case 14:
-        Intent intentOcticons = new Intent(MainActivity.this, OcticonsButtonsActivity.class);
-        startActivity(intentOcticons);
-        break;
-      case 15:
-        Intent intentPixeden = new Intent(MainActivity.this, Pixeden7StrokeActivity.class);
-        startActivity(intentPixeden);
-        break;
-      case 16:
-        Intent intentThemify = new Intent(MainActivity.this, ThemifyIconsActivity.class);
-        startActivity(intentThemify);
-        break;
-      case 17:
-        Intent intentTypicons = new Intent(MainActivity.this, TypiconsActivity.class);
-        startActivity(intentTypicons);
-        break;
-      case 18:
-        Intent intentVaadin = new Intent(MainActivity.this, VaadinIconsActivity.class);
-        startActivity(intentVaadin);
-        break;
-      case 19:
-        Intent intentWeatherIcons = new Intent(MainActivity.this, WeatherIconsActivity.class);
-        startActivity(intentWeatherIcons);
-        break;
-      default:
-        throw new IllegalArgumentException("Hold up, hold my phone :)");
-    }
+    Intent intentActivity = new Intent(MainActivity.this, nameClasses.get(position).clazz);
+    startActivity(intentActivity);
   }
 }
