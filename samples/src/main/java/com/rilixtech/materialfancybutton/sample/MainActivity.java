@@ -3,7 +3,6 @@ package com.rilixtech.materialfancybutton.sample;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,72 +14,49 @@ import java.util.List;
 
 public class MainActivity extends ListActivity implements AdapterView.OnItemClickListener {
 
-  public static final String TAG = MainActivity.class.getSimpleName();
-  public static final String PACKAGE_NAME = MainActivity.class.getPackage().getName();
-
   private List<NameClass> nameClasses;
 
-  class NameClass {
+  private class NameClass {
     String name;
-    String clazz;
+    Class clazz;
 
-    NameClass(String name, String clazz) {
+    NameClass(String name, Class clazz) {
       this.name = name;
       this.clazz = clazz;
     }
   }
 
   private List<NameClass> getNameAndClasses() {
-    List<NameClass> lists = new ArrayList<>();
-    lists.add(new NameClass(getString(R.string.title_activity_xml_buttons),
-        XmlButtons.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_program_buttons),
-        ProgramButtons.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_community_material_buttons),
-        CommunityMaterialButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_devicon_buttons),
-        DeviconButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_dripicons_buttons),
-        DripiconsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_entypo),
-        EntypoButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_fontawesome),
-        FontAwesomeActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_foundation_icons),
-        FoundationIconsButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_google_material),
-        GoogleMaterialButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_ionicons),
-        IoniconsButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_mfglabs),
-        MFGLabsIconsetButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_material_design_iconic),
-        MaterialDesignIconicButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_meteocons),
-        MeteoconsButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_mobiriseicons),
-        MobiriseIconsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_octicons),
-        OcticonsButtonsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_picol),
-        PicolIconsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_pixeden7),
-        Pixeden7StrokeActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_themify_icons),
-        ThemifyIconsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_typicons),
-        TypiconsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_vaadin_icons),
-        VaadinIconsActivity.class.getSimpleName()));
-    lists.add(new NameClass(getString(R.string.title_activity_weather_icons),
-        WeatherIconsActivity.class.getSimpleName()));
+    List<NameClass> list = new ArrayList<>();
+    list.add(new NameClass(getString(R.string.title_xml_buttons), XmlButtons.class));
+    list.add(new NameClass(getString(R.string.title_program_buttons), ProgramButtons.class));
+    list.add(new NameClass(getString(R.string.title_community_material_buttons),
+        CommunityMaterialButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_devicon_buttons), DeviconButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_dripicons_buttons), DripiconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_entypo), EntypoButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_fontawesome), FontAwesomeActivity.class));
+    list.add(new NameClass(getString(R.string.title_foundation_icons), FoundationIconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_google_material), GoogleMaterialButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_ionicons), IoniconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_mfglabs), MFGLabsIconsetButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_material_design_iconic), MaterialDesignIconicButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_meteocons), MeteoconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_mobiriseicons), MobiriseIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_octicons), OcticonsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_picol), PicolIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_pixeden7), Pixeden7StrokeActivity.class));
+    list.add(new NameClass(getString(R.string.title_themify_icons), ThemifyIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_typicons), TypiconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_vaadin_icons), VaadinIconsActivity.class));
+    list.add(new NameClass(getString(R.string.title_weather_icons), WeatherIconsActivity.class));
 
-    return lists;
+    return list;
   }
 
   private List<String> getNames(List<NameClass> nameClasses) {
     List<String> names = new ArrayList<>();
-    for(NameClass nameClass: nameClasses) {
+    for (NameClass nameClass : nameClasses) {
       names.add(nameClass.name);
     }
     return names;
@@ -90,10 +66,12 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     nameClasses = getNameAndClasses();
-    setListAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, getNames(nameClasses)));
+    setListAdapter(
+        new ArrayAdapter(this, android.R.layout.simple_list_item_1, getNames(nameClasses)));
     getListView().setOnItemClickListener(this);
     TextView titleTv = (TextView) findViewById(R.id.title_tv);
-    titleTv.setText("MaterialFancyButtons example with " + (nameClasses.size() - 2) + " icon fonts");
+    titleTv.setText(
+        "MaterialFancyButtons example with " + (nameClasses.size() - 2) + " icon fonts");
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
@@ -114,12 +92,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
   }
 
   @Override public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-    try {
-      Intent intentActivity = new Intent(MainActivity.this, Class.forName(PACKAGE_NAME + "." + nameClasses.get(position).clazz));
-      Log.d(TAG, "PACKAGE_NAME = " + PACKAGE_NAME);
-      startActivity(intentActivity);
-    } catch (ClassNotFoundException e) {
-      e.printStackTrace();
-    }
+    Intent intentActivity = new Intent(MainActivity.this, nameClasses.get(position).clazz);
+    startActivity(intentActivity);
   }
 }
