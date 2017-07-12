@@ -1,5 +1,5 @@
 include ':samples', ':mfglabs-iconset-typeface', ':themify-icons-typeface', ':picol-typeface',
-    ':dripicons-typeface',
+    ':dripicons-typeface', ':glyphicons-halflings-typeface',
     ':mobirise-icons-typeface'
 include ':materialfancybuttons'
 include ':icontext2string'

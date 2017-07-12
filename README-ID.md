@@ -28,6 +28,7 @@ Tidak perlu lagi secara manual menggunakan `&#xf087;` untuk karakter ikon font l
     * [Entypo](http://www.entypo.com/)
     * [Fontawesome](http://fontawesome.io)
     * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
+    * [Glyphicons Halflings](http://glyphicons.com/)
     * [Google Material Design Icons](https://github.com/google/material-design-icons)
     * [Ionicons](http://ionicons.com/)
     * [Material Design Iconic Font](http://zavoloklom.github.io/material-design-iconic-font)
@@ -120,6 +121,10 @@ Daftar berikut mengikuti format:
 * [Foundation Icons](http://zurb.com/playground/foundation-icon-fonts-3)
   * "foui"
   * `compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'`
+
+* [Glyphicons Halflings](http://glyphicons.com/)
+  * "glyi"
+  * `compile 'com.rilixtech:glyphicons-halflings-typeface:1.0.0'`
 
 * [Google Material Design Icons](https://github.com/google/material-design-icons)
   * "gmdi"

@@ -37,6 +37,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     list.add(new NameClass(getString(R.string.title_entypo), EntypoButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_fontawesome), FontAwesomeActivity.class));
     list.add(new NameClass(getString(R.string.title_foundation_icons), FoundationIconsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_activity_glyphicons_halflings), GlyphiconsHalflingsActivity.class));
     list.add(new NameClass(getString(R.string.title_google_material), GoogleMaterialButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_ionicons), IoniconsButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_mfglabs), MFGLabsIconsetButtonsActivity.class));
