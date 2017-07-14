@@ -2,9 +2,9 @@
 
 Fancy Button yang indah dikarenakan endorphins.
 
-Ikon, Border, Radius ... untuk button Android. Dengan 18 Icon Fonts yang dapat dipilih yang sudah dikompilasi sebelumnya!
+Ikon, Border, Radius ... untuk button Android. Dengan 20 Icon Fonts yang dapat dipilih yang sudah dikompilasi sebelumnya!
 
-Tidak perlu lagi secara manual menggunakan `&#xf087;` untuk karakter ikon font lagi!
+Tidak perlu secara manual menggunakan `&#xf087;` untuk karakter ikon font lagi!
 
 <img src="/resources/cover.png" width="80%" alt="Android About Page Cover"/>
 
@@ -74,6 +74,7 @@ compile 'com.rilixtech:dripicons-typeface:2.0.0'
 compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
+compile 'com.rilixtech:glyphicons-halflings-typeface:1.0.0'
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'

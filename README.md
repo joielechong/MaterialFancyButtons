@@ -5,7 +5,7 @@ README in Bahasa Indonesia : [README-ID.md](https://github.com/joielechong/Mater
 
 Beautiful Fancy Button on endorphins.
 
-Icons, Borders, Radius ... for Android buttons. With selectable 19 Icon Fonts precompiled!
+Icons, Borders, Radius ... for Android buttons. With selectable 20 Icon Fonts precompiled!
 
 No need to manually using `&#xf087;` for icon font character anymore!
 
@@ -78,6 +78,7 @@ compile 'com.rilixtech:dripicons-typeface:2.0.0'
 compile 'com.rilixtech:entypo-typeface:1.0.0.3'
 compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
+compile 'com.rilixtech:glyphicons-halflings-typeface:1.0.0'
 compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
 compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
