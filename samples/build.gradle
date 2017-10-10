@@ -70,7 +70,8 @@ dependencies {
   //  compile project(path: ':octicons-typeface')
   compile 'com.rilixtech:octicons-typeface:3.2.0.3'
 
-    compile project(path: ':open-iconic-typeface')
+//    compile project(path: ':open-iconic-typeface')
+  compile 'com.rilixtech:open-iconic-typeface:1.1.1'
 
 //    compile project(path: ':picol-typeface')
   compile 'com.rilixtech:picol-typeface:1.1.0'

@@ -2,7 +2,7 @@
 
 Fancy Button yang indah dikarenakan endorphins.
 
-Ikon, Border, Radius ... untuk button Android. Dengan 20 Icon Fonts yang dapat dipilih yang sudah dikompilasi sebelumnya!
+Ikon, Border, Radius ... untuk button Android. Dengan 21 Icon Fonts yang dapat dipilih yang sudah dikompilasi sebelumnya!
 
 Tidak perlu secara manual menggunakan `&#xf087;` untuk karakter ikon font lagi!
 
@@ -36,6 +36,7 @@ Tidak perlu secara manual menggunakan `&#xf087;` untuk karakter ikon font lagi!
     * [Meteocons](http://www.alessioatzeni.com/meteocons/)
     * [Mobirise Icons](https://mobiriseicons.com/)
     * [Octicons](https://github.com/github/octicons)
+    * [Open Iconic](https://useiconic.com/)
     * [PICOL](http://picol.org/)
     * [Pixden7Stroke](http://themes-pixeden.com/font-demos/7-stroke/)
     * [Themify Icons](http://themify.me/themify-icons)
@@ -82,6 +83,7 @@ compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
 compile 'com.rilixtech:mobirise-icons-typeface:1.0.0'
 compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
 compile 'com.rilixtech:octicons-typeface:3.2.0.3'
+compile 'com.rilixtech:open-iconic-typeface:1.1.1'
 compile 'com.rilixtech:picol-typeface:1.0.0'
 compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
 compile 'com.rilixtech:themify-icons-typeface:0.1.2'
@@ -155,6 +157,10 @@ Daftar berikut mengikuti format:
 * [Octicons](https://github.com/github/octicons)
   * "octi"
   * `compile 'com.rilixtech:octicons-typeface:3.2.0.3'`
+
+* [Open Iconic](https://useiconic.com/)
+  * "opic"
+  * `compile 'com.rilixtech:open-iconic-typeface:1.1.1'`
 
 * [PICOL](http://picol.org/)
   * "pici"
