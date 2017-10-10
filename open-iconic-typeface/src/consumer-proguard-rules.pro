@@ -1,0 +1,1 @@
+-keep class com.rilixtech.open_iconic_typeface.OpenIconic { *; }

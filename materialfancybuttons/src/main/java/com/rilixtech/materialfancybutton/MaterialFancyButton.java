@@ -15,18 +15,21 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.rilixtech.materialfancybutton.typeface.IIcon;
 import com.rilixtech.materialfancybutton.typeface.ITypeface;
 import com.rilixtech.materialfancybutton.utils.FontUtil;
+import com.rilixtech.materialfancybutton.utils.RippleManager;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MaterialFancyButton extends LinearLayout {
+
+  private RippleManager mRippleManager;
 
   public static final String TAG = MaterialFancyButton.class.getSimpleName();
 
@@ -66,6 +69,8 @@ public class MaterialFancyButton extends LinearLayout {
   private int mRadiusBottomLeft = 0;
   private int mRadiusBottomRight = 0;
 
+  private float[] mCornerRadii;
+
   private boolean mEnabled = true;
 
   private boolean mTextAllCaps = false;
@@ -86,8 +91,9 @@ public class MaterialFancyButton extends LinearLayout {
   private TextView mTextView;
 
   private boolean mGhost = false; // Default is a solid button !
-  //private boolean mUseSystemFont = false; // Default is using robotoregular.ttf
   private boolean mUseRippleEffect = true;
+
+  GradientDrawable mDefaultDrawable;
 
   /**
    * Default constructor
@@ -96,9 +102,6 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public MaterialFancyButton(Context context) {
     super(context);
-
-    //mTextTypeFace = FontUtil.findFont(context, mDefaultTextFont, null);
-    //mIconTypeFace = FontUtil.findFont(context, mDefaultIconFont, null);
     initializeMaterialFancyButton();
   }
 
@@ -111,12 +114,15 @@ public class MaterialFancyButton extends LinearLayout {
   public MaterialFancyButton(Context context, AttributeSet attrs) {
     super(context, attrs);
 
-    TypedArray attrsArray =
-        context.obtainStyledAttributes(attrs, R.styleable.MaterialFancyButtonAttrs, 0, 0);
+    TypedArray attrsArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialFancyButtonAttrs, 0, 0);
     initAttributesArray(attrsArray);
-    attrsArray.recycle();
 
     initializeMaterialFancyButton();
+
+    attrsArray.recycle();
+
+    //applyStyle(context, attrs, defStyleAttr, defStyleRes);
+    applyStyle(context, attrs, 0, 0);
   }
 
   /**
@@ -133,7 +139,6 @@ public class MaterialFancyButton extends LinearLayout {
     mIconView = setupIconView();
     mFontIconView = setupFontIconView();
     if (mIcon != null) {
-      Log.d(TAG, "mIcon = " + mIcon);
       setIcon(mIcon);
     }
 
@@ -180,7 +185,7 @@ public class MaterialFancyButton extends LinearLayout {
    */
   private TextView setupTextView() {
     if (mText == null) {
-      mText = "Fancy Button";
+      mText = "Button";
     }
 
     TextView textView;
@@ -196,9 +201,6 @@ public class MaterialFancyButton extends LinearLayout {
     textView.setTextSize(FontUtil.pxToSp(getContext(), mDefaultTextSize));
     textView.setLayoutParams(
         new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-    //if (!isInEditMode() && !mUseSystemFont) {
-    //  textView.setTypeface(mTextTypeFace); //we can pass null in first arg
-    //}
     return textView;
   }
 
@@ -322,8 +324,8 @@ public class MaterialFancyButton extends LinearLayout {
         (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_android_textSize,
             mDefaultTextSize);
 
-    mDefaultTextGravity =
-        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_textGravity, mDefaultTextGravity);
+    mDefaultTextGravity = attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_textGravity,
+        mDefaultTextGravity);
 
     mBorderColor =
         attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_borderColor, mBorderColor);
@@ -403,7 +405,7 @@ public class MaterialFancyButton extends LinearLayout {
     if (text != null) mText = mTextAllCaps ? text.toUpperCase() : text;
 
     if (!isInEditMode()) {
-      if(mIcon != null) {
+      if (mIcon != null) {
 
       } else {
         if (iconFontFamily != null) {
@@ -435,52 +437,49 @@ public class MaterialFancyButton extends LinearLayout {
   @SuppressLint("NewApi") private void setupBackground() {
 
     // Default Drawable
-    GradientDrawable defaultDrawable = new GradientDrawable();
-    defaultDrawable.setCornerRadius(mRadius);
-    defaultDrawable.setCornerRadii(new float[] {
+    mDefaultDrawable = new GradientDrawable();
+    mDefaultDrawable.setCornerRadius(mRadius);
+    mDefaultDrawable.setCornerRadii(new float[] {
         mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
         mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
     });
     if (mGhost) {
       // Hollow Background
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        defaultDrawable.setColor(getContext().getColor(android.R.color.transparent));
+        mDefaultDrawable.setColor(getContext().getColor(android.R.color.transparent));
       } else {
         //noinspection deprecation
-        defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
+        mDefaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
       }
-
     } else {
-      defaultDrawable.setColor(mDefaultBackgroundColor);
+      mDefaultDrawable.setColor(mDefaultBackgroundColor);
     }
 
+    mCornerRadii = new float[] {
+        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
+        mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
+    };
     //Focus Drawable
     GradientDrawable focusDrawable = new GradientDrawable();
     focusDrawable.setCornerRadius(mRadius);
-    focusDrawable.setCornerRadii(new float[] {
-        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-        mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
-    });
+    focusDrawable.setCornerRadii(mCornerRadii);
     focusDrawable.setColor(mFocusBackgroundColor);
 
     // Disabled Drawable
     GradientDrawable disabledDrawable = new GradientDrawable();
     disabledDrawable.setCornerRadius(mRadius);
-    focusDrawable.setCornerRadii(new float[] {
-        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-        mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
-    });
+    focusDrawable.setCornerRadii(mCornerRadii);
     disabledDrawable.setColor(mDisabledBackgroundColor);
     disabledDrawable.setStroke(mBorderWidth, mDisabledBorderColor);
 
     // Handle Border
     if (mBorderColor != 0) {
-      defaultDrawable.setStroke(mBorderWidth, mBorderColor);
+      mDefaultDrawable.setStroke(mBorderWidth, mBorderColor);
     }
 
     // Handle disabled border color
     if (!mEnabled) {
-      defaultDrawable.setStroke(mBorderWidth, mDisabledBorderColor);
+      mDefaultDrawable.setStroke(mBorderWidth, mDisabledBorderColor);
       if (mGhost) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
           disabledDrawable.setColor(getContext().getColor(android.R.color.transparent));
@@ -492,7 +491,7 @@ public class MaterialFancyButton extends LinearLayout {
     }
 
     if (mUseRippleEffect && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      this.setBackground(getRippleDrawable(defaultDrawable, focusDrawable, disabledDrawable));
+      //this.setBackground(getRippleDrawable(mDefaultDrawable, focusDrawable, disabledDrawable));
     } else {
 
       StateListDrawable states = new StateListDrawable();
@@ -500,10 +499,7 @@ public class MaterialFancyButton extends LinearLayout {
       // Focus/Pressed Drawable
       GradientDrawable drawable2 = new GradientDrawable();
       drawable2.setCornerRadius(mRadius);
-      focusDrawable.setCornerRadii(new float[] {
-          mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-          mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
-      });
+      focusDrawable.setCornerRadii(mCornerRadii);
       if (mGhost) {
         drawable2.setColor(getResources().getColor(android.R.color.transparent)); // No focus color
       } else {
@@ -513,8 +509,8 @@ public class MaterialFancyButton extends LinearLayout {
       // Handle Button Border
       if (mBorderColor != 0) {
         if (mGhost) {
-          drawable2.setStroke(mBorderWidth,
-              mFocusBackgroundColor); // Border is the main part of button now
+          // Border is the main part of button now
+          drawable2.setStroke(mBorderWidth, mFocusBackgroundColor);
         } else {
           drawable2.setStroke(mBorderWidth, mBorderColor);
         }
@@ -534,7 +530,7 @@ public class MaterialFancyButton extends LinearLayout {
         states.addState(new int[] { -android.R.attr.state_enabled }, disabledDrawable);
       }
 
-      states.addState(new int[] {}, defaultDrawable);
+      states.addState(new int[] {}, mDefaultDrawable);
 
       if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
         this.setBackgroundDrawable(states);
@@ -548,7 +544,6 @@ public class MaterialFancyButton extends LinearLayout {
    * Initialize button container
    */
   private void initializeButtonContainer() {
-
     if (mIconPosition == POSITION_TOP || mIconPosition == POSITION_BOTTOM) {
       this.setOrientation(LinearLayout.VERTICAL);
     } else {
@@ -797,22 +792,18 @@ public class MaterialFancyButton extends LinearLayout {
 
   public void setIcon(String icon) {
     try {
-      Log.d(TAG, "icon.substring(0, 3) = " + icon.substring(0, 3));
-      ITypeface font =
-          CoreIcon.findFont(getContext().getApplicationContext(), icon.substring(0, CoreIcon.FONT_MAPPING_PREFIX));
-      Log.d(TAG, "Font characters = " + font.getCharacters().size());
+      ITypeface font = CoreIcon.findFont(getContext().getApplicationContext(),
+          icon.substring(0, CoreIcon.FONT_MAPPING_PREFIX));
       icon = icon.replace("-", "_");
       setIcon(font.getIcon(icon));
       Log.d(TAG, font.getIcon(icon).getTypeface().getDescription());
     } catch (Exception ex) {
       Log.e(TAG, "Wrong icon name: " + icon);
     }
-    //setIconResource(icon);
   }
 
   public void setIcon(IIcon icon) {
     ITypeface typeface = icon.getTypeface();
-    Log.d(TAG, "Typeface = " + icon.getTypeface().getAuthor());
     mIconTypeFace = typeface.getTypeface(getContext().getApplicationContext());
     setIconResource(String.valueOf(icon.getCharacter()));
   }
@@ -881,7 +872,8 @@ public class MaterialFancyButton extends LinearLayout {
     }
   }
 
-  public void setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight) {
+  public void setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft,
+      int radiusBottomRight) {
     this.mRadiusTopLeft = radiusTopLeft;
     this.mRadiusTopRight = radiusTopRight;
     this.mRadiusBottomLeft = radiusBottomLeft;
@@ -893,6 +885,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius top left of the button
+   *
    * @param radiusTopLeft radius top left of the button
    */
   public void setRadiusTopLeft(int radiusTopLeft) {
@@ -904,6 +897,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius top right of the button
+   *
    * @param radiusTopRight radius top right of the button
    */
   public void setRadiusTopRight(int radiusTopRight) {
@@ -915,6 +909,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius bottom left of the button
+   *
    * @param radiusBottomLeft radius bottom left of the button
    */
   public void setRadiusBottomLeft(int radiusBottomLeft) {
@@ -926,6 +921,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius bottom right of the button
+   *
    * @param radiusBottomRight radius bottom right of the button
    */
   public void setRadiusBottomRight(int radiusBottomRight) {
@@ -989,15 +985,6 @@ public class MaterialFancyButton extends LinearLayout {
     }
   }
 
-  ///**
-  // * If enabled, the button title will ignore its custom font and use the default system font
-  // *
-  // * @param status : true || false
-  // */
-  //@SuppressWarnings("unused") public void setUsingSystemFont(boolean status) {
-  //  this.mUseSystemFont = status;
-  //}
-
   /**
    * Return Text of the button
    *
@@ -1036,5 +1023,40 @@ public class MaterialFancyButton extends LinearLayout {
    */
   @SuppressWarnings("unused") public ImageView getIconImageObject() {
     return mIconView;
+  }
+
+  protected void applyStyle(Context context, AttributeSet attrs, int defStyleAttr,
+      int defStyleRes) {
+    getRippleManager().onCreate(this, context, attrs, defStyleAttr, defStyleRes, mCornerRadii);
+  }
+
+  protected RippleManager getRippleManager() {
+    if (mRippleManager == null) {
+      synchronized (RippleManager.class) {
+        if (mRippleManager == null) mRippleManager = new RippleManager();
+      }
+    }
+
+    return mRippleManager;
+  }
+
+  @Override protected void onDetachedFromWindow() {
+    super.onDetachedFromWindow();
+    RippleManager.cancelRipple(this);
+  }
+
+  @Override public void setOnClickListener(OnClickListener l) {
+    RippleManager rippleManager = getRippleManager();
+    if (l == rippleManager) {
+      super.setOnClickListener(l);
+    } else {
+      rippleManager.setOnClickListener(l);
+      setOnClickListener(rippleManager);
+    }
+  }
+
+  @Override public boolean onTouchEvent(MotionEvent event) {
+    boolean result = super.onTouchEvent(event);
+    return getRippleManager().onTouchEvent(this, event) || result;
   }
 }

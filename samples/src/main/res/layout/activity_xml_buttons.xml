@@ -38,6 +38,8 @@
           fancy:mfb_text="Like my facebook page"
           fancy:mfb_textColor="#FFFFFF"
           fancy:mfb_radius="30dp"
+          fancy:rd_enable="true"
+          style="@style/LightFlatButtonRippleStyle"
           />
       <!--fancy:mfb_iconFont="fontawesome.ttf"-->
       <!--fancy:mfb_fontIconResource="@string/icon_like"-->
@@ -62,6 +64,7 @@
           fancy:mfb_radius="30dp"
           fancy:mfb_radiusTopLeft="10dp"
           fancy:mfb_radiusTopRight="10dp"
+          style="@style/LightFlatButtonRippleStyle"
           />
       <!--fancy:mfb_iconFont="fontawesome.ttf"-->
       <!--fancy:mfb_fontIconResource="@string/icon_share"-->

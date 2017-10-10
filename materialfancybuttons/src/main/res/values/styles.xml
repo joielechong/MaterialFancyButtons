@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="Material"></style>
+
+  <style name="Material.Drawable"></style>
+
+  <style name="Material.Drawable.Ripple">
+    <item name="rd_enable">true</item>
+    <item name="rd_inInterpolator">@android:anim/decelerate_interpolator</item>
+    <item name="rd_outInterpolator">@android:anim/decelerate_interpolator</item>
+    <item name="rd_maskType">rectangle</item>
+    <item name="rd_cornerRadius">2dp</item>
+    <item name="rd_padding">0dp</item>
+    <item name="rd_delayClick">none</item>
+  </style>
+
+  <style name="Material.Drawable.Ripple.Touch" parent="Material.Drawable.Ripple">
+    <item name="rd_backgroundColor">#26CCCCCC</item>
+    <item name="rd_backgroundAnimDuration">200</item>
+    <item name="rd_maxRippleRadius">48dp</item>
+    <item name="rd_rippleColor">#19CCCCCC</item>
+    <item name="rd_rippleAnimDuration">300</item>
+    <item name="rd_rippleType">touch</item>
+  </style>
+
+  <style name="Material.Drawable.Ripple.Touch.Light" parent="Material.Drawable.Ripple.Touch">
+    <item name="rd_backgroundColor">#33999999</item>
+    <item name="rd_rippleColor">#33999999</item>
+  </style>
+
+  <style name="Material.Drawable.Ripple.Wave" parent="Material.Drawable.Ripple">
+    <item name="rd_maxRippleRadius">48dp</item>
+    <item name="rd_rippleColor">#3FCCCCCC</item>
+    <item name="rd_rippleAnimDuration">200</item>
+    <item name="rd_rippleType">wave</item>
+  </style>
+
+  <style name="Material.Drawable.Ripple.Wave.Light" parent="Material.Drawable.Ripple.Wave">
+    <item name="rd_rippleColor">#66999999</item>
+  </style>
+
+</resources>

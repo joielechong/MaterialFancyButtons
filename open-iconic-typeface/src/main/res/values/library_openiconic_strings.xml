@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="define_openiconic">year;author;libraryName;libraryWebsite</string>
+  <string name="library_openiconic_author">Iconic</string>
+  <string name="library_openiconic_authorWebsite">https://useiconic.com/</string>
+  <string name="library_openiconic_libraryName">Open Iconic</string>
+  <string name="library_openiconic_libraryDescription">An open source icon set with 223 marks in SVG, webfont and raster formats</string>
+  <string name="library_openiconic_libraryWebsite">https://github.com/iconic/open-iconic</string>
+  <string name="library_openiconic_libraryVersion">1.1.1</string>
+  <string name="library_openiconic_licenseId">sil_ofl_1_1</string>
+  <string name="library_openiconic_isOpenSource">true</string>
+  <string name="library_openiconic_repositoryLink">https://github.com/iconic/open-iconic</string>
+  <!-- Custom variables section -->
+  <string name="library_openiconic_year">2014</string>
+</resources> 
