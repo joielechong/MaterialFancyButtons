@@ -66,8 +66,8 @@ public class OpenIconicParser {
               // we need the second part
               iconValue = iconValues[1];
               iconValue = iconValue.trim();
-              // remove "
-              iconValue = iconValue.replace("\"", "");
+              // remove '
+              iconValue = iconValue.replace("\'", "");
               // remove ;
               iconValue = iconValue.replace(";", "");
               iconValue = iconValue.replace("\\", "\\u");

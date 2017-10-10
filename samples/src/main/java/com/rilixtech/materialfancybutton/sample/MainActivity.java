@@ -30,8 +30,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     List<NameClass> list = new ArrayList<>();
     list.add(new NameClass(getString(R.string.title_xml_buttons), XmlButtons.class));
     list.add(new NameClass(getString(R.string.title_program_buttons), ProgramButtons.class));
-    list.add(new NameClass(getString(R.string.title_community_material_buttons),
-        CommunityMaterialButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_community_material_buttons), CommunityMaterialButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_devicon_buttons), DeviconButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_dripicons_buttons), DripiconsActivity.class));
     list.add(new NameClass(getString(R.string.title_entypo), EntypoButtonsActivity.class));
@@ -45,6 +44,7 @@ public class MainActivity extends ListActivity implements AdapterView.OnItemClic
     list.add(new NameClass(getString(R.string.title_meteocons), MeteoconsButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_mobiriseicons), MobiriseIconsActivity.class));
     list.add(new NameClass(getString(R.string.title_octicons), OcticonsButtonsActivity.class));
+    list.add(new NameClass(getString(R.string.title_openiconic), OpenIconicButtonsActivity.class));
     list.add(new NameClass(getString(R.string.title_picol), PicolIconsActivity.class));
     list.add(new NameClass(getString(R.string.title_pixeden7), Pixeden7StrokeActivity.class));
     list.add(new NameClass(getString(R.string.title_themify_icons), ThemifyIconsActivity.class));

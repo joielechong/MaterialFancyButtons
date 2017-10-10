@@ -97,6 +97,10 @@
     </activity>
 
     <activity
+        android:name=".OpenIconicButtonsActivity"
+        android:label="@string/title_openiconic"/>
+
+    <activity
         android:name=".PicolIconsActivity"
         android:label="@string/title_picol">
     </activity>
