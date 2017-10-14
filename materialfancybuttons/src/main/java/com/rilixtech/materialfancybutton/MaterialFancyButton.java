@@ -322,8 +322,8 @@ public class MaterialFancyButton extends LinearLayout {
         (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_android_textSize,
             mDefaultTextSize);
 
-    mDefaultTextGravity =
-        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_textGravity, mDefaultTextGravity);
+    mDefaultTextGravity = attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_textGravity,
+        mDefaultTextGravity);
 
     mBorderColor =
         attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_borderColor, mBorderColor);
@@ -403,7 +403,7 @@ public class MaterialFancyButton extends LinearLayout {
     if (text != null) mText = mTextAllCaps ? text.toUpperCase() : text;
 
     if (!isInEditMode()) {
-      if(mIcon != null) {
+      if (mIcon != null) {
 
       } else {
         if (iconFontFamily != null) {
@@ -449,7 +449,6 @@ public class MaterialFancyButton extends LinearLayout {
         //noinspection deprecation
         defaultDrawable.setColor(getResources().getColor(android.R.color.transparent));
       }
-
     } else {
       defaultDrawable.setColor(mDefaultBackgroundColor);
     }
@@ -562,8 +561,8 @@ public class MaterialFancyButton extends LinearLayout {
     }
 
     this.setGravity(Gravity.CENTER);
-    this.setClickable(true);
-    this.setFocusable(true);
+    //this.setClickable(true);
+    //this.setFocusable(true);
     if (mIconResource == null
         && mFontIcon == null
         && getPaddingLeft() == 0
@@ -571,6 +570,12 @@ public class MaterialFancyButton extends LinearLayout {
         && getPaddingTop() == 0
         && getPaddingBottom() == 0) {
       this.setPadding(20, 0, 20, 0);
+
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        this.setPadding(0, 0, 0, 0);
+      } else {
+        this.setPadding(20, 20, 20, 20);
+      }
     }
   }
 
@@ -798,8 +803,8 @@ public class MaterialFancyButton extends LinearLayout {
   public void setIcon(String icon) {
     try {
       Log.d(TAG, "icon.substring(0, 3) = " + icon.substring(0, 3));
-      ITypeface font =
-          CoreIcon.findFont(getContext().getApplicationContext(), icon.substring(0, CoreIcon.FONT_MAPPING_PREFIX));
+      ITypeface font = CoreIcon.findFont(getContext().getApplicationContext(),
+          icon.substring(0, CoreIcon.FONT_MAPPING_PREFIX));
       Log.d(TAG, "Font characters = " + font.getCharacters().size());
       icon = icon.replace("-", "_");
       setIcon(font.getIcon(icon));
@@ -881,7 +886,8 @@ public class MaterialFancyButton extends LinearLayout {
     }
   }
 
-  public void setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight) {
+  public void setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft,
+      int radiusBottomRight) {
     this.mRadiusTopLeft = radiusTopLeft;
     this.mRadiusTopRight = radiusTopRight;
     this.mRadiusBottomLeft = radiusBottomLeft;
@@ -893,6 +899,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius top left of the button
+   *
    * @param radiusTopLeft radius top left of the button
    */
   public void setRadiusTopLeft(int radiusTopLeft) {
@@ -904,6 +911,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius top right of the button
+   *
    * @param radiusTopRight radius top right of the button
    */
   public void setRadiusTopRight(int radiusTopRight) {
@@ -915,6 +923,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius bottom left of the button
+   *
    * @param radiusBottomLeft radius bottom left of the button
    */
   public void setRadiusBottomLeft(int radiusBottomLeft) {
@@ -926,6 +935,7 @@ public class MaterialFancyButton extends LinearLayout {
 
   /**
    * Set border radius bottom right of the button
+   *
    * @param radiusBottomRight radius bottom right of the button
    */
   public void setRadiusBottomRight(int radiusBottomRight) {
@@ -1039,38 +1049,38 @@ public class MaterialFancyButton extends LinearLayout {
   }
 }
 
-  //protected void applyStyle(Context context, AttributeSet attrs, int defStyleAttr,
-  //    int defStyleRes) {
-  //  getRippleManager().onCreate(this, context, attrs, defStyleAttr, defStyleRes, mCornerRadii);
-  //}
+//protected void applyStyle(Context context, AttributeSet attrs, int defStyleAttr,
+//    int defStyleRes) {
+//  getRippleManager().onCreate(this, context, attrs, defStyleAttr, defStyleRes, mCornerRadii);
+//}
 
-  //protected RippleManager getRippleManager() {
-  //  if (mRippleManager == null) {
-  //    synchronized (RippleManager.class) {
-  //      if (mRippleManager == null) mRippleManager = new RippleManager();
-  //    }
-  //  }
-  //
-  //  return mRippleManager;
-  //}
+//protected RippleManager getRippleManager() {
+//  if (mRippleManager == null) {
+//    synchronized (RippleManager.class) {
+//      if (mRippleManager == null) mRippleManager = new RippleManager();
+//    }
+//  }
+//
+//  return mRippleManager;
+//}
 
-  //@Override protected void onDetachedFromWindow() {
-  //  super.onDetachedFromWindow();
-  //  RippleManager.cancelRipple(this);
-  //}
+//@Override protected void onDetachedFromWindow() {
+//  super.onDetachedFromWindow();
+//  RippleManager.cancelRipple(this);
+//}
 
-  //@Override public void setOnClickListener(OnClickListener l) {
-  //  RippleManager rippleManager = getRippleManager();
-  //  if (l == rippleManager) {
-  //    super.setOnClickListener(l);
-  //  } else {
-  //    rippleManager.setOnClickListener(l);
-  //    setOnClickListener(rippleManager);
-  //  }
-  //}
+//@Override public void setOnClickListener(OnClickListener l) {
+//  RippleManager rippleManager = getRippleManager();
+//  if (l == rippleManager) {
+//    super.setOnClickListener(l);
+//  } else {
+//    rippleManager.setOnClickListener(l);
+//    setOnClickListener(rippleManager);
+//  }
+//}
 
-  //@Override public boolean onTouchEvent(MotionEvent event) {
-  //  boolean result = super.onTouchEvent(event);
-  //  return getRippleManager().onTouchEvent(this, event) || result;
-  //}
+//@Override public boolean onTouchEvent(MotionEvent event) {
+//  boolean result = super.onTouchEvent(event);
+//  return getRippleManager().onTouchEvent(this, event) || result;
+//}
 //}
