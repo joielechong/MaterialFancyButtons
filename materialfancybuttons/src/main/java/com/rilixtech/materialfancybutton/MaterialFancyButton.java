@@ -570,7 +570,7 @@ public class MaterialFancyButton extends LinearLayout {
         && getPaddingRight() == 0
         && getPaddingTop() == 0
         && getPaddingBottom() == 0) {
-      this.setPadding(20, 20, 20, 20);
+      this.setPadding(20, 0, 20, 0);
     }
   }
 
