@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <declare-styleable name="MFBAttrs">
+  <declare-styleable name="MaterialFancyButton">
 
     <!-- Default Android attrs -->
     <attr name="android:enabled"/>
     <attr name="android:text"/>
     <attr name="android:textSize"/>
     <attr name="android:textAllCaps"/>
+    <attr name="android:textStyle"/>
 
     <attr format="color" name="mfb_defaultColor"/>
     <attr format="string" name="mfb_text"/>
@@ -75,10 +76,6 @@
 
     <attr format="boolean" name="mfb_ghost"/>
   </declare-styleable>
-
-
-
-
 
 
   <declare-styleable name="View">

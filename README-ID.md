@@ -56,7 +56,7 @@ Tidak perlu secara manual menggunakan `&#xf087;` untuk karakter ikon font lagi!
 ### Pemasangan
 Tambahkan Material Fancy Button:
 ```gradle
-compile 'com.rilixtech:materialfancybuttons:1.8.7'
+compile 'com.rilixtech:materialfancybuttons:1.8.8'
 ```
 
 Tambahkan maven ke build.gradle:
@@ -309,6 +309,7 @@ Attribut Bawaan memiliki prioritas lebih tinggi dari attribut `fancy:`
 | android:text |
 | android:textSize |
 | android:textAllCaps |
+| android:textStyle|
 
 ####  Getter yang didukung
 
@@ -333,6 +334,7 @@ Attribut Bawaan memiliki prioritas lebih tinggi dari attribut `fancy:`
 		android:paddingLeft="20dp"
 		android:paddingRight="20dp"
 		android:paddingTop="10dp"
+		android:textStyle="bold"
 		fancy:mfb_borderColor="#FFFFFF"
 		fancy:mfb_borderWidth="1dp"
 		fancy:mfb_defaultColor="#7ab800"

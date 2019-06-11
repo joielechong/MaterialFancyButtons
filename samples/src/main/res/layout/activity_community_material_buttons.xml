@@ -38,6 +38,7 @@
           fancy:mfb_text="Free access Point"
           fancy:mfb_textColor="#FFFFFF"
           fancy:mfb_radius="30dp"
+          android:textStyle="bold"
           />
 
       <com.rilixtech.materialfancybutton.MaterialFancyButton

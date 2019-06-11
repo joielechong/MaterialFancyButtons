@@ -60,7 +60,7 @@ No need to manually using `&#xf087;` for icon font character anymore!
 ### Installation
 
 ```gradle
-compile 'com.rilixtech:materialfancybuttons:1.8.7'
+compile 'com.rilixtech:materialfancybuttons:1.8.8'
 ```
 
 Add maven to your build.gradle:
@@ -313,6 +313,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 | android:text |
 | android:textSize |
 | android:textAllCaps |
+| android:textStyle|
 
 ####  Supported Getters
 
@@ -337,6 +338,7 @@ Default Attributes have more priority than Attributes with prefix fancy.
 		android:paddingLeft="20dp"
 		android:paddingRight="20dp"
 		android:paddingTop="10dp"
+		android:textStyle="bold"
 		fancy:mfb_borderColor="#FFFFFF"
 		fancy:mfb_borderWidth="1dp"
 		fancy:mfb_defaultColor="#7ab800"

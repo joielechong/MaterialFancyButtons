@@ -19,8 +19,8 @@ ext {
   licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   allLicenses = "Apache-2.0"
 
-  materialFancyButtonLibraryVersionName = '1.8.7'
-  materialFancyButtonLibraryVersionCode = 187
+  materialFancyButtonLibraryVersionName = '1.8.8'
+  materialFancyButtonLibraryVersionCode = 188
 
 }
 
