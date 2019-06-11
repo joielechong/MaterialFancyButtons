@@ -21,74 +21,74 @@ android {
 }
 
 dependencies {
-  compile "com.android.support:appcompat-v7:$supportLibVersion"
-  compile project(':materialfancybuttons')
-//  compile 'com.rilixtech:materialfancybuttons:1.8.7'
+  implementation "com.android.support:appcompat-v7:$supportLibVersion"
+  implementation project(':materialfancybuttons')
+//  implementation 'com.rilixtech:materialfancybuttons:1.8.7'
 
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-//  compile project(path: ':fontawesome-typeface')
-    compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
+//  implementation project(path: ':fontawesome-typeface')
+    implementation 'com.rilixtech:fontawesome-typeface:4.7.0.4'
 
-  //  compile project(path: ':community-material-typeface')
-  compile 'com.rilixtech:community-material-typeface:1.9.32.2'
+  //  implementation project(path: ':community-material-typeface')
+  implementation 'com.rilixtech:community-material-typeface:1.9.32.2'
 
-  //  compile project(path: ':devicon-typeface')
-  compile 'com.rilixtech:devicon-typeface:2.0.0.3'
+  //  implementation project(path: ':devicon-typeface')
+  implementation 'com.rilixtech:devicon-typeface:2.0.0.3'
 
-  //  compile project(path: ':entypo-typeface')
-  compile 'com.rilixtech:entypo-typeface:1.0.0.3'
+  //  implementation project(path: ':entypo-typeface')
+  implementation 'com.rilixtech:entypo-typeface:1.0.0.3'
 
-//    compile project(path: ':dripicons-typeface')
-  compile 'com.rilixtech:dripicons-typeface:2.0.0'
+//    implementation project(path: ':dripicons-typeface')
+  implementation 'com.rilixtech:dripicons-typeface:2.0.0'
 
-  //  compile project(path: ':mfglabs-iconset-typeface')
-  compile 'com.rilixtech:mfglabs-iconset-typeface:1.0'
+  //  implementation project(path: ':mfglabs-iconset-typeface')
+  implementation 'com.rilixtech:mfglabs-iconset-typeface:1.0'
 
-  //  compile project(path: ':foundation-icons-typeface')
-  compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
+  //  implementation project(path: ':foundation-icons-typeface')
+  implementation 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
 
-//    compile project(path: ':glyphicons-halflings-typeface')
-  compile 'com.rilixtech:glyphicons-halflings-typeface:1.0.0'
+//    implementation project(path: ':glyphicons-halflings-typeface')
+  implementation 'com.rilixtech:glyphicons-halflings-typeface:1.0.0'
 
-  //  compile project(path: ':google-material-typeface')
-  compile 'com.rilixtech:google-material-typeface:3.0.1.1.original'
+  //  implementation project(path: ':google-material-typeface')
+  implementation 'com.rilixtech:google-material-typeface:3.0.1.1.original'
   
-  //  compile project(path: ':ionicons-typeface')
-  compile 'com.rilixtech:ionicons-typeface:2.0.1.3'
+  //  implementation project(path: ':ionicons-typeface')
+  implementation 'com.rilixtech:ionicons-typeface:2.0.1.3'
 
-  //  compile project(path: ':material-design-iconic-typeface')
-  compile 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
+  //  implementation project(path: ':material-design-iconic-typeface')
+  implementation 'com.rilixtech:material-design-iconic-typeface:2.2.0.3'
 
-  //  compile project(path: ':meteocons-typeface')
-  compile 'com.rilixtech:meteocons-typeface:1.1.0.3'
-
-
-//    compile project(path: ':mobirise-icons-typeface')
-  compile 'com.rilixtech:mobirise-icons-typeface:1.0.0'
-
-  //  compile project(path: ':octicons-typeface')
-  compile 'com.rilixtech:octicons-typeface:3.2.0.3'
-
-//    compile project(path: ':open-iconic-typeface')
-  compile 'com.rilixtech:open-iconic-typeface:1.1.1'
-
-//    compile project(path: ':picol-typeface')
-  compile 'com.rilixtech:picol-typeface:1.1.0'
-
-  //  compile project(path: ':pixeden-7-stroke-typeface')
-  compile 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
-
-//    compile project(path: ':themify-icons-typeface')
-  compile 'com.rilixtech:themify-icons-typeface:0.1.2'
-
-  //  compile project(path: ':typicons-typeface')
-  compile 'com.rilixtech:typicons-typeface:2.0.7.3'
-
-//  compile project(path: ':vaadin-icons-typeface')
-  compile 'com.rilixtech:vaadin-icons-typeface:4.1.0'
+  //  implementation project(path: ':meteocons-typeface')
+  implementation 'com.rilixtech:meteocons-typeface:1.1.0.3'
 
 
-  //  compile project(path: ':weather-icons-typeface')
-  compile 'com.rilixtech:weather-icons-typeface:2.0.10.3'
+//    implementation project(path: ':mobirise-icons-typeface')
+  implementation 'com.rilixtech:mobirise-icons-typeface:1.0.0'
+
+  //  implementation project(path: ':octicons-typeface')
+  implementation 'com.rilixtech:octicons-typeface:3.2.0.3'
+
+//    implementation project(path: ':open-iconic-typeface')
+  implementation 'com.rilixtech:open-iconic-typeface:1.1.1'
+
+//    implementation project(path: ':picol-typeface')
+  implementation 'com.rilixtech:picol-typeface:1.1.0'
+
+  //  implementation project(path: ':pixeden-7-stroke-typeface')
+  implementation 'com.rilixtech:pixeden-7-stroke-typeface:1.2.0.1'
+
+//    implementation project(path: ':themify-icons-typeface')
+  implementation 'com.rilixtech:themify-icons-typeface:0.1.2'
+
+  //  implementation project(path: ':typicons-typeface')
+  implementation 'com.rilixtech:typicons-typeface:2.0.7.3'
+
+//  implementation project(path: ':vaadin-icons-typeface')
+  implementation 'com.rilixtech:vaadin-icons-typeface:4.1.0'
+
+
+  //  implementation project(path: ':weather-icons-typeface')
+  implementation 'com.rilixtech:weather-icons-typeface:2.0.10.3'
 }

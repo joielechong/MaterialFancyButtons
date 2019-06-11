@@ -27,7 +27,7 @@ android {
 }
 
 dependencies {
-  compile project(path: ':materialfancybuttons')
+  implementation project(path: ':materialfancybuttons')
 }
 
 if (project.hasProperty('pushall') || project.hasProperty('communityMaterialTypefaceOnly')) {

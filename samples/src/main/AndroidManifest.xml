@@ -18,116 +18,13 @@
       </intent-filter>
     </activity>
     <activity
-        android:name=".XmlButtons"
-        android:label="@string/title_xml_buttons">
-    </activity>
-    <activity
         android:name=".ProgramButtons"
-        android:label="@string/title_program_buttons">
+        android:label="@string/title_program_buttons"
+        android:exported="true">
     </activity>
 
     <activity
-        android:name=".CommunityMaterialButtonsActivity"
-        android:label="@string/title_community_material_buttons">
-    </activity>
-
-    <activity
-        android:name=".DeviconButtonsActivity"
-        android:label="@string/title_devicon_buttons">
-    </activity>
-
-    <activity
-        android:name=".EntypoButtonsActivity"
-        android:label="@string/title_entypo">
-    </activity>
-
-    <activity
-        android:name=".DripiconsActivity"
-        android:label="@string/title_dripicons_buttons">
-    </activity>
-
-    <activity
-        android:name=".FontAwesomeActivity"
-        android:label="@string/title_fontawesome">
-    </activity>
-
-    <activity
-        android:name=".FoundationIconsButtonsActivity"
-        android:label="@string/title_foundation_icons">
-    </activity>
-
-    <activity
-        android:name=".GlyphiconsHalflingsActivity"
-        android:label="@string/title_activity_glyphicons_halflings">
-    </activity>
-
-    <activity
-        android:name=".GoogleMaterialButtonsActivity"
-        android:label="@string/title_google_material">
-    </activity>
-
-    <activity
-        android:name=".IoniconsButtonsActivity"
-        android:label="@string/title_ionicons">
-    </activity>
-
-    <activity
-        android:name=".MFGLabsIconsetButtonsActivity"
-        android:label="@string/title_mfglabs">
-    </activity>
-
-    <activity
-        android:name=".MaterialDesignIconicButtonsActivity"
-        android:label="@string/title_material_design_iconic">
-    </activity>
-
-    <activity
-        android:name=".MeteoconsButtonsActivity"
-        android:label="@string/title_meteocons">
-    </activity>
-
-    <activity
-        android:name=".MobiriseIconsActivity"
-        android:label="@string/title_mobiriseicons">
-    </activity>
-
-    <activity
-        android:name=".OcticonsButtonsActivity"
-        android:label="@string/title_octicons">
-    </activity>
-
-    <activity
-        android:name=".OpenIconicButtonsActivity"
-        android:label="@string/title_openiconic"/>
-
-    <activity
-        android:name=".PicolIconsActivity"
-        android:label="@string/title_picol">
-    </activity>
-
-    <activity
-        android:name=".Pixeden7StrokeActivity"
-        android:label="@string/title_pixeden7">
-    </activity>
-
-    <activity
-        android:name=".ThemifyIconsActivity"
-        android:label="@string/title_themify_icons">
-    </activity>
-
-    <activity
-        android:name=".TypiconsActivity"
-        android:label="@string/title_typicons">
-    </activity>
-
-    <activity
-        android:name=".VaadinIconsActivity"
-        android:label="@string/title_vaadin_icons">
-    </activity>
-
-    <activity
-        android:name=".WeatherIconsActivity"
-        android:label="@string/title_weather_icons">
+        android:name=".IconButtonsActivity">
     </activity>
 
   </application>

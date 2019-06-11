@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-  compile project(path: ':materialfancybuttons')
+  implementation project(path: ':materialfancybuttons')
 }
 
 

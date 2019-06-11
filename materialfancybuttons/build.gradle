@@ -20,11 +20,6 @@ android {
   }
 }
 
-dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  //  compile "com.android.support:support-annotations:$supportLibVersion"
-}
-
 if (project.hasProperty('pushall') || project.hasProperty('materialFancyButtonsOnly')) {
   ext {
 

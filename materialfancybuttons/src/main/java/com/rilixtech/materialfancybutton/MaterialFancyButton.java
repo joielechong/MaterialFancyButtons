@@ -40,7 +40,7 @@ public class MaterialFancyButton extends LinearLayout {
   // # Text Attributes
   private int mDefaultTextColor = Color.WHITE;
   private int mDefaultIconColor = Color.WHITE;
-  private int mTextPosition = 1;
+  //private int mTextPosition = 1;
   private int mDefaultTextSize = FontUtil.spToPx(getContext(), 15);
   private int mDefaultTextGravity = 0x11; // Gravity.CENTER
   private String mText = null;
@@ -111,8 +111,7 @@ public class MaterialFancyButton extends LinearLayout {
   public MaterialFancyButton(Context context, AttributeSet attrs) {
     super(context, attrs);
 
-    TypedArray attrsArray =
-        context.obtainStyledAttributes(attrs, R.styleable.MaterialFancyButtonAttrs, 0, 0);
+    TypedArray attrsArray = context.obtainStyledAttributes(attrs, R.styleable.MFBAttrs, 0, 0);
     initAttributesArray(attrsArray);
     attrsArray.recycle();
 
@@ -129,15 +128,15 @@ public class MaterialFancyButton extends LinearLayout {
   private void initializeMaterialFancyButton() {
     initializeButtonContainer();
 
-    mTextView = setupTextView();
-    mIconView = setupIconView();
-    mFontIconView = setupFontIconView();
+    /*mTextView = */setupTextView();
+    ///*mIconView = */setupIconView();
+    /*mFontIconView =*/ setupFontIconView();
     if (mIcon != null) {
       Log.d(TAG, "mIcon = " + mIcon);
       setIcon(mIcon);
     }
 
-    this.removeAllViews();
+    //this.removeAllViews();
     setupBackground();
 
     List<View> views = new ArrayList<>();
@@ -178,28 +177,28 @@ public class MaterialFancyButton extends LinearLayout {
    *
    * @return : TextView
    */
-  private TextView setupTextView() {
+  private void setupTextView() {
     if (mText == null) {
       mText = "Fancy Button";
     }
 
-    TextView textView;
-    if (mTextView == null) {
-      textView = new TextView(getContext());
-    } else {
-      textView = mTextView;
+    //TextView mTextView;
+    if (this.mTextView == null) {
+      this.mTextView = new TextView(getContext());
     }
-    textView.setText(mText);
-
-    textView.setGravity(mDefaultTextGravity);
-    textView.setTextColor(mEnabled ? mDefaultTextColor : mDisabledTextColor);
-    textView.setTextSize(FontUtil.pxToSp(getContext(), mDefaultTextSize));
-    textView.setLayoutParams(
-        new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-    //if (!isInEditMode() && !mUseSystemFont) {
-    //  textView.setTypeface(mTextTypeFace); //we can pass null in first arg
+    //else {
+    //  mTextView = this.mTextView;
     //}
-    return textView;
+    mTextView.setText(mText);
+
+    mTextView.setGravity(mDefaultTextGravity);
+    mTextView.setTextColor(mEnabled ? mDefaultTextColor : mDisabledTextColor);
+    mTextView.setTextSize(FontUtil.pxToSp(getContext(), mDefaultTextSize));
+    mTextView.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+    //if (!isInEditMode() && !mUseSystemFont) {
+    //  mTextView.setTypeface(mTextTypeFace); //we can pass null in first arg
+    //}
+    //return mTextView;
   }
 
   /**
@@ -207,44 +206,44 @@ public class MaterialFancyButton extends LinearLayout {
    *
    * @return : TextView
    */
-  private TextView setupFontIconView() {
+  private void setupFontIconView() {
+    Log.d("setupFontIconView", "mFontIcon = " + mFontIcon);
     if (mFontIcon != null) {
-      TextView fontIconView = new TextView(getContext());
-      fontIconView.setTextColor(mEnabled ? mDefaultIconColor : mDisabledTextColor);
+      /*TextView*/ mFontIconView = new TextView(getContext());
+      mFontIconView.setTextColor(mEnabled ? mDefaultIconColor : mDisabledTextColor);
 
-      LayoutParams iconTextViewParams =
-          new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+      LayoutParams iconTextViewParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
       iconTextViewParams.rightMargin = mIconPaddingRight;
       iconTextViewParams.leftMargin = mIconPaddingLeft;
       iconTextViewParams.topMargin = mIconPaddingTop;
       iconTextViewParams.bottomMargin = mIconPaddingBottom;
 
       if (mTextView != null) {
-
         if (mIconPosition == POSITION_TOP || mIconPosition == POSITION_BOTTOM) {
           iconTextViewParams.gravity = Gravity.CENTER;
-          fontIconView.setGravity(Gravity.CENTER);
+          mFontIconView.setGravity(Gravity.CENTER);
         } else {
-          fontIconView.setGravity(Gravity.CENTER_VERTICAL);
+          mFontIconView.setGravity(Gravity.CENTER_VERTICAL);
           iconTextViewParams.gravity = Gravity.CENTER_VERTICAL;
         }
       } else {
         iconTextViewParams.gravity = Gravity.CENTER;
-        fontIconView.setGravity(Gravity.CENTER_VERTICAL);
+        mFontIconView.setGravity(Gravity.CENTER_VERTICAL);
       }
 
-      fontIconView.setLayoutParams(iconTextViewParams);
-      if (!isInEditMode()) {
-        fontIconView.setTextSize(FontUtil.pxToSp(getContext(), mFontIconSize));
-        fontIconView.setText(mFontIcon);
-        fontIconView.setTypeface(mIconTypeFace);
-      } else {
-        fontIconView.setTextSize(FontUtil.pxToSp(getContext(), mFontIconSize));
-        fontIconView.setText("O");
-      }
-      return fontIconView;
+      mFontIconView.setLayoutParams(iconTextViewParams);
+      //if (!isInEditMode()) {
+      mFontIconView.setTextSize(FontUtil.pxToSp(getContext(), mFontIconSize));
+      mFontIconView.setText(mFontIcon);
+      mFontIconView.setTypeface(mIconTypeFace);
+      Log.d("setupFontIconView", "mIconTypeFace  =  " + mIconTypeFace.toString());
+      //} else {
+      //  fontIconView.setTextSize(FontUtil.pxToSp(getContext(), mFontIconSize));
+      //  fontIconView.setText("O");
+      //}
+      //return mFontIconView;
     }
-    return null;
+    //return null;
   }
 
   /**
@@ -252,194 +251,165 @@ public class MaterialFancyButton extends LinearLayout {
    *
    * @return : ImageView
    */
-  private ImageView setupIconView() {
-    if (mIconResource != null) {
-      ImageView iconView;
-      if (mIconView == null) {
-        iconView = new ImageView(getContext());
-      } else {
-        iconView = mIconView;
-      }
-      //ImageView iconView = new ImageView(getContext());
-      iconView.setImageDrawable(mIconResource);
-      iconView.setPadding(mIconPaddingLeft, mIconPaddingTop, mIconPaddingRight, mIconPaddingBottom);
-
-      LayoutParams iconViewParams =
-          new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-      if (mTextView != null) {
-        if (mIconPosition == POSITION_TOP || mIconPosition == POSITION_BOTTOM) {
-          iconViewParams.gravity = Gravity.CENTER;
-        } else {
-          iconViewParams.gravity = Gravity.START;
-        }
-
-        iconViewParams.rightMargin = 10;
-        iconViewParams.leftMargin = 10;
-      } else {
-        iconViewParams.gravity = Gravity.CENTER_VERTICAL;
-      }
-      iconView.setLayoutParams(iconViewParams);
-
-      return iconView;
+  private void setupIconView() {
+    if (this.mIconView == null) {
+      mIconView = new ImageView(getContext());
     }
-    return null;
+
+    mIconView.setPadding(mIconPaddingLeft, mIconPaddingTop, mIconPaddingRight, mIconPaddingBottom);
+
+    LayoutParams iconViewParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+    if (mTextView != null) {
+      if (mIconPosition == POSITION_TOP || mIconPosition == POSITION_BOTTOM) {
+        iconViewParams.gravity = Gravity.CENTER;
+      } else {
+        iconViewParams.gravity = Gravity.START;
+      }
+
+      //iconViewParams.rightMargin= 10;
+      //iconViewParams.leftMargin = 10;
+    } else {
+      iconViewParams.gravity = Gravity.CENTER_VERTICAL;
+    }
+    mIconView.setLayoutParams(iconViewParams);
+
+    if (mIconResource != null) {
+      //ImageView mIconView;
+
+      //else {
+      //  mIconView = this.mIconView;
+      //}
+      //ImageView iconView = new ImageView(getContext());
+      mIconView.setImageDrawable(mIconResource);
+
+    } else {
+      Log.d(TAG, "mIconResource is null");
+      //return null;
+
+    }
+
+    //return mIconView;
+
   }
 
   /**
    * Initialize Attributes arrays
    *
-   * @param attrsArray : Attributes array
+   * @param attrs : Attributes array
    */
-  private void initAttributesArray(TypedArray attrsArray) {
+  private void initAttributesArray(TypedArray attrs) {
+    mDefaultBackgroundColor = attrs.getColor(R.styleable.MFBAttrs_mfb_defaultColor, mDefaultBackgroundColor);
+    mFocusBackgroundColor = attrs.getColor(R.styleable.MFBAttrs_mfb_focusColor, mFocusBackgroundColor);
+    mDisabledBackgroundColor = attrs.getColor(R.styleable.MFBAttrs_mfb_disabledColor, mDisabledBackgroundColor);
 
-    mDefaultBackgroundColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_defaultColor,
-            mDefaultBackgroundColor);
-    mFocusBackgroundColor = attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_focusColor,
-        mFocusBackgroundColor);
-    mDisabledBackgroundColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_disabledColor,
-            mDisabledBackgroundColor);
+    mEnabled = attrs.getBoolean(R.styleable.MFBAttrs_android_enabled, true);
 
-    mEnabled = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_android_enabled, true);
-
-    mDisabledTextColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_disabledTextColor,
-            mDisabledTextColor);
-    mDisabledBorderColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_disabledBorderColor,
-            mDisabledBorderColor);
-    mDefaultTextColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_textColor, mDefaultTextColor);
+    mDisabledTextColor = attrs.getColor(R.styleable.MFBAttrs_mfb_disabledTextColor, mDisabledTextColor);
+    mDisabledBorderColor = attrs.getColor(R.styleable.MFBAttrs_mfb_disabledBorderColor, mDisabledBorderColor);
+    mDefaultTextColor = attrs.getColor(R.styleable.MFBAttrs_mfb_textColor, mDefaultTextColor);
     // if default color is set then the icon's color is the same (the default for icon's color)
-    mDefaultIconColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_iconColor, mDefaultTextColor);
+    mDefaultIconColor = attrs.getColor(R.styleable.MFBAttrs_mfb_iconColor, mDefaultTextColor);
 
-    mDefaultTextSize =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_textSize,
-            mDefaultTextSize);
-    mDefaultTextSize =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_android_textSize,
-            mDefaultTextSize);
+    mDefaultTextSize = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_textSize, mDefaultTextSize);
+    mDefaultTextSize = (int) attrs.getDimension(R.styleable.MFBAttrs_android_textSize, mDefaultTextSize);
 
-    mDefaultTextGravity = attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_textGravity,
-        mDefaultTextGravity);
+    mDefaultTextGravity = attrs.getInt(R.styleable.MFBAttrs_mfb_textGravity, mDefaultTextGravity);
 
-    mBorderColor =
-        attrsArray.getColor(R.styleable.MaterialFancyButtonAttrs_mfb_borderColor, mBorderColor);
-    mBorderWidth =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_borderWidth,
-            mBorderWidth);
+    mBorderColor = attrs.getColor(R.styleable.MFBAttrs_mfb_borderColor, mBorderColor);
+    mBorderWidth = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_borderWidth, mBorderWidth);
 
     // Handle radius for button.
-    mRadius =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_radius, mRadius);
+    mRadius = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_radius, mRadius);
 
-    mRadiusTopLeft =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_radiusTopLeft,
-            mRadius);
-    mRadiusTopRight =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_radiusTopRight,
-            mRadius);
-    mRadiusBottomLeft =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_radiusBottomLeft,
-            mRadius);
-    mRadiusBottomRight =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_radiusBottomRight,
-            mRadius);
+    mRadiusTopLeft = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_radiusTopLeft, mRadius);
+    mRadiusTopRight = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_radiusTopRight, mRadius);
+    mRadiusBottomLeft = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_radiusBottomLeft, mRadius);
+    mRadiusBottomRight = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_radiusBottomRight, mRadius);
 
-    mFontIconSize =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_fontIconSize,
-            mFontIconSize);
+    mFontIconSize = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_fontIconSize, mFontIconSize);
 
-    mIconPaddingLeft =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingLeft,
-            mIconPaddingLeft);
-    mIconPaddingRight =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingRight,
-            mIconPaddingRight);
-    mIconPaddingTop =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingTop,
-            mIconPaddingTop);
-    mIconPaddingBottom =
-        (int) attrsArray.getDimension(R.styleable.MaterialFancyButtonAttrs_mfb_iconPaddingBottom,
-            mIconPaddingBottom);
+    mIconPaddingLeft = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_iconPaddingLeft, mIconPaddingLeft);
+    mIconPaddingRight = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_iconPaddingRight, mIconPaddingRight);
+    mIconPaddingTop = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_iconPaddingTop, mIconPaddingTop);
+    mIconPaddingBottom = (int) attrs.getDimension(R.styleable.MFBAttrs_mfb_iconPaddingBottom, mIconPaddingBottom);
 
-    mTextAllCaps =
-        attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_mfb_textAllCaps, false);
-    mTextAllCaps =
-        attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_android_textAllCaps, false);
+    mTextAllCaps = attrs.getBoolean(R.styleable.MFBAttrs_mfb_textAllCaps, false);
+    mTextAllCaps = attrs.getBoolean(R.styleable.MFBAttrs_android_textAllCaps, false);
 
-    mGhost = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_mfb_ghost, mGhost);
+    mGhost = attrs.getBoolean(R.styleable.MFBAttrs_mfb_ghost, mGhost);
     //mUseSystemFont = attrsArray.getBoolean(R.styleable.MaterialFancyButtonAttrs_fb_useSystemFont,
     //    mUseSystemFont);
 
-    String text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_text);
+    String text = attrs.getString(R.styleable.MFBAttrs_mfb_text);
 
     if (text == null) { //no mfb_text attribute
-      text = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_android_text);
+      text = attrs.getString(R.styleable.MFBAttrs_android_text);
     }
 
-    mIconPosition =
-        attrsArray.getInt(R.styleable.MaterialFancyButtonAttrs_mfb_iconPosition, mIconPosition);
+    mIconPosition = attrs.getInt(R.styleable.MFBAttrs_mfb_iconPosition, mIconPosition);
 
-    String fontIcon =
-        attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_fontIconResource);
+    String fontIcon = attrs.getString(R.styleable.MFBAttrs_mfb_fontIconResource);
 
-    String iconFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_iconFont);
-    String textFontFamily = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_textFont);
+    String iconFontFamily = attrs.getString(R.styleable.MFBAttrs_mfb_iconFont);
+    String textFontFamily = attrs.getString(R.styleable.MFBAttrs_mfb_textFont);
 
     try {
-      mIconResource = attrsArray.getDrawable(R.styleable.MaterialFancyButtonAttrs_mfb_iconResource);
+      mIconResource = attrs.getDrawable(R.styleable.MFBAttrs_mfb_iconResource);
     } catch (Exception e) {
       mIconResource = null;
     }
 
-    mIcon = attrsArray.getString(R.styleable.MaterialFancyButtonAttrs_mfb_icon);
+    mIcon = attrs.getString(R.styleable.MFBAttrs_mfb_icon);
 
     Log.d(TAG, "mIcon = " + mIcon);
     if (fontIcon != null) mFontIcon = fontIcon;
 
     if (text != null) mText = mTextAllCaps ? text.toUpperCase() : text;
 
-    if (!isInEditMode()) {
-      if (mIcon != null) {
+    //if (!isInEditMode()) {
+    if (mIcon != null) {
 
+    } else {
+      if (iconFontFamily != null) {
+        mIconTypeFace = FontUtil.findFont(getContext(), iconFontFamily, null);
       } else {
-        if (iconFontFamily != null) {
-          mIconTypeFace = FontUtil.findFont(getContext(), iconFontFamily, null);
-        } else {
-          mIconTypeFace = FontUtil.findFont(getContext(), null, null);
-        }
+        mIconTypeFace = FontUtil.findFont(getContext(), null, null);
+      }
 
-        if (textFontFamily != null) {
-          mTextTypeFace = FontUtil.findFont(getContext(), textFontFamily, null);
-        } else {
-          mTextTypeFace = FontUtil.findFont(getContext(), null, null);
-        }
+      if (textFontFamily != null) {
+        mTextTypeFace = FontUtil.findFont(getContext(), textFontFamily, null);
+      } else {
+        mTextTypeFace = FontUtil.findFont(getContext(), null, null);
       }
     }
+    //}
   }
 
   @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-  private Drawable getRippleDrawable(Drawable defaultDrawable, Drawable focusDrawable,
-      Drawable disabledDrawable) {
+  private Drawable getRippleDrawable(Drawable defaultDrawable, Drawable focusDrawable, Drawable disabledDrawable) {
     if (!mEnabled) {
       return disabledDrawable;
     } else {
-      return new RippleDrawable(ColorStateList.valueOf(mFocusBackgroundColor), defaultDrawable,
-          focusDrawable);
+      return new RippleDrawable(ColorStateList.valueOf(mFocusBackgroundColor), defaultDrawable, focusDrawable);
     }
   }
+
+  GradientDrawable defaultDrawable;
+  GradientDrawable focusDrawable;
+  GradientDrawable disabledDrawable;
+  StateListDrawable states;
+  GradientDrawable drawable2;
 
   @SuppressLint("NewApi") private void setupBackground() {
 
     // Default Drawable
+    //if(defaultDrawable == null) {
     GradientDrawable defaultDrawable = new GradientDrawable();
+    //}
     defaultDrawable.setCornerRadius(mRadius);
     defaultDrawable.setCornerRadii(new float[] {
-        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-        mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
+        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight, mRadiusBottomRight,
+        mRadiusBottomLeft, mRadiusBottomLeft
     });
     if (mGhost) {
       // Hollow Background
@@ -454,20 +424,24 @@ public class MaterialFancyButton extends LinearLayout {
     }
 
     //Focus Drawable
+    //if(focusDrawable == null) {
     GradientDrawable focusDrawable = new GradientDrawable();
+    //}
     focusDrawable.setCornerRadius(mRadius);
     focusDrawable.setCornerRadii(new float[] {
-        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-        mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
+        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight, mRadiusBottomRight,
+        mRadiusBottomLeft, mRadiusBottomLeft
     });
     focusDrawable.setColor(mFocusBackgroundColor);
 
     // Disabled Drawable
+    //if(disabledDrawable == null) {
     GradientDrawable disabledDrawable = new GradientDrawable();
+    //}
     disabledDrawable.setCornerRadius(mRadius);
     focusDrawable.setCornerRadii(new float[] {
-        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-        mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
+        mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight, mRadiusBottomRight,
+        mRadiusBottomLeft, mRadiusBottomLeft
     });
     disabledDrawable.setColor(mDisabledBackgroundColor);
     disabledDrawable.setStroke(mBorderWidth, mDisabledBorderColor);
@@ -490,18 +464,26 @@ public class MaterialFancyButton extends LinearLayout {
       }
     }
 
+    setupRippleEffect(defaultDrawable, focusDrawable, disabledDrawable);
+  }
+
+  private void setupRippleEffect(GradientDrawable defaultDrawable, GradientDrawable focusDrawable,
+      GradientDrawable disabledDrawable) {
     if (mUseRippleEffect && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       this.setBackground(getRippleDrawable(defaultDrawable, focusDrawable, disabledDrawable));
     } else {
-
+      //if(states == null) {
       StateListDrawable states = new StateListDrawable();
+      //}
 
       // Focus/Pressed Drawable
+      //if(drawable2 == null) {
       GradientDrawable drawable2 = new GradientDrawable();
+      //}
       drawable2.setCornerRadius(mRadius);
       focusDrawable.setCornerRadii(new float[] {
-          mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight,
-          mRadiusBottomRight, mRadiusBottomLeft, mRadiusBottomLeft
+          mRadiusTopLeft, mRadiusTopLeft, mRadiusTopRight, mRadiusTopRight, mRadiusBottomRight, mRadiusBottomRight,
+          mRadiusBottomLeft, mRadiusBottomLeft
       });
       if (mGhost) {
         drawable2.setColor(getResources().getColor(android.R.color.transparent)); // No focus color
@@ -512,8 +494,7 @@ public class MaterialFancyButton extends LinearLayout {
       // Handle Button Border
       if (mBorderColor != 0) {
         if (mGhost) {
-          drawable2.setStroke(mBorderWidth,
-              mFocusBackgroundColor); // Border is the main part of button now
+          drawable2.setStroke(mBorderWidth, mFocusBackgroundColor); // Border is the main part of button now
         } else {
           drawable2.setStroke(mBorderWidth, mBorderColor);
         }
@@ -547,7 +528,6 @@ public class MaterialFancyButton extends LinearLayout {
    * Initialize button container
    */
   private void initializeButtonContainer() {
-
     if (mIconPosition == POSITION_TOP || mIconPosition == POSITION_BOTTOM) {
       this.setOrientation(LinearLayout.VERTICAL);
     } else {
@@ -555,27 +535,22 @@ public class MaterialFancyButton extends LinearLayout {
     }
 
     if (this.getLayoutParams() == null) {
-      LayoutParams containerParams =
-          new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+      LayoutParams containerParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
       this.setLayoutParams(containerParams);
     }
 
     this.setGravity(Gravity.CENTER);
-    //this.setClickable(true);
-    //this.setFocusable(true);
+    this.setClickable(true);
+    this.setFocusable(true);
     if (mIconResource == null
         && mFontIcon == null
         && getPaddingLeft() == 0
         && getPaddingRight() == 0
         && getPaddingTop() == 0
         && getPaddingBottom() == 0) {
-      this.setPadding(20, 0, 20, 0);
 
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-        this.setPadding(0, 0, 0, 0);
-      } else {
-        this.setPadding(20, 20, 20, 20);
-      }
+      //fix for all version of androids and screens
+      this.setPadding(20, 0, 20, 0);
     }
   }
 
@@ -587,11 +562,14 @@ public class MaterialFancyButton extends LinearLayout {
   public void setText(String text) {
     text = mTextAllCaps ? text.toUpperCase() : text;
     this.mText = text;
-    if (mTextView == null) {
-      initializeMaterialFancyButton();
-    } else {
+    setupView();
+    //if (mTextView == null) {
+      //initializeMaterialFancyButton();
+      //setupTextView();
+      //mTextView.setText(text);
+    //} else {
       mTextView.setText(text);
-    }
+    //}
   }
 
   /**
@@ -604,7 +582,9 @@ public class MaterialFancyButton extends LinearLayout {
     text = mTextAllCaps ? text.toUpperCase() : text;
     this.mText = text;
     if (mTextView == null) {
-      initializeMaterialFancyButton();
+      //initializeMaterialFancyButton();
+      setupTextView();
+      mTextView.setText(text);
     } else {
       mTextView.setText(text);
     }
@@ -629,7 +609,9 @@ public class MaterialFancyButton extends LinearLayout {
   @SuppressWarnings("unused") public void setTextColor(int color) {
     this.mDefaultTextColor = color;
     if (mTextView == null) {
-      initializeMaterialFancyButton();
+      //initializeMaterialFancyButton();
+      setupTextView();
+      mTextView.setTextColor(color);
     } else {
       mTextView.setTextColor(color);
     }
@@ -653,9 +635,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setBackgroundColor(int color) {
     this.mDefaultBackgroundColor = color;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -665,7 +648,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setFocusBackgroundColor(int color) {
     this.mFocusBackgroundColor = color;
-    if (mIconView != null || mFontIconView != null || mTextView != null) this.setupBackground();
+    //if (mIconView != null || mFontIconView != null || mTextView != null) this.setupBackground();
+
+    setupView();
+    this.setupBackground();
   }
 
   /**
@@ -675,7 +661,9 @@ public class MaterialFancyButton extends LinearLayout {
    */
   @SuppressWarnings("unused") public void setDisableBackgroundColor(int color) {
     this.mDisabledBackgroundColor = color;
-    if (mIconView != null || mFontIconView != null || mTextView != null) this.setupBackground();
+    //if (mIconView != null || mFontIconView != null || mTextView != null) this.setupBackground();
+    setupView();
+    this.setupBackground();
   }
 
   /**
@@ -686,8 +674,13 @@ public class MaterialFancyButton extends LinearLayout {
   @SuppressWarnings("unused") public void setDisableTextColor(int color) {
     this.mDisabledTextColor = color;
     if (mTextView == null) {
-      initializeMaterialFancyButton();
-    } else if (!mEnabled) mTextView.setTextColor(color);
+      //initializeMaterialFancyButton();
+      setupTextView();
+    }
+
+    if (!mEnabled) {
+      mTextView.setTextColor(color);
+    }
   }
 
   /**
@@ -758,12 +751,16 @@ public class MaterialFancyButton extends LinearLayout {
     } else {
       this.mIconResource = getResources().getDrawable(drawable, getContext().getTheme());
     }
-    if (mIconView == null || mFontIconView != null) {
-      mFontIconView = null;
-      initializeMaterialFancyButton();
-    } else {
-      mIconView.setImageDrawable(mIconResource);
+    if (mIconView == null) {
+      setupIconView();
     }
+
+    if (mFontIconView == null) {
+      //mFontIconView = null;
+      //initializeMaterialFancyButton();
+      setupFontIconView();
+    }
+    mIconView.setImageDrawable(mIconResource);
   }
 
   /**
@@ -773,12 +770,18 @@ public class MaterialFancyButton extends LinearLayout {
    */
   @SuppressWarnings("unused") public void setIconResource(Drawable drawable) {
     this.mIconResource = drawable;
-    if (mIconView == null || mFontIconView != null) {
-      mFontIconView = null;
-      initializeMaterialFancyButton();
-    } else {
-      mIconView.setImageDrawable(mIconResource);
+    if (mIconView == null) {
+      setupIconView();
     }
+
+    if(mFontIconView == null) {
+      //mFontIconView = null;
+      //initializeMaterialFancyButton();
+      setupFontIconView();
+    }
+    //else {
+      mIconView.setImageDrawable(mIconResource);
+    //}
   }
 
   /**
@@ -787,13 +790,20 @@ public class MaterialFancyButton extends LinearLayout {
    * @param icon : Icon value eg : \uf082
    */
   public void setIconResource(String icon) {
+    this.mIcon = icon;
     this.mFontIcon = icon;
-    if (mFontIconView == null) {
-      mIconView = null;
-      initializeMaterialFancyButton();
-    } else {
-      mFontIconView.setText(icon);
-    }
+    //if (mFontIconView == null) {
+    //  //mIconView = null;
+    //  setupFontIconView();
+    //}
+    //if(mIconView == null) {
+    //  setupIconView();
+    //}
+    //mFontIconView.setText(icon);
+    setupView();
+      //initializeMaterialFancyButton();
+    //} else {
+    //}
   }
 
   public void setIcon(Character icon) {
@@ -802,13 +812,13 @@ public class MaterialFancyButton extends LinearLayout {
 
   public void setIcon(String icon) {
     try {
-      Log.d(TAG, "icon.substring(0, 3) = " + icon.substring(0, 3));
-      ITypeface font = CoreIcon.findFont(getContext().getApplicationContext(),
-          icon.substring(0, CoreIcon.FONT_MAPPING_PREFIX));
-      Log.d(TAG, "Font characters = " + font.getCharacters().size());
+      //Log.d(TAG, "icon.substring(0, 3) = " + icon.substring(0, 3));
+      ITypeface font =
+          CoreIcon.findFont(getContext().getApplicationContext(), icon.substring(0, CoreIcon.FONT_MAPPING_PREFIX));
+      //Log.d(TAG, "Font characters = " + font.getCharacters().size());
       icon = icon.replace("-", "_");
       setIcon(font.getIcon(icon));
-      Log.d(TAG, font.getIcon(icon).getTypeface().getDescription());
+      //Log.d(TAG, font.getIcon(icon).getTypeface().getDescription());
     } catch (Exception ex) {
       Log.e(TAG, "Wrong icon name: " + icon);
     }
@@ -817,9 +827,10 @@ public class MaterialFancyButton extends LinearLayout {
 
   public void setIcon(IIcon icon) {
     ITypeface typeface = icon.getTypeface();
-    Log.d(TAG, "Typeface = " + icon.getTypeface().getAuthor());
+    Log.d(TAG, "Typeface = " + icon.getTypeface().getFontName());
     mIconTypeFace = typeface.getTypeface(getContext().getApplicationContext());
     setIconResource(String.valueOf(icon.getCharacter()));
+    //setupView();
   }
 
   /**
@@ -846,7 +857,9 @@ public class MaterialFancyButton extends LinearLayout {
       mIconPosition = POSITION_LEFT;
     }
 
-    initializeMaterialFancyButton();
+    setupView();
+    //initializeMaterialFancyButton();
+    //setupFontIconView();
   }
 
   /**
@@ -857,9 +870,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   @SuppressWarnings("unused") public void setBorderColor(int color) {
     this.mBorderColor = color;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -869,11 +883,24 @@ public class MaterialFancyButton extends LinearLayout {
    */
   @SuppressWarnings("unused") public void setBorderWidth(int width) {
     this.mBorderWidth = width;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
+  private void setupView() {
+    //if(mIconView == null) {
+    //  setupIconView();
+    //}
+    //if(mFontIconView == null) {
+      setupFontIconView();
+    //}
+
+    //if(mTextView == null) {
+      setupTextView();
+    //}
+  }
   /**
    * Set Border Radius of the button
    *
@@ -881,20 +908,29 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setRadius(int radius) {
     this.mRadius = radius;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    this.mRadiusTopLeft = radius;
+    this.mRadiusTopRight = radius;
+    this.mRadiusBottomLeft = radius;
+    this.mRadiusBottomRight = radius;
+
+    setupView();
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
       this.setupBackground();
-    }
+      Log.d(TAG, "setRadius is called");
+    //} else {
+    //  Log.d(TAG, "setRadius NOT CALLED!");
+    //}
   }
 
-  public void setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft,
-      int radiusBottomRight) {
+  public void setRadius(int radiusTopLeft, int radiusTopRight, int radiusBottomLeft, int radiusBottomRight) {
     this.mRadiusTopLeft = radiusTopLeft;
     this.mRadiusTopRight = radiusTopRight;
     this.mRadiusBottomLeft = radiusBottomLeft;
     this.mRadiusBottomRight = radiusBottomRight;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -904,9 +940,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setRadiusTopLeft(int radiusTopLeft) {
     this.mRadiusTopLeft = radiusTopLeft;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -916,9 +953,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setRadiusTopRight(int radiusTopRight) {
     this.mRadiusTopRight = radiusTopRight;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -928,9 +966,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setRadiusBottomLeft(int radiusBottomLeft) {
     this.mRadiusBottomLeft = radiusBottomLeft;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -940,9 +979,10 @@ public class MaterialFancyButton extends LinearLayout {
    */
   public void setRadiusBottomRight(int radiusBottomRight) {
     this.mRadiusBottomRight = radiusBottomRight;
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
       this.setupBackground();
-    }
+    //}
   }
 
   /**
@@ -955,10 +995,12 @@ public class MaterialFancyButton extends LinearLayout {
     mTextTypeFace = FontUtil.findFont(getContext(), fontName, null);
 
     if (mTextView == null) {
-      initializeMaterialFancyButton();
-    } else {
-      mTextView.setTypeface(mTextTypeFace);
+      //initializeMaterialFancyButton();
+      setupTextView();
     }
+    //else {
+      mTextView.setTypeface(mTextTypeFace);
+    //}
   }
 
   /**
@@ -972,10 +1014,12 @@ public class MaterialFancyButton extends LinearLayout {
     mIconTypeFace = FontUtil.findFont(getContext(), fontName, null);
 
     if (mFontIconView == null) {
-      initializeMaterialFancyButton();
-    } else {
-      mFontIconView.setTypeface(mIconTypeFace);
+      //initializeMaterialFancyButton();
+      setupFontIconView();
     }
+    //else {
+      mFontIconView.setTypeface(mIconTypeFace);
+    //}
   }
 
   /**
@@ -994,9 +1038,10 @@ public class MaterialFancyButton extends LinearLayout {
   @SuppressWarnings("unused") public void setGhost(boolean ghost) {
     this.mGhost = ghost;
 
-    if (mIconView != null || mFontIconView != null || mTextView != null) {
+    setupView();
+    //if (mIconView != null || mFontIconView != null || mTextView != null) {
       this.setupBackground();
-    }
+    //}
   }
 
   ///**
@@ -1014,11 +1059,7 @@ public class MaterialFancyButton extends LinearLayout {
    * @return Text
    */
   @SuppressWarnings("unused") public CharSequence getText() {
-    if (mTextView != null) {
-      return mTextView.getText();
-    } else {
-      return "";
-    }
+    return mTextView != null ? mTextView.getText() : "";
   }
 
   /**
