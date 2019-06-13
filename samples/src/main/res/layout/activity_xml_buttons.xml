@@ -20,6 +20,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="20dp"
+        android:visibility="visible"
         >
 
       <com.rilixtech.materialfancybutton.MaterialFancyButton
@@ -112,6 +113,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:padding="10dp"
             fancy:mfb_defaultColor="#55acee"
             fancy:mfb_focusColor="#313131"
@@ -120,6 +122,8 @@
             fancy:mfb_iconResource="@drawable/twitter"
             fancy:mfb_textColor="#FFFFFF"
             fancy:mfb_radius="64dp"
+            fancy:mfb_iconPosition="right"
+            android:text="sss"
             />
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
@@ -218,409 +222,415 @@
       </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/section_spotify"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#222326"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_spotify"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="10dp"
-          android:paddingBottom="10dp"
-          android:paddingLeft="20dp"
-          android:paddingRight="20dp"
-          android:paddingTop="10dp"
-          fancy:mfb_defaultColor="#7ab800"
-          fancy:mfb_focusColor="#9bd823"
-          fancy:mfb_fontIconResource="&#xf04b;"
-          fancy:mfb_iconFont="fontawesome.ttf"
-          fancy:mfb_iconPosition="left"
-          fancy:mfb_text="SHUFFLE PLAY"
-          fancy:mfb_textColor="#FFFFFF"
-          fancy:mfb_radius="30dp"
-          />
+    <!--<LinearLayout-->
+        <!--android:id="@+id/section_spotify"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#222326"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="20dp"-->
+        <!--android:visibility="visible"-->
+        <!--&gt;-->
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_spotify"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginBottom="10dp"-->
+          <!--android:paddingBottom="10dp"-->
+          <!--android:paddingLeft="20dp"-->
+          <!--android:paddingRight="20dp"-->
+          <!--android:paddingTop="10dp"-->
+          <!--fancy:mfb_defaultColor="#7ab800"-->
+          <!--fancy:mfb_focusColor="#9bd823"-->
+          <!--fancy:mfb_fontIconResource="&#xf04b;"-->
+          <!--fancy:mfb_iconFont="fontawesome.ttf"-->
+          <!--fancy:mfb_iconPosition="left"-->
+          <!--fancy:mfb_text="SHUFFLE PLAY"-->
+          <!--fancy:mfb_textColor="#FFFFFF"-->
+          <!--fancy:mfb_radius="30dp"-->
+          <!--/>-->
 
 
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_spotify_pause"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="10dp"
-          android:paddingBottom="10dp"
-          android:paddingLeft="20dp"
-          android:paddingRight="20dp"
-          android:paddingTop="10dp"
-          fancy:mfb_defaultColor="#7ab800"
-          fancy:mfb_focusColor="#9bd823"
-          fancy:mfb_fontIconResource="&#xf04c;"
-          fancy:mfb_iconFont="fontawesome.ttf"
-          fancy:mfb_iconPosition="left"
-          fancy:mfb_text="PAUSE"
-          fancy:mfb_textColor="#FFFFFF"
-          fancy:mfb_radius="30dp"
-          />
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_spotify_follow"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingBottom="10dp"
-          android:paddingLeft="20dp"
-          android:paddingRight="20dp"
-          android:paddingTop="10dp"
-          fancy:mfb_borderColor="#88898c"
-          fancy:mfb_borderWidth="1dp"
-          fancy:mfb_defaultColor="#222326"
-          fancy:mfb_focusColor="#424243"
-          fancy:mfb_text="FOLLOW"
-          fancy:mfb_textColor="#dfe0d9"
-          fancy:mfb_radius="30dp"
-          />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/section_twitter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#55acee"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_spotify_pause"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginBottom="10dp"-->
+          <!--android:paddingBottom="10dp"-->
+          <!--android:paddingLeft="20dp"-->
+          <!--android:paddingRight="20dp"-->
+          <!--android:paddingTop="10dp"-->
+          <!--fancy:mfb_defaultColor="#7ab800"-->
+          <!--fancy:mfb_focusColor="#9bd823"-->
+          <!--fancy:mfb_fontIconResource="&#xf04c;"-->
+          <!--fancy:mfb_iconFont="fontawesome.ttf"-->
+          <!--fancy:mfb_iconPosition="left"-->
+          <!--fancy:mfb_text="PAUSE"-->
+          <!--fancy:mfb_textColor="#FFFFFF"-->
+          <!--fancy:mfb_radius="30dp"-->
+          <!--/>-->
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_spotify_follow"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:paddingBottom="10dp"-->
+          <!--android:paddingLeft="20dp"-->
+          <!--android:paddingRight="20dp"-->
+          <!--android:paddingTop="10dp"-->
+          <!--fancy:mfb_borderColor="#88898c"-->
+          <!--fancy:mfb_borderWidth="1dp"-->
+          <!--fancy:mfb_defaultColor="#222326"-->
+          <!--fancy:mfb_focusColor="#424243"-->
+          <!--fancy:mfb_text="FOLLOW"-->
+          <!--fancy:mfb_textColor="#dfe0d9"-->
+          <!--fancy:mfb_radius="30dp"-->
+          <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/section_twitter"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#55acee"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="20dp"-->
+        <!--android:visibility="gone"-->
+        <!--&gt;-->
 
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_twitter_follow"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="20dp"
-          android:padding="5dp"
-          fancy:mfb_borderColor="#FFFFFF"
-          fancy:mfb_borderWidth="2dp"
-          fancy:mfb_defaultColor="#55acee"
-          fancy:mfb_focusColor="#8cc9f8"
-          fancy:mfb_iconResource="@drawable/twitter"
-          fancy:mfb_text="Follow me on Twitter"
-          fancy:mfb_textColor="#FFFFFF"
-          />
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_twitter_follow"-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginBottom="20dp"-->
+          <!--android:padding="5dp"-->
+          <!--fancy:mfb_borderColor="#FFFFFF"-->
+          <!--fancy:mfb_borderWidth="2dp"-->
+          <!--fancy:mfb_defaultColor="#55acee"-->
+          <!--fancy:mfb_focusColor="#8cc9f8"-->
+          <!--fancy:mfb_iconResource="@drawable/twitter"-->
+          <!--fancy:mfb_text="Follow me on Twitter"-->
+          <!--fancy:mfb_textColor="#FFFFFF"-->
+          <!--/>-->
 
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_twitter_followers"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="10dp"
-          android:padding="10dp"
-          fancy:mfb_borderColor="#FFFFFF"
-          fancy:mfb_borderWidth="2dp"
-          fancy:mfb_defaultColor="#55acee"
-          fancy:mfb_focusColor="#8cc9f8"
-          fancy:mfb_fontIconResource="@string/icon_user"
-          fancy:mfb_fontIconSize="25sp"
-          fancy:mfb_iconFont="fontawesome.ttf"
-          fancy:mfb_iconPosition="top"
-          fancy:mfb_text="2145 followers"
-          fancy:mfb_textColor="#FFFFFF"
-          />
-    </LinearLayout>
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_twitter_followers"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginBottom="10dp"-->
+          <!--android:padding="10dp"-->
+          <!--fancy:mfb_borderColor="#FFFFFF"-->
+          <!--fancy:mfb_borderWidth="2dp"-->
+          <!--fancy:mfb_defaultColor="#55acee"-->
+          <!--fancy:mfb_focusColor="#8cc9f8"-->
+          <!--fancy:mfb_fontIconResource="@string/icon_user"-->
+          <!--fancy:mfb_fontIconSize="25sp"-->
+          <!--fancy:mfb_iconFont="fontawesome.ttf"-->
+          <!--fancy:mfb_iconPosition="top"-->
+          <!--fancy:mfb_text="2145 followers"-->
+          <!--fancy:mfb_textColor="#FFFFFF"-->
+          <!--/>-->
+    <!--</LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ff5f69"
-        android:gravity="center"
-        android:paddingBottom="30dp"
-        android:paddingTop="30dp"
-        >
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#ff5f69"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="30dp"-->
+        <!--android:paddingTop="30dp"-->
+        <!--android:visibility="gone"-->
+        <!--&gt;-->
 
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_create_account"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginRight="20dp"
-          android:padding="10dp"
-          fancy:mfb_borderColor="#FFFFFF"
-          fancy:mfb_borderWidth="1dp"
-          fancy:mfb_defaultColor="#ff5f69"
-          fancy:mfb_focusColor="#ff838b"
-          fancy:mfb_text="Create an account"
-          fancy:mfb_textColor="#FFFFFF"
-          fancy:mfb_radius="30dp"
-          >
-      </com.rilixtech.materialfancybutton.MaterialFancyButton>
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_create_account"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginRight="20dp"-->
+          <!--android:padding="10dp"-->
+          <!--fancy:mfb_borderColor="#FFFFFF"-->
+          <!--fancy:mfb_borderWidth="1dp"-->
+          <!--fancy:mfb_defaultColor="#ff5f69"-->
+          <!--fancy:mfb_focusColor="#ff838b"-->
+          <!--fancy:mfb_text="Create an account"-->
+          <!--fancy:mfb_textColor="#FFFFFF"-->
+          <!--fancy:mfb_radius="30dp"-->
+          <!--&gt;-->
+      <!--</com.rilixtech.materialfancybutton.MaterialFancyButton>-->
 
-      <com.rilixtech.materialfancybutton.MaterialFancyButton
-          android:id="@+id/btn_login"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:paddingBottom="10dp"
-          android:paddingLeft="20dp"
-          android:paddingRight="20dp"
-          android:paddingTop="10dp"
-          fancy:mfb_borderColor="#FFFFFF"
-          fancy:mfb_borderWidth="1dp"
-          fancy:mfb_defaultColor="#ff5f69"
-          fancy:mfb_focusColor="#ff838b"
-          fancy:mfb_icon="@string/fawi_user"
-          fancy:mfb_iconPosition="left"
-          fancy:mfb_text="Login"
-          fancy:mfb_textColor="#FFFFFF"
-          fancy:mfb_radius="30dp"
-          />
+      <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+          <!--android:id="@+id/btn_login"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:paddingBottom="10dp"-->
+          <!--android:paddingLeft="20dp"-->
+          <!--android:paddingRight="20dp"-->
+          <!--android:paddingTop="10dp"-->
+          <!--fancy:mfb_borderColor="#FFFFFF"-->
+          <!--fancy:mfb_borderWidth="1dp"-->
+          <!--fancy:mfb_defaultColor="#ff5f69"-->
+          <!--fancy:mfb_focusColor="#ff838b"-->
+          <!--fancy:mfb_icon="@string/fawi_user"-->
+          <!--fancy:mfb_iconPosition="left"-->
+          <!--fancy:mfb_text="Login"-->
+          <!--fancy:mfb_textColor="#FFFFFF"-->
+          <!--fancy:mfb_radius="30dp"-->
+          <!--/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="20dp"-->
+        <!--android:visibility="gone"-->
+        <!--&gt;-->
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          >
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:visibility="gone"-->
+          <!--&gt;-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_download"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            fancy:mfb_borderColor="#FFFFFF"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_defaultColor="#3b414f"
-            fancy:mfb_focusColor="#8cc9f8"
-            fancy:mfb_fontIconSize="25sp"
-            fancy:mfb_icon="@string/fawi_download"
-            fancy:mfb_iconPosition="top"
-            fancy:mfb_text="Download the file"
-            fancy:mfb_textColor="#FFFFFF"
-            fancy:mfb_radius="10dp"
-            >
-        </com.rilixtech.materialfancybutton.MaterialFancyButton>
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_download"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:padding="10dp"-->
+            <!--fancy:mfb_borderColor="#FFFFFF"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_defaultColor="#3b414f"-->
+            <!--fancy:mfb_focusColor="#8cc9f8"-->
+            <!--fancy:mfb_fontIconSize="25sp"-->
+            <!--fancy:mfb_icon="@string/fawi_download"-->
+            <!--fancy:mfb_iconPosition="top"-->
+            <!--fancy:mfb_text="Download the file"-->
+            <!--fancy:mfb_textColor="#FFFFFF"-->
+            <!--fancy:mfb_radius="10dp"-->
+            <!--&gt;-->
+        <!--</com.rilixtech.materialfancybutton.MaterialFancyButton>-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            fancy:mfb_borderColor="#FFFFFF"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_defaultColor="#3b414f"
-            fancy:mfb_focusColor="#8cc9f8"
-            fancy:mfb_fontIconSize="25sp"
-            fancy:mfb_icon="@string/fawi_upload"
-            fancy:mfb_iconPosition="bottom"
-            fancy:mfb_text="Upload"
-            fancy:mfb_textColor="#FFFFFF"
-            fancy:mfb_radius="10dp"
-            >
-        </com.rilixtech.materialfancybutton.MaterialFancyButton>
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_upload"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:padding="10dp"-->
+            <!--fancy:mfb_borderColor="#FFFFFF"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_defaultColor="#3b414f"-->
+            <!--fancy:mfb_focusColor="#8cc9f8"-->
+            <!--fancy:mfb_fontIconSize="25sp"-->
+            <!--fancy:mfb_icon="@string/fawi_upload"-->
+            <!--fancy:mfb_iconPosition="bottom"-->
+            <!--fancy:mfb_text="Upload"-->
+            <!--fancy:mfb_textColor="#FFFFFF"-->
+            <!--fancy:mfb_radius="10dp"-->
+            <!--&gt;-->
+        <!--</com.rilixtech.materialfancybutton.MaterialFancyButton>-->
 
-      </LinearLayout>
+      <!--</LinearLayout>-->
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          >
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--&gt;-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            fancy:mfb_borderColor="#FFFFFF"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_defaultColor="#40a75a"
-            fancy:mfb_focusColor="#8cc9f8"
-            fancy:mfb_fontIconSize="30sp"
-            fancy:mfb_icon="@string/fawi_user"
-            fancy:mfb_iconPosition="left"
-            fancy:mfb_text="Send"
-            fancy:mfb_textColor="#FFFFFF"
-            fancy:mfb_radius="10dp"
-            >
-        </com.rilixtech.materialfancybutton.MaterialFancyButton>
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_send"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:padding="10dp"-->
+            <!--fancy:mfb_borderColor="#FFFFFF"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_defaultColor="#40a75a"-->
+            <!--fancy:mfb_focusColor="#8cc9f8"-->
+            <!--fancy:mfb_fontIconSize="30sp"-->
+            <!--fancy:mfb_icon="@string/fawi_user"-->
+            <!--fancy:mfb_iconPosition="left"-->
+            <!--fancy:mfb_text="Send"-->
+            <!--fancy:mfb_textColor="#FFFFFF"-->
+            <!--fancy:mfb_radius="10dp"-->
+            <!--&gt;-->
+        <!--</com.rilixtech.materialfancybutton.MaterialFancyButton>-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_send_disabled"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:enabled="false"
-            android:padding="10dp"
-            fancy:mfb_borderColor="#FFFFFF"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_defaultColor="#40a75a"
-            fancy:mfb_disabledColor="#e4e4e4"
-            fancy:mfb_focusColor="#8cc9f8"
-            fancy:mfb_fontIconSize="30sp"
-            fancy:mfb_icon="@string/fawi_user"
-            fancy:mfb_iconPosition="left"
-            fancy:mfb_text="Send Disabled"
-            fancy:mfb_textColor="#FFFFFF"
-            fancy:mfb_radius="10dp"
-            >
-        </com.rilixtech.materialfancybutton.MaterialFancyButton>
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_send_disabled"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:enabled="false"-->
+            <!--android:padding="10dp"-->
+            <!--fancy:mfb_borderColor="#FFFFFF"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_defaultColor="#40a75a"-->
+            <!--fancy:mfb_disabledColor="#e4e4e4"-->
+            <!--fancy:mfb_focusColor="#8cc9f8"-->
+            <!--fancy:mfb_fontIconSize="30sp"-->
+            <!--fancy:mfb_icon="@string/fawi_user"-->
+            <!--fancy:mfb_iconPosition="left"-->
+            <!--fancy:mfb_text="Send Disabled"-->
+            <!--fancy:mfb_textColor="#FFFFFF"-->
+            <!--fancy:mfb_radius="10dp"-->
+            <!--&gt;-->
+        <!--</com.rilixtech.materialfancybutton.MaterialFancyButton>-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_android_prefix"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            android:text="@string/android_prefix"
-            android:textAllCaps="true"
-            android:textSize="10sp"
-            fancy:mfb_borderColor="#FFFFFF"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_defaultColor="#40a75a"
-            fancy:mfb_disabledColor="#e4e4e4"
-            fancy:mfb_focusColor="#8cc9f8"
-            fancy:mfb_icon="@string/fawi_android"
-            fancy:mfb_textColor="#FFFFFF"
-            fancy:mfb_radius="10dp"
-            />
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_android_prefix"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:text="@string/android_prefix"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:textSize="10sp"-->
+            <!--fancy:mfb_borderColor="#FFFFFF"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_defaultColor="#40a75a"-->
+            <!--fancy:mfb_disabledColor="#e4e4e4"-->
+            <!--fancy:mfb_focusColor="#8cc9f8"-->
+            <!--fancy:mfb_icon="@string/fawi_android"-->
+            <!--fancy:mfb_textColor="#FFFFFF"-->
+            <!--fancy:mfb_radius="10dp"-->
+            <!--/>-->
 
-      </LinearLayout>
+      <!--</LinearLayout>-->
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          >
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--&gt;-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_decline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:padding="10dp"
-            fancy:mfb_borderColor="#FFFFFF"
-            fancy:mfb_borderWidth="0dp"
-            fancy:mfb_defaultColor="#d86262"
-            fancy:mfb_focusColor="#2e5071"
-            fancy:mfb_fontIconSize="25dp"
-            fancy:mfb_iconPosition="right"
-            fancy:mfb_text="Mute"
-            fancy:mfb_textColor="#ffffff"
-            fancy:mfb_radius="30dp"
-            />
-        <!--fancy:mfb_iconFont="fontawesome.ttf"-->
-        <!--fancy:mfb_fontIconResource="@string/icon_mute"-->
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_decline"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:padding="10dp"-->
+            <!--fancy:mfb_borderColor="#FFFFFF"-->
+            <!--fancy:mfb_borderWidth="0dp"-->
+            <!--fancy:mfb_defaultColor="#d86262"-->
+            <!--fancy:mfb_focusColor="#2e5071"-->
+            <!--fancy:mfb_fontIconSize="25dp"-->
+            <!--fancy:mfb_iconPosition="right"-->
+            <!--fancy:mfb_text="Mute"-->
+            <!--fancy:mfb_textColor="#ffffff"-->
+            <!--fancy:mfb_radius="30dp"-->
+            <!--/>-->
+        <!--&lt;!&ndash;fancy:mfb_iconFont="fontawesome.ttf"&ndash;&gt;-->
+        <!--&lt;!&ndash;fancy:mfb_fontIconResource="@string/icon_mute"&ndash;&gt;-->
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_answer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:gravity="right"
-            android:padding="10dp"
-            fancy:mfb_defaultColor="#7ed862"
-            fancy:mfb_focusColor="#2e5071"
-            fancy:mfb_fontIconSize="25dp"
-            fancy:mfb_iconPosition="right"
-            fancy:mfb_iconFont="fontawesome.ttf"
-            fancy:mfb_fontIconResource="@string/icon_answer"
-            fancy:mfb_text="Answer the call"
-            fancy:mfb_textColor="#ffffff"
-            fancy:mfb_radius="30dp"
-            />
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_answer"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:gravity="right"-->
+            <!--android:padding="10dp"-->
+            <!--fancy:mfb_defaultColor="#7ed862"-->
+            <!--fancy:mfb_focusColor="#2e5071"-->
+            <!--fancy:mfb_fontIconSize="25dp"-->
+            <!--fancy:mfb_iconPosition="right"-->
+            <!--fancy:mfb_iconFont="fontawesome.ttf"-->
+            <!--fancy:mfb_fontIconResource="@string/icon_answer"-->
+            <!--fancy:mfb_text="Answer the call"-->
+            <!--fancy:mfb_textColor="#ffffff"-->
+            <!--fancy:mfb_radius="30dp"-->
+            <!--/>-->
 
-      </LinearLayout>
+      <!--</LinearLayout>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#55acee"
-        android:orientation="vertical"
-        android:padding="20dp"
-        >
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#55acee"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="20dp"-->
+        <!--android:visibility="gone"-->
+        <!--&gt;-->
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="15dp"
-          android:orientation="vertical"
-          >
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginBottom="15dp"-->
+          <!--android:orientation="vertical"-->
+          <!--&gt;-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/ghost_button_title"
-            android:textColor="#ff000000"
-            android:textSize="20sp"
-            />
-
-
-      </LinearLayout>
-
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="15dp"
-          android:gravity="center"
-          android:orientation="horizontal"
-          >
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="@string/ghost_button_title"-->
+            <!--android:textColor="#ff000000"-->
+            <!--android:textSize="20sp"-->
+            <!--/>-->
 
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_ghost_deposit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:gravity="right"
-            android:padding="15dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            fancy:mfb_borderColor="#ffe7e6e2"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_focusColor="#fffffefa"
-            fancy:mfb_fontIconResource="@string/icon_creditcard"
-            fancy:mfb_fontIconSize="15sp"
-            fancy:mfb_ghost="true"
-            fancy:mfb_iconFont="fontawesome.ttf"
-            fancy:mfb_iconPosition="right"
-            fancy:mfb_text="Deposit"
-            fancy:mfb_textColor="#ffffff"
-            fancy:mfb_radius="40dp"
-            />
-
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btn_ghost_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:gravity="right"
-            android:padding="15dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            fancy:mfb_borderColor="#7ed862"
-            fancy:mfb_borderWidth="2dp"
-            fancy:mfb_focusColor="#ffa8f192"
-            fancy:mfb_fontIconResource="@string/icon_envelope"
-            fancy:mfb_fontIconSize="15sp"
-            fancy:mfb_ghost="true"
-            fancy:mfb_iconFont="fontawesome.ttf"
-            fancy:mfb_iconPosition="right"
-            fancy:mfb_text="Contact"
-            fancy:mfb_textColor="#ffa8f192"
-            fancy:mfb_radius="25dp"
-            />
+      <!--</LinearLayout>-->
 
 
-      </LinearLayout>
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="wrap_content"-->
+          <!--android:layout_marginBottom="15dp"-->
+          <!--android:gravity="center"-->
+          <!--android:orientation="horizontal"-->
+          <!--&gt;-->
 
-    </LinearLayout>
+
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_ghost_deposit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:gravity="right"-->
+            <!--android:padding="15dp"-->
+            <!--android:paddingLeft="20dp"-->
+            <!--android:paddingRight="20dp"-->
+            <!--fancy:mfb_borderColor="#ffe7e6e2"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_focusColor="#fffffefa"-->
+            <!--fancy:mfb_fontIconResource="@string/icon_creditcard"-->
+            <!--fancy:mfb_fontIconSize="15sp"-->
+            <!--fancy:mfb_ghost="true"-->
+            <!--fancy:mfb_iconFont="fontawesome.ttf"-->
+            <!--fancy:mfb_iconPosition="right"-->
+            <!--fancy:mfb_text="Deposit"-->
+            <!--fancy:mfb_textColor="#ffffff"-->
+            <!--fancy:mfb_radius="40dp"-->
+            <!--/>-->
+
+        <!--<com.rilixtech.materialfancybutton.MaterialFancyButton-->
+            <!--android:id="@+id/btn_ghost_email"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:gravity="right"-->
+            <!--android:padding="15dp"-->
+            <!--android:paddingLeft="30dp"-->
+            <!--android:paddingRight="30dp"-->
+            <!--fancy:mfb_borderColor="#7ed862"-->
+            <!--fancy:mfb_borderWidth="2dp"-->
+            <!--fancy:mfb_focusColor="#ffa8f192"-->
+            <!--fancy:mfb_fontIconResource="@string/icon_envelope"-->
+            <!--fancy:mfb_fontIconSize="15sp"-->
+            <!--fancy:mfb_ghost="true"-->
+            <!--fancy:mfb_iconFont="fontawesome.ttf"-->
+            <!--fancy:mfb_iconPosition="right"-->
+            <!--fancy:mfb_text="Contact"-->
+            <!--fancy:mfb_textColor="#ffa8f192"-->
+            <!--fancy:mfb_radius="25dp"-->
+            <!--/>-->
+
+
+      <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
 
   </LinearLayout>
 
